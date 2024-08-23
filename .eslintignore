@@ -1,0 +1,6 @@
+.next/
+out/
+public/
+prettier.config.js
+.eslintrc.js
+next.config.js
