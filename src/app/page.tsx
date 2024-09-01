@@ -14,17 +14,32 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <div className={styles.basic}>
-        <Image
-          src={`${BASE_PATH}/icon.jpg`}
-          alt='icon'
-          width={200}
-          height={200}
-          style={{ borderRadius: '50%' }}
-        />
-        <div className={styles.basicText}>
-          <div className={`${styles.name} ${noticia.className}`}>kAIto47802</div>
-          <div className={styles.affiliation}>{t('basic.affiliation')}</div>
+        <div className={styles.basicContent}>
+          <Image
+            src={`${BASE_PATH}/icon.jpg`}
+            alt='icon'
+            width={200}
+            height={200}
+            style={{ borderRadius: '50%' }}
+          />
+          <div className={styles.basicText}>
+            <div className={`${styles.name} ${noticia.className}`}>kAIto47802</div>
+            <div className={styles.affiliation}>{t('basic.affiliation')}</div>
+          </div>
         </div>
+      </div>
+      <div className={styles.publications}>
+        <div className={styles.publicationsTitle}>{t('publications.title')}</div>
+        {t('publications.content', { returnObjects: true })
+          .filter((publication) => publication.type === 'international conference')
+          .map((publication, index) => (
+            <div key={index} className={styles.publication}>
+              <div className={styles.publicationTitle}>{publication.title}</div>
+              <div className={styles.publicationAuthors}>{publication.authors}</div>
+              <div className={styles.publicationConference}>{publication.conference}</div>
+              <div className={styles.publicationYear}>{publication.year}</div>
+            </div>
+          ))}
       </div>
     </main>
   );

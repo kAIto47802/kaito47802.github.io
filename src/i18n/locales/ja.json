@@ -1,5 +1,24 @@
 {
   "basic": {
-    "affiliation": "東京大学工学部計数工学科4年"
+    "affiliation": "東京大学工学部計数工学科4年\nFourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+  },
+  "publications": {
+    "title": "発表論文",
+    "content": [
+      {
+        "title": "The T05 System (UTMOSv2) for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
+        "authors": "Kaito Baba, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
+        "conference": "IEEE Spoken Language Technology Workshop (SLT)",
+        "year": "2024",
+        "type": "international conference"
+      },
+      {
+        "title": "UTMOSv2: 自然性MOS予測におけるスペクトログラム特徴量とSSL特徴量の統合的利用",
+        "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",
+        "conference": "日本音響学会第152回 (2024年秋季) 研究発表会",
+        "year": "2024",
+        "type": "domestic conference"
+      }
+    ]
   }
 }
