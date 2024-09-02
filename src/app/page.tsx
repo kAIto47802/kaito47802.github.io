@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
+import { Publication } from '@/types';
 import nextConfig from '../../next.config.mjs';
 const BASE_PATH = nextConfig.basePath || '';
 
@@ -30,7 +31,7 @@ const Home = () => {
       </div>
       <div className={styles.publications}>
         <div className={styles.publicationsTitle}>{t('publications.title')}</div>
-        {t('publications.content', { returnObjects: true })
+        {(t('publications.content', { returnObjects: true }) as Publication[])
           .filter((publication) => publication.type === 'international conference')
           .map((publication, index) => (
             <div key={index} className={styles.publication}>
