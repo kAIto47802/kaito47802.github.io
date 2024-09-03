@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
 import Header from '@/components/pure/Header';
+import Heading2 from '@/components/pure/Heading2';
 import { Publication as PublicationType } from '@/types';
 import nextConfig from '../../next.config.mjs';
 const BASE_PATH = nextConfig.basePath || '';
@@ -33,13 +34,22 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className={styles.publications}>
-          <div className={styles.publicationsTitle}>{t('publications.title')}</div>
-          {(t('publications.content', { returnObjects: true }) as PublicationType[])
-            .filter((publication) => publication.type === 'international conference')
-            .map((publication, index) => (
-              <Publication key={index} index={index} {...publication} />
-            ))}
+        <div className={styles.content}>
+          <div className={styles.publications}>
+            <div className={styles.publicationsTitle}>{t('publications.title')}</div>
+            <Heading2>{t('publications.internationalConference')}</Heading2>
+            {(t('publications.content', { returnObjects: true }) as PublicationType[])
+              .filter((publication) => publication.type === 'international conference')
+              .map((publication, index) => (
+                <Publication key={index} index={index} {...publication} />
+              ))}
+            <Heading2>{t('publications.domesticConference')}</Heading2>
+            {(t('publications.content', { returnObjects: true }) as PublicationType[])
+              .filter((publication) => publication.type === 'domestic conference')
+              .map((publication, index) => (
+                <Publication key={index} index={index} {...publication} />
+              ))}
+          </div>
         </div>
       </main>
     </>

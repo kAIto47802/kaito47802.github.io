@@ -63,9 +63,15 @@
   font-size: 3rem;
 }
 
+.content {
+  background-color: #7597df;
+  padding-top: 2rem;
+}
+
 .publications {
   margin: 0 auto;
   width: 80%;
+  background-color: #ffffff56;
 }
 
 .publicationsTitle {

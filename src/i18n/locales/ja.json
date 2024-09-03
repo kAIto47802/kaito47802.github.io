@@ -4,6 +4,8 @@
   },
   "publications": {
     "title": "発表論文",
+    "internationalConference": "国際会議",
+    "domesticConference": "国内会議",
     "content": [
       {
         "title": "The T05 System (UTMOSv2) for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",

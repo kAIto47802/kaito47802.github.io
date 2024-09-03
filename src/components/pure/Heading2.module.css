@@ -1,0 +1,16 @@
+.heading2 {
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+  font-weight: 300;
+  padding-left: 0.2em;
+}
+
+.heading2::after {
+  position: absolute;
+  content: '';
+  display: block;
+  border-bottom: solid 3px #5472cd;
+  bottom: -3px;
+  left: -0.2em;
+  width: 20%;
+}

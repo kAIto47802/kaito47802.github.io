@@ -3,5 +3,5 @@ export interface Publication {
   authors: string;
   conference: string;
   year: number;
-  type: 'international conference' | 'journal';
+  type: 'international conference' | 'domestic conference';
 }
