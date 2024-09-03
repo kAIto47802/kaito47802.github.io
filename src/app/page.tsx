@@ -1,10 +1,11 @@
 'use client';
+import Publication from '@/components/pageDependents/Publication';
 import { Noticia_Text } from 'next/font/google';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
-import { Publication } from '@/types';
+import { Publication as PublicationType } from '@/types';
 import nextConfig from '../../next.config.mjs';
 const BASE_PATH = nextConfig.basePath || '';
 
@@ -31,15 +32,10 @@ const Home = () => {
       </div>
       <div className={styles.publications}>
         <div className={styles.publicationsTitle}>{t('publications.title')}</div>
-        {(t('publications.content', { returnObjects: true }) as Publication[])
+        {(t('publications.content', { returnObjects: true }) as PublicationType[])
           .filter((publication) => publication.type === 'international conference')
           .map((publication, index) => (
-            <div key={index} className={styles.publication}>
-              <div className={styles.publicationTitle}>{publication.title}</div>
-              <div className={styles.publicationAuthors}>{publication.authors}</div>
-              <div className={styles.publicationConference}>{publication.conference}</div>
-              <div className={styles.publicationYear}>{publication.year}</div>
-            </div>
+            <Publication key={index} index={index} {...publication} />
           ))}
       </div>
     </main>

@@ -1,0 +1,14 @@
+.publication::before {
+  position: relative;
+  left: 1em;
+  width: 1em;
+  height: 1em;
+  /* transform: rotate(-45deg); */
+  border-bottom: 3px solid #2589d0;
+  border-right: 3px solid #2589d0;
+  content: '';
+}
+
+.title {
+  font-size: 1.1rem;
+}

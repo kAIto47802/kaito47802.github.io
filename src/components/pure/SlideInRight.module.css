@@ -1,0 +1,23 @@
+.inView {
+  animation: slidein-right 1s;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slidein-right {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.outView {
+  transform: translateX(-20%);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
