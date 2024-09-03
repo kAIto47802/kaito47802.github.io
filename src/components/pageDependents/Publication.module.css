@@ -1,11 +1,16 @@
-.publication::before {
+.publication {
   position: relative;
-  left: 1em;
-  width: 1em;
-  height: 1em;
-  /* transform: rotate(-45deg); */
-  border-bottom: 3px solid #2589d0;
-  border-right: 3px solid #2589d0;
+}
+
+.publication::before {
+  position: absolute;
+  left: -1em;
+  top: 0.6em;
+  width: 0.5em;
+  height: 0.5em;
+  transform: rotate(-45deg);
+  border-bottom: 3px solid #f28c2d;
+  border-right: 3px solid #f28c2d;
   content: '';
 }
 
