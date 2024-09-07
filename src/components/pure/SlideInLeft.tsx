@@ -18,7 +18,7 @@ const SlideInLeft = ({
     <div
       key={key}
       ref={ref}
-      className={`${inView ? styles.inView : styles.outView} ${className}`}
+      className={`${inView ? styles.inView : styles.outView} ${className ?? ''}`}
     >
       {children}
     </div>

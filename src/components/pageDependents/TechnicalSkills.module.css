@@ -1,0 +1,28 @@
+.title {
+  margin: 0.8em 1.4em 0;
+}
+
+.content {
+  position: relative;
+  margin-left: 3rem;
+  width: auto;
+}
+
+.content::before {
+  position: absolute;
+  content: '';
+  left: -1em;
+  top: 0.8em;
+  height: 0;
+  width: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #f6a38b;
+  transform: translateY(-50%);
+}
+
+.langContent {
+  position: relative;
+  margin-left: 3rem;
+  width: auto;
+}

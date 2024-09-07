@@ -5,11 +5,11 @@
 }
 
 @keyframes slidein-right {
-  0% {
+  from {
     transform: translateX(-20%);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateX(0%);
     opacity: 1;
   }

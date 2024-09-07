@@ -4,14 +4,21 @@
   },
   "publications": {
     "title": "発表論文",
-    "internationalConference": "国際会議",
-    "domesticConference": "国内会議",
+    "internationalConference": {
+      "text": "国際会議",
+      "subtext": "International Conference"
+    },
+    "domesticConference": {
+      "text": "国内会議",
+      "subtext": "Domestic Conference"
+    },
     "content": [
       {
         "title": "The T05 System (UTMOSv2) for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
         "authors": "Kaito Baba, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
         "conference": "IEEE Spoken Language Technology Workshop (SLT)",
         "year": "2024",
+        "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "international conference"
       },
       {
@@ -19,8 +26,152 @@
         "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",
         "conference": "日本音響学会第152回 (2024年秋季) 研究発表会",
         "year": "2024",
+        "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "domestic conference"
       }
     ]
+  },
+  "awardsAndHonors": {
+    "title": "受賞歴",
+    "content": [
+      {
+        "title": "Kaggle コンペティション 銅メダル🥉×4",
+        "descriptions": [
+          "世界最大規模の機械学習コンペティションであるKaggleでこれまでに4回銅メダルを獲得しました。"
+        ],
+        "yearMonth": "~2024/08",
+        "emphasize": false
+      },
+      {
+        "title": "VoiceMos Challenge 2024 Track1 16項目中7項目で1位🥇，残り9項目で2位🥈",
+        "descriptions": [
+          "合成音声の自然性MOSを予測する機械学習モデルを作成する国際コンペティションで上記の順位を獲得しました。"
+        ],
+        "yearMonth": "2024/06",
+        "emphasize": false
+      },
+      {
+        "title": "アイフル主催ハッカソン (aihack2024) 優勝🥇",
+        "descriptions": [
+          "顧客が貸し倒れするか否かを予測する機械学習モデルを作成しました。"
+        ],
+        "yearMonth": "2024/03",
+        "emphasize": false
+      },
+      {
+        "title": "ライフカード主催ハッカソン 3位🥉",
+        "descriptions": ["与信スコアを予測する機械学習モデルを作成しました。"],
+        "yearMonth": "2023/10",
+        "emphasize": false
+      },
+      {
+        "title": "CodinGame オセロAIコンペティション 世界3位🥉",
+        "descriptions": [
+          "深層強化学習と探索アルゴリズムを組み合わせてオセロAIを開発し，CodinGameのコンペティションで世界3位になりました。"
+        ],
+        "yearMonth": "2023/09",
+        "emphasize": true
+      },
+      {
+        "title": "ソフトバンク主催ハッカソン 本選4位 特別賞🏅",
+        "descriptions": ["物体検知モデルを搭載したWebアプリケーションを開発しました。"],
+        "yearMonth": "2023/03",
+        "emphasize": false
+      },
+      {
+        "title": "松尾研究室主催深層強化学習スプリングセミナー 優秀賞🏅",
+        "descriptions": [],
+        "yearMonth": "2023/03",
+        "emphasize": false
+      }
+    ]
+  },
+  "workExperience": {
+    "title": "職歴",
+    "content": [
+      {
+        "company": "株式会社Preferred Networks",
+        "position": "パートタイムエンジニア",
+        "period": "2024/07 - 現在",
+        "descriptions": [
+          "AutoMLチームにてハイパーパラメータ最適化ライブラリのOptunaの開発を行っております。"
+        ]
+      },
+      {
+        "company": "東京大学医学部附属病院",
+        "position": "学術専門職員（特定短時間勤務有期雇用教職員）",
+        "period": "2024/05 - 現在",
+        "descriptions": ["医療AIの研究開発を医師と共に行っております。"]
+      },
+      {
+        "company": "株式会社 SIGNATE",
+        "position": "技術アドバイザー・教材作成",
+        "period": "2023/12 -2024/05",
+        "descriptions": [
+          "LLM の技術アドバイザーとして，主にRAGに関する資料作成や技術アドバイスを行っておりました。",
+          "データ分析・LLMの活用方法・アルゴリズム・最適化などに関する教材作成を行っておりました。"
+        ]
+      },
+      {
+        "company": "株式会社 kuzen",
+        "position": "フルスタックエンジニア（インターンシップ）",
+        "period": "2023/11 - 2024/04",
+        "descriptions": [
+          "フロントエンドやバックエンドの実装，LangChainを用いたRAGシステムの開発などを行っておりました。"
+        ]
+      },
+      {
+        "company": "株式会社リクルート",
+        "position": "データサイエンティスト（インターンシップ）",
+        "period": "2023/10 - 2023/12",
+        "descriptions": [
+          "データ推進室の検索グループにて，社内ドキュメントの検索体験の向上を目的として，RAGのシステム開発を行っておりました。"
+        ]
+      },
+      {
+        "company": "東京大学エッジキャピタルパートナーズ UTEC",
+        "position": "リサーチアシスタント",
+        "period": "2023/07 - 現在",
+        "descriptions": [
+          "投資家のためのデータ収集・分析・予測モデルの作成などを行っております。"
+        ]
+      },
+      {
+        "company": "株式会社 LearnWiz",
+        "position": "フロントエンドエンジニア（業務委託）",
+        "period": "2023/04 - 2023/09",
+        "descriptions": [
+          "Web アプリケーションのフロントエンド開発とUI/UXデザインの提案を行っておりました。"
+        ]
+      },
+      {
+        "company": "GHELIA 株式会社",
+        "position": "AIリサーチャー（インターンシップ）",
+        "period": "2023/01 - 2023/09",
+        "descriptions": ["画像認識に関する深層学習の研究開発を行っておりました。"]
+      }
+    ]
+  },
+  "technicalSkills": {
+    "title": "技術スキル",
+    "dealWith": {
+      "title": "扱っている領域：",
+      "content": "深層学習，強化学習，アルゴリズム，フロントエンド，バックエンド，iOS アプリ開発 など"
+    },
+    "language": {
+      "title": "使用言語・フレームワーク：",
+      "advanced": {
+        "title": "Advanced:",
+        "content": "Rust, Python, PyTorch, TensorFlow, TypeScript, JavaScript, React, Next.js, HTML/CSS, C, C++, bash, Swift, Go, Google Apps Script, R"
+      },
+      "intermediate": {
+        "title": "Intermediate:",
+        "content": "Haskell, OCaml, Scheme, Assembly (RISC-V), SQL, Fortran, Verilog, C# (Unity), Julia, Java, Kotlin"
+      }
+    },
+    "other": {
+      "title": "その他：",
+      "content": "Git/GitHub, Docker, AWS, GCP, Linux, GitHub Actions, GraphQL, Arduino, Raspberry Pi など"
+    }
   }
 }

@@ -1,0 +1,49 @@
+.workExperience {
+  margin: 0.8em 1.4em 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.period {
+  width: 9rem;
+}
+
+.content {
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.description {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.description::before {
+  position: absolute;
+  content: '';
+  left: -1em;
+  top: 0.8em;
+  height: 0;
+  width: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #f6a38b;
+  transform: translateY(-50%);
+}
+
+.position {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.position::before {
+  content: '';
+  position: absolute;
+  border: 1.9px solid #f6a38b;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: -1em;
+  top: 0.5em;
+}

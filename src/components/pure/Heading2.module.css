@@ -1,8 +1,10 @@
 .heading2 {
   border-bottom: solid 3px #cce4ff;
   position: relative;
-  font-weight: 300;
+  font-size: 1.9rem;
   padding-left: 0.2em;
+  padding-bottom: -3px;
+  line-height: 1em;
 }
 
 .heading2::after {
@@ -13,4 +15,11 @@
   bottom: -3px;
   left: -0.2em;
   width: 20%;
+  z-index: 0;
+}
+
+.heading2 span {
+  margin-left: 0.5em;
+  font-size: 1.5rem;
+  line-height: 1em;
 }

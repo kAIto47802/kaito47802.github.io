@@ -1,0 +1,12 @@
+.github {
+  height: 1.2rem;
+  margin-top: 0.4rem;
+  position: relative;
+  display: block;
+}
+
+.github img {
+  object-fit: contain;
+  position: relative !important;
+  width: auto !important;
+}

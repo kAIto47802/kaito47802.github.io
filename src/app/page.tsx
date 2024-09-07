@@ -5,50 +5,94 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
+import AwardsAndHonors from '@/components/pageDependents/AwardsAndHonors';
+import TechnicalSkills from '@/components/pageDependents/TechnicalSkills';
+import WorkExperience from '@/components/pageDependents/WorkExperience';
+import AnimatedHeader from '@/components/pure/AnimatedHeader';
+import GitHubIcon from '@/components/pure/GitHubIcon';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
-import { Publication as PublicationType } from '@/types';
+import {
+  AwardsAndHonors as AwardsAndHonorsType,
+  Publication as PublicationType,
+  WorkExperience as WorkExperienceType,
+} from '@/types';
 import nextConfig from '../../next.config.mjs';
 const BASE_PATH = nextConfig.basePath || '';
 
 const noticia = Noticia_Text({ weight: '400', style: 'italic', subsets: ['latin'] });
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Header />
       <main className={styles.main}>
         <div className={styles.basic}>
-          <div className={styles.basicContent}>
-            <Image
-              src={`${BASE_PATH}/icon.jpg`}
-              alt='icon'
-              width={200}
-              height={200}
-              style={{ borderRadius: '50%' }}
-            />
-            <div className={styles.basicText}>
-              <div className={`${styles.name} ${noticia.className}`}>kAIto47802</div>
-              <div className={styles.affiliation}>{t('basic.affiliation')}</div>
+          <div className={styles.basicBox}>
+            <div className={styles.basicContent}>
+              <Image
+                className={styles.icon}
+                src={`${BASE_PATH}/icon.jpg`}
+                alt='icon'
+                width={200}
+                height={200}
+                style={{ borderRadius: '50%' }}
+              />
+              <div className={styles.basicText}>
+                <div className={`${styles.name} ${noticia.className}`}>kAIto47802</div>
+                <div className={styles.affiliation}>{t('basic.affiliation')}</div>
+                <GitHubIcon
+                  className={styles.githubProfile}
+                  link='https://github.com/kAIto47802'
+                />
+              </div>
             </div>
           </div>
         </div>
         <div className={styles.content}>
-          <div className={styles.publications}>
-            <div className={styles.publicationsTitle}>{t('publications.title')}</div>
-            <Heading2>{t('publications.internationalConference')}</Heading2>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('publications.title')} />
+            <Heading2
+              text={t('publications.internationalConference.text')}
+              subtext={t('publications.internationalConference.subtext')}
+            />
             {(t('publications.content', { returnObjects: true }) as PublicationType[])
               .filter((publication) => publication.type === 'international conference')
               .map((publication, index) => (
                 <Publication key={index} index={index} {...publication} />
               ))}
-            <Heading2>{t('publications.domesticConference')}</Heading2>
+            <Heading2
+              text={t('publications.domesticConference.text')}
+              subtext={t('publications.domesticConference.subtext')}
+            />
             {(t('publications.content', { returnObjects: true }) as PublicationType[])
               .filter((publication) => publication.type === 'domestic conference')
               .map((publication, index) => (
                 <Publication key={index} index={index} {...publication} />
               ))}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('awardsAndHonors.title')} />
+            {(
+              t('awardsAndHonors.content', {
+                returnObjects: true,
+              }) as AwardsAndHonorsType[]
+            ).map((award, index) => (
+              <AwardsAndHonors key={index} index={index} {...award} />
+            ))}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('workExperience.title')} />
+            {(
+              t('workExperience.content', { returnObjects: true }) as WorkExperienceType[]
+            ).map((workExperience, index) => (
+              <WorkExperience key={index} index={index} {...workExperience} />
+            ))}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('technicalSkills.title')} />
+            <TechnicalSkills />
           </div>
         </div>
       </main>

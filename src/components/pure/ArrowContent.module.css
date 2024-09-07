@@ -1,0 +1,15 @@
+.markerContent {
+  position: relative;
+}
+
+.markerContent::before {
+  position: absolute;
+  left: -1em;
+  top: 0.5em;
+  width: 0.5em;
+  height: 0.5em;
+  transform: rotate(-45deg);
+  border-bottom: 3px solid #f28c2d;
+  border-right: 3px solid #f28c2d;
+  content: '';
+}

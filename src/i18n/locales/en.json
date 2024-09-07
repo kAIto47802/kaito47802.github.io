@@ -4,14 +4,21 @@
   },
   "publications": {
     "title": "Publications",
-    "internationalConference": "International Conference",
-    "domesticConference": "Domestic Conference",
+    "internationalConference": {
+      "text": "International Conference",
+      "subtext": ""
+    },
+    "domesticConference": {
+      "text": "Domestic Conference",
+      "subtext": ""
+    },
     "content": [
       {
-        "title": "The T05 System (UTMOSv2) for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
+        "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
         "authors": "Kaito Baba, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
         "conference": "IEEE Spoken Language Technology Workshop (SLT)",
         "year": "2024",
+        "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "international conference"
       },
       {
@@ -19,8 +26,158 @@
         "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",
         "conference": "日本音響学会第152回 (2024年秋季) 研究発表会",
         "year": "2024",
+        "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "domestic conference"
       }
     ]
+  },
+  "awardsAndHonors": {
+    "title": "Awards and Honors",
+    "content": [
+      {
+        "title": "4 bronze medals🥉 in Kaggle competitions",
+        "descriptions": [
+          "Won 4 solo bronze medals so far in Kaggle, the world's largest machine learning competition."
+        ],
+        "yearMonth": "~08/2024",
+        "emphasize": false
+      },
+      {
+        "title": "1st place🥇 in 7 out of 16 metrics and 2nd place🥈 in the remaining 9 metrics in the VoiceMOS Challenge 2024 Track1",
+        "descriptions": [
+          "Took the above ranking in a global competition to create a machine learning model to predict the naturalness MOS of synthetic speech."
+        ],
+        "yearMonth": "06/2024",
+        "emphasize": false
+      },
+      {
+        "title": "1st Place, Hackathon by AIFUL (aihack2024)🥇",
+        "descriptions": [
+          "Developed a machine learning model for predicting the credit score of individuals."
+        ],
+        "yearMonth": "03/2024",
+        "emphasize": false
+      },
+      {
+        "title": "Special Prize, 3rd Place, Hackathon by LIFECARD🥉",
+        "descriptions": ["Created a machine learning model for credit scoring."],
+        "yearMonth": "10/2023",
+        "emphasize": false
+      },
+      {
+        "title": "World Rank 3, CodinGame Othello AI competition🥉",
+        "descriptions": [
+          "Developed an AI for the game of Othello by combining deep reinforcement learning and heuristic search algorithms."
+        ],
+        "yearMonth": "09/2023",
+        "emphasize": true
+      },
+      {
+        "title": "Special Prize, 4th Place in the Final Round, Hackathon by SoftBank🏅",
+        "descriptions": [
+          "Developed a web application integrated with object detection AI."
+        ],
+        "yearMonth": "03/2023",
+        "emphasize": false
+      },
+      {
+        "title": "Outstanding Achievement Award, Deep Reinforcement Learning Spring Seminar, Matsuo Laboratory🏅",
+        "descriptions": [],
+        "yearMonth": "03/2023",
+        "emphasize": false
+      }
+    ]
+  },
+  "workExperience": {
+    "title": "Work Experience",
+    "content": [
+      {
+        "company": "Preferred Networks, Inc.",
+        "position": "Part-time Engineer",
+        "period": "07/2024 - Present",
+        "descriptions": [
+          "Developing Optuna, an hyperparameter optimization library, as part of the AutoML team."
+        ]
+      },
+      {
+        "company": "The University of Tokyo Hospital",
+        "position": "Technical Staff (Part-time)",
+        "period": "05/2024 - Present",
+        "descriptions": [
+          "Conducting research and development of medical AI in collaboration with physicians."
+        ]
+      },
+      {
+        "company": "SIGNATE Inc.",
+        "position": "Technical Advisor, Educational Material Creator",
+        "period": "2023/12 - 2024/05",
+        "descriptions": [
+          "Created materials on RAG (Retrieval-Augmented Generation) and prompt engineering as an LLM Advisor.",
+          "Created educational materials on data analysis, LLM usage, algorithms, optimization, etc."
+        ]
+      },
+      {
+        "company": "kuzen Inc.",
+        "position": "Full-stack Engineer (Internship)",
+        "period": "2023/11 - 2024/04",
+        "descriptions": [
+          "Involved in front-end and back-end implementation, as well as the development of a RAG system using LangChain."
+        ]
+      },
+      {
+        "company": "Recruit Co., Ltd",
+        "position": "Datascientist (Internship)",
+        "period": "2023/10 - 2023/12",
+        "descriptions": [
+          "Worked in the Search Group of the Data Promotion Office, developing a RAG system to improve the internal document search experience."
+        ]
+      },
+      {
+        "company": "The University of Tokyo Edge Capital Partners Co., Ltd. (UTEC)",
+        "position": "Research Assistant",
+        "period": "07/2023 - Present",
+        "descriptions": [
+          "Conducting data collection, analysis, and predictive model creation for investors."
+        ]
+      },
+      {
+        "company": "LearnWiz Inc.",
+        "position": "Font-end Engineer (Outsourcing)",
+        "period": "2023/04 - 2023/09",
+        "descriptions": [
+          "Carried out front-end implementation and proposed UI/UX design for web applications."
+        ]
+      },
+      {
+        "company": "GHELIA Inc.",
+        "position": "AI Researcher (Internship)",
+        "period": "2023/01 - 2023/09",
+        "descriptions": [
+          "Conducted research and development in deep learning related to image recognition."
+        ]
+      }
+    ]
+  },
+  "technicalSkills": {
+    "title": "Technical Skills",
+    "dealWith": {
+      "title": "Deal with:",
+      "content": "Deep learning, reinforcement learning, front-end development, back-end development, iOS app development, etc."
+    },
+    "language": {
+      "title": "Languages and Frameworks:",
+      "advanced": {
+        "title": "Advanced:",
+        "content": "Rust, Python, PyTorch, TensorFlow, TypeScript, JavaScript, React, Next.js, HTML/CSS, C, C++, bash, Swift, Go, Google Apps Script, and R"
+      },
+      "intermediate": {
+        "title": "Intermediate:",
+        "content": "Haskell, OCaml, Scheme, Assembly (RISC-V), SQL, Fortran, Verilog, C# (Unity), Julia, Java, and Kotlin"
+      }
+    },
+    "other": {
+      "title": "Others:",
+      "content": "Git/GitHub, Docker, AWS, GCP, Linux, GitHub Actions, GraphQL, Arduino, Raspberry Pi, etc."
+    }
   }
 }
