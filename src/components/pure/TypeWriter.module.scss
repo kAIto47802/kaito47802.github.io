@@ -1,12 +1,17 @@
 .typeText {
-  display: inline-block;
+  display: block;
   color: transparent;
+}
+@media (min-width: 1240px) {
+  .typeText {
+    width: 105%;
+  }
 }
 
-.outView span {
+.outView .char {
   color: transparent;
 }
-.inView span {
+.inView .char {
   animation: 0.0001s forwards typing;
 }
 @keyframes typing {
@@ -19,16 +24,16 @@
 }
 
 @for $i from 1 through 150 {
-  .inView span:nth-child(#{$i}) {
+  .inView .char:nth-child(#{$i}) {
     animation-delay: (2.5s + 0.1s * ($i - 1));
   }
 }
 
-.typeText span {
+.typeText .char {
   position: relative;
 }
 
-.outView span:first-child::before {
+.outView .char:first-child::before {
   content: '';
   display: inline-block;
   width: 0.4em;
@@ -39,7 +44,7 @@
   top: 0.2em;
 }
 
-.inView span:first-child::before {
+.inView .char:first-child::before {
   content: '';
   display: inline-block;
   width: 0.4em;
@@ -73,7 +78,7 @@
   }
 }
 
-.inView span::after {
+.inView .char::after {
   content: '';
   display: inline-block;
   width: 0.4em;
@@ -104,13 +109,13 @@
   }
 }
 @for $i from 1 through 150 {
-  .inView span:nth-child(#{$i})::after {
+  .inView .char:nth-child(#{$i})::after {
     animation-delay: (2.5s + 0.1s * ($i - 1));
   }
 }
 
 @for $i from 2 through 150 {
-  .count-#{$i} span:last-child::before {
+  .count-#{$i} .char:last-child::before {
     content: '';
     display: inline-block;
     width: 0.4em;
@@ -120,7 +125,7 @@
     left: 100%;
     top: 0.2em;
     animation: 1s infinite blink;
-    animation-delay: (2.5s + 0.1s * $i + 1.5s);
+    animation-delay: (2.5s + 0.1s * $i + 1s);
     opacity: 0;
   }
 }

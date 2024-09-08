@@ -1,0 +1,11 @@
+.particles {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 0;
+}
+
+.particleCanvas {
+  position: absolute;
+  z-index: 0;
+}

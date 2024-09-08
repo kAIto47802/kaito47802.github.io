@@ -1,15 +1,13 @@
 .basicBox {
   position: relative;
   top: 20%;
-  /* background-color: #ffffff99; */
   height: 60%;
   width: 75%;
   display: flex;
   align-items: center;
-  /* transform: translateX(-100%); */
 }
 
-/* .basicBox::before {
+.basicBox::before {
   content: '';
   position: absolute;
   top: 0;
@@ -19,13 +17,83 @@
   background-color: #ffffff99;
 }
 
-.boxOutView::before {
+.basicBox.outView::before {
   transform: translateX(-100%);
 }
-.boxInView::before {
+.basicBox.inView::before {
   transform: translateX(0);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-} */
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+}
+
+.outView .githubProfile {
+  opacity: 0;
+}
+
+.inView .githubProfile {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+
+.icon {
+  position: relative;
+  z-index: 200;
+}
+
+.iconBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.iconBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.iconBox img:nth-child(1) {
+  mask-image: linear-gradient(to right, #000 33%, transparent 33%);
+  -webkit-mask-image: linear-gradient(to right, #000 33%, transparent 33%);
+}
+.iconBox img:nth-child(2) {
+  mask-image: linear-gradient(
+    to right,
+    transparent 33%,
+    #000 33%,
+    #000 67%,
+    transparent 67%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 33%,
+    #000 33%,
+    #000 67%,
+    transparent 67%
+  );
+}
+.iconBox img:nth-child(3) {
+  mask-image: linear-gradient(to right, transparent 67%, #000 67%);
+  -webkit-mask-image: linear-gradient(to right, transparent 67%, #000 67%);
+}
+
+.outView .iconBox img:nth-child(1),
+.outView .iconBox img:nth-child(3) {
+  transform: translate(0, -100%);
+  opacity: 0;
+}
+.outView .iconBox img:nth-child(2) {
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+
+.inView .iconBox img:nth-child(1),
+.inView .iconBox img:nth-child(2),
+.inView .iconBox img:nth-child(3) {
+  transform: translate(0, 0);
+  transition:
+    transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
+    opacity 0.4s ease-in-out 0.5s;
+}
 
 .basicContent {
   display: flex;
@@ -65,7 +133,7 @@
 }
 
 @media (max-width: 850px) {
-  .icon {
+  .iconBox {
     width: 180px !important;
     height: 180px !important;
   }
@@ -79,7 +147,6 @@
 
 .name {
   font-size: 3rem;
-  width: calc(100% - 300px);
 }
 @media (max-width: 800px) {
   .name {
@@ -111,7 +178,7 @@
   .basicContent {
     align-items: flex-start;
   }
-  .icon {
+  .iconBox {
     width: 3.8rem !important;
     height: 3.8rem !important;
   }
@@ -129,7 +196,7 @@
   }
 }
 @media (max-width: 500px) {
-  .icon {
+  .iconBox {
     width: 3.5rem !important;
     height: 3.5rem !important;
   }

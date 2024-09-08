@@ -1,0 +1,24 @@
+.dropInText span {
+  display: inline-block;
+  transform: translate(0, -105%);
+  opacity: 0;
+}
+
+.outView span {
+  transform: translate(0, -105%);
+  opacity: 0;
+}
+
+.inView span {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition:
+    transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
+    opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+@for $i from 1 through 30 {
+  .inView span:nth-child(#{$i}) {
+    transition-delay: 1s + 0.1s * ($i - 1);
+  }
+}

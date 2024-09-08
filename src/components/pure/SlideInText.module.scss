@@ -1,0 +1,18 @@
+.charText {
+  display: inline-block;
+  transform: translateX(-105%);
+}
+
+.outView .charText {
+  transform: translateX(-105%);
+}
+
+.char {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.inView .charText {
+  transform: translateX(0);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}

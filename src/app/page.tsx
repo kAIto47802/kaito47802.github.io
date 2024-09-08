@@ -8,6 +8,7 @@ import TechnicalSkills from '@/components/pageDependents/TechnicalSkills';
 import TitleBox from '@/components/pageDependents/TitleBox';
 import WorkExperience from '@/components/pageDependents/WorkExperience';
 import AnimatedHeader from '@/components/pure/AnimatedHeader';
+import CustomParticles from '@/components/pure/CustomParticles';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
 import {
@@ -22,6 +23,7 @@ const Home = () => {
     <>
       <Header />
       <main className={styles.main}>
+        <CustomParticles />
         <div className={styles.basic}>
           <TitleBox />
         </div>

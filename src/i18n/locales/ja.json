@@ -1,8 +1,8 @@
 {
   "basic": {
     "affiliation": {
-      "text": "東京大学工学部計数工学科4年",
-      "subText": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+      "textJa": "東京大学工学部計数工学科4年",
+      "text": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
     }
   },
   "publications": {
@@ -70,7 +70,7 @@
       {
         "title": "CodinGame オセロAIコンペティション 世界3位🥉",
         "descriptions": [
-          "深層強化学習と探索アルゴリズムを組み合わせてオセロAIを開発し，CodinGameのコンペティションで世界3位になりました。"
+          "深層強化学習と探索アルゴリズムを組み合わせてオセロAIを開発しました。"
         ],
         "yearMonth": "2023/09",
         "emphasize": true
@@ -114,7 +114,7 @@
       },
       {
         "company": "株式会社 SIGNATE",
-        "position": "技術アドバイザー・教材作成",
+        "position": "技術アドバイザー・教材作成担当（業務委託）",
         "period": {
           "start": "2023/12",
           "end": "2024/05"

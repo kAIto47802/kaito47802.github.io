@@ -1,8 +1,7 @@
 {
   "basic": {
     "affiliation": {
-      "text": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering",
-      "subText": ""
+      "text": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
     }
   },
   "publications": {
@@ -118,7 +117,7 @@
       },
       {
         "company": "SIGNATE Inc.",
-        "position": "Technical Advisor, Educational Material Creator",
+        "position": "Technical Advisor, Educational Material Creator (Outsourcing)",
         "period": {
           "start": "2023/12",
           "end": "2024/05"
