@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import styles from './AnimatedHeader.module.css';
+import styles from './AnimatedHeader.module.scss';
 
 const AnimatedHeader = ({ text }: { text: string }) => {
   const { ref, inView } = useInView();

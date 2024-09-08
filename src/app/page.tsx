@@ -1,15 +1,13 @@
 'use client';
 import Publication from '@/components/pageDependents/Publication';
-import { Noticia_Text } from 'next/font/google';
-import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
 import AwardsAndHonors from '@/components/pageDependents/AwardsAndHonors';
 import TechnicalSkills from '@/components/pageDependents/TechnicalSkills';
+import TitleBox from '@/components/pageDependents/TitleBox';
 import WorkExperience from '@/components/pageDependents/WorkExperience';
 import AnimatedHeader from '@/components/pure/AnimatedHeader';
-import GitHubIcon from '@/components/pure/GitHubIcon';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
 import {
@@ -17,10 +15,6 @@ import {
   Publication as PublicationType,
   WorkExperience as WorkExperienceType,
 } from '@/types';
-import nextConfig from '../../next.config.mjs';
-const BASE_PATH = nextConfig.basePath || '';
-
-const noticia = Noticia_Text({ weight: '400', style: 'italic', subsets: ['latin'] });
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -29,26 +23,7 @@ const Home = () => {
       <Header />
       <main className={styles.main}>
         <div className={styles.basic}>
-          <div className={styles.basicBox}>
-            <div className={styles.basicContent}>
-              <Image
-                className={styles.icon}
-                src={`${BASE_PATH}/icon.jpg`}
-                alt='icon'
-                width={200}
-                height={200}
-                style={{ borderRadius: '50%' }}
-              />
-              <div className={styles.basicText}>
-                <div className={`${styles.name} ${noticia.className}`}>kAIto47802</div>
-                <div className={styles.affiliation}>{t('basic.affiliation')}</div>
-                <GitHubIcon
-                  className={styles.githubProfile}
-                  link='https://github.com/kAIto47802'
-                />
-              </div>
-            </div>
-          </div>
+          <TitleBox />
         </div>
         <div className={styles.content}>
           <div className={styles.contentBox}>

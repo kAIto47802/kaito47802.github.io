@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Jiyuno Tsubasa';
+  src: url(../../fonts/JiyunoTsubasa.ttf) format('truetype');
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  border-top: solid 2px #285fc6;
+  border-bottom: solid 2px #285fc6;
+  margin: 0.5rem 0;
+  padding: 0.01rem 2rem;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Jiyuno Tsubasa';
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+.title span {
+  display: inline-block;
+  transform: translate(0, -105%);
+  opacity: 0;
+}
+
+.outView span {
+  transform: translate(0, -105%);
+  opacity: 0;
+}
+
+.inView span {
+  animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) slidein;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(0, -105%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@for $i from 2 through 21 {
+  .title span:nth-child(#{$i}) {
+    animation-delay: (0.06s * ($i - 1));
+  }
+}

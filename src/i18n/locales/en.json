@@ -1,6 +1,9 @@
 {
   "basic": {
-    "affiliation": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+    "affiliation": {
+      "text": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering",
+      "subText": ""
+    }
   },
   "publications": {
     "title": "Publications",

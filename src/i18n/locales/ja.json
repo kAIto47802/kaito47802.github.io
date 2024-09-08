@@ -1,6 +1,9 @@
 {
   "basic": {
-    "affiliation": "東京大学工学部計数工学科4年\nFourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+    "affiliation": {
+      "text": "東京大学工学部計数工学科4年",
+      "subText": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+    }
   },
   "publications": {
     "title": "発表論文",

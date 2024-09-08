@@ -1,0 +1,143 @@
+.typeText {
+  display: inline-block;
+  color: transparent;
+}
+
+.outView span {
+  color: transparent;
+}
+.inView span {
+  animation: 0.0001s forwards typing;
+}
+@keyframes typing {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}
+
+@for $i from 1 through 150 {
+  .inView span:nth-child(#{$i}) {
+    animation-delay: (2.5s + 0.1s * ($i - 1));
+  }
+}
+
+.typeText span {
+  position: relative;
+}
+
+.outView span:first-child::before {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.9em;
+  background-color: #5f5f5f;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+}
+
+.inView span:first-child::before {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.9em;
+  background-color: #5f5f5f;
+  animation: 2.5s forwards blink-first;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+}
+
+@keyframes blink-first {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    // display: none;
+  }
+}
+
+.inView span::after {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.9em;
+  background-color: #5f5f5f;
+  animation: 0.102s forwards cursor;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  opacity: 0;
+}
+@keyframes cursor {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  10% {
+    opacity: 1;
+    left: 100%;
+  }
+  99% {
+    opacity: 1;
+    left: 100%;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@for $i from 1 through 150 {
+  .inView span:nth-child(#{$i})::after {
+    animation-delay: (2.5s + 0.1s * ($i - 1));
+  }
+}
+
+@for $i from 2 through 150 {
+  .count-#{$i} span:last-child::before {
+    content: '';
+    display: inline-block;
+    width: 0.4em;
+    height: 0.9em;
+    background-color: #5f5f5f;
+    position: absolute;
+    left: 100%;
+    top: 0.2em;
+    animation: 1s infinite blink;
+    animation-delay: (2.5s + 0.1s * $i + 1.5s);
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
