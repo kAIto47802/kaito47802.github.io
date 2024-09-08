@@ -18,7 +18,7 @@ import {
 } from '@/types';
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Header />
