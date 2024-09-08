@@ -1,5 +1,6 @@
 'use client';
 import Providers from '@/app/providers';
+import GoogleAnalytics from '@/components/pure/GoogleAnalytics';
 import { Noto_Sans, Noto_Sans_JP } from 'next/font/google';
 import { useTranslation } from 'react-i18next';
 const notoSans = Noto_Sans({ subsets: ['latin'] });
@@ -14,6 +15,9 @@ const Template = ({
   return (
     <html lang={i18n.language}>
       <Providers>
+        <head>
+          <GoogleAnalytics />
+        </head>
         <body
           className={i18n.language === 'en' ? notoSans.className : notoSansJP.className}
         >
