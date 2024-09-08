@@ -15,11 +15,12 @@ const AwardsAndHonors = ({
   emphasize,
 }: AwardsAndHonorsProps) => (
   <ArrowContent className={styles.awardsAndHonors}>
-    {yearMonth && <div className={styles.yearMonth}>{yearMonth}</div>}
+    <div className={styles.yearMonth}>{yearMonth}</div>
     <div className={styles.content}>
       <SlideInLeft className={`${styles.title} ${emphasize ? styles.emph : ''}`}>
         {title}
       </SlideInLeft>
+      <div className={styles.yearMonthInner}>{yearMonth}</div>
       {descriptions &&
         (descriptions as string[]).map((desc, i) => (
           <SlideInRight key={i} className={styles.description}>

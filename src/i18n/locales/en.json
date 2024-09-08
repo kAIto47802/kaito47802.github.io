@@ -94,7 +94,10 @@
       {
         "company": "Preferred Networks, Inc.",
         "position": "Part-time Engineer",
-        "period": "07/2024 - Present",
+        "period": {
+          "start": "07/2024",
+          "end": "Present"
+        },
         "descriptions": [
           "Developing Optuna, an hyperparameter optimization library, as part of the AutoML team."
         ]
@@ -102,7 +105,10 @@
       {
         "company": "The University of Tokyo Hospital",
         "position": "Technical Staff (Part-time)",
-        "period": "05/2024 - Present",
+        "period": {
+          "start": "05/2024",
+          "end": "Present"
+        },
         "descriptions": [
           "Conducting research and development of medical AI in collaboration with physicians."
         ]
@@ -110,7 +116,10 @@
       {
         "company": "SIGNATE Inc.",
         "position": "Technical Advisor, Educational Material Creator",
-        "period": "2023/12 - 2024/05",
+        "period": {
+          "start": "2023/12",
+          "end": "2024/05"
+        },
         "descriptions": [
           "Created materials on RAG (Retrieval-Augmented Generation) and prompt engineering as an LLM Advisor.",
           "Created educational materials on data analysis, LLM usage, algorithms, optimization, etc."
@@ -119,7 +128,10 @@
       {
         "company": "kuzen Inc.",
         "position": "Full-stack Engineer (Internship)",
-        "period": "2023/11 - 2024/04",
+        "period": {
+          "start": "2023/11",
+          "end": "2024/04"
+        },
         "descriptions": [
           "Involved in front-end and back-end implementation, as well as the development of a RAG system using LangChain."
         ]
@@ -127,7 +139,10 @@
       {
         "company": "Recruit Co., Ltd",
         "position": "Datascientist (Internship)",
-        "period": "2023/10 - 2023/12",
+        "period": {
+          "start": "2023/10",
+          "end": "2023/12"
+        },
         "descriptions": [
           "Worked in the Search Group of the Data Promotion Office, developing a RAG system to improve the internal document search experience."
         ]
@@ -135,7 +150,10 @@
       {
         "company": "The University of Tokyo Edge Capital Partners Co., Ltd. (UTEC)",
         "position": "Research Assistant",
-        "period": "07/2023 - Present",
+        "period": {
+          "start": "07/2023",
+          "end": "Present"
+        },
         "descriptions": [
           "Conducting data collection, analysis, and predictive model creation for investors."
         ]
@@ -143,7 +161,10 @@
       {
         "company": "LearnWiz Inc.",
         "position": "Font-end Engineer (Outsourcing)",
-        "period": "2023/04 - 2023/09",
+        "period": {
+          "start": "2023/04",
+          "end": "2023/09"
+        },
         "descriptions": [
           "Carried out front-end implementation and proposed UI/UX design for web applications."
         ]
@@ -151,7 +172,10 @@
       {
         "company": "GHELIA Inc.",
         "position": "AI Researcher (Internship)",
-        "period": "2023/01 - 2023/09",
+        "period": {
+          "start": "2023/01",
+          "end": "2023/09"
+        },
         "descriptions": [
           "Conducted research and development in deep learning related to image recognition."
         ]

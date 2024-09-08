@@ -17,6 +17,9 @@ export interface AwardsAndHonors {
 export interface WorkExperience {
   company: string;
   position: string;
-  period: string;
+  period: {
+    start: string;
+    end: string;
+  };
   descriptions: string[];
 }

@@ -16,6 +16,16 @@
   transform: translateX(-50%);
   font-family: 'Jiyuno Tsubasa';
 }
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
 
 .title span {
   display: inline-block;

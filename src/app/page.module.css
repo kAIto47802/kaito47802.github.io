@@ -14,7 +14,7 @@
 }
 @media (max-width: 600px) and (min-height: 650px) {
   .basic {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
@@ -165,4 +165,19 @@
   width: 80%;
   background-color: #ffffff56;
   padding: 1rem 1rem 2rem;
+}
+@media (max-width: 900px) {
+  .contentBox {
+    width: 85%;
+  }
+}
+@media (max-width: 820px) {
+  .contentBox {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .contentBox {
+    width: 95%;
+  }
 }

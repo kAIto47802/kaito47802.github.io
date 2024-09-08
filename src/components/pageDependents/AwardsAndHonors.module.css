@@ -4,9 +4,45 @@
   align-items: flex-start;
   justify-content: start;
 }
+@media (max-width: 665px) {
+  .awardsAndHonors {
+    margin-left: 0.8em;
+    margin-right: 0.2em;
+  }
+}
+@media (max-width: 520px) {
+  .yearMonth {
+    display: none;
+  }
+}
+@media (min-width: 520px) {
+  .yearMonthInner {
+    display: none;
+  }
+}
 
 .yearMonth {
   width: 4.5rem;
+}
+@media (max-width: 750px) {
+  .yearMonth {
+    width: 4rem;
+  }
+}
+
+.yearMonthInner {
+  position: relative;
+}
+
+.yearMonthInner::before {
+  content: '';
+  position: absolute;
+  border: 1.9px solid #f6a38b;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: -1em;
+  top: 0.5em;
 }
 
 .content {
@@ -17,6 +53,27 @@
 .description {
   position: relative;
   margin-left: 2rem;
+  width: auto;
+}
+@media (max-width: 670px) {
+  .description {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 630px) {
+  .description {
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 610px) {
+  .description {
+    margin-left: -1rem;
+  }
+}
+@media (max-width: 560px) {
+  .description {
+    margin-left: -3rem;
+  }
 }
 
 .description::before {
@@ -34,4 +91,35 @@
 
 .emph {
   color: #ff07ad;
+}
+
+@media (max-width: 520px) {
+  .content {
+    padding-left: 0;
+  }
+  .title {
+    position: relative;
+  }
+  .yearMonthInner,
+  .description {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .yearMonthInner,
+  .description {
+    margin-left: 0.7em;
+  }
+}
+@media (max-width: 430px) {
+  .yearMonthInner,
+  .description {
+    margin-left: 0.4em;
+  }
+}
+@media (max-width: 550px) {
+  .yearMonthInner,
+  .description {
+    font-size: 0.9em;
+  }
 }

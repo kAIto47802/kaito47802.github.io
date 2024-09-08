@@ -16,7 +16,11 @@ const WorkExperience = ({
   descriptions,
 }: WorkExperienceProps) => (
   <ArrowContent className={styles.workExperience}>
-    <div className={styles.period}>{period}</div>
+    <div className={styles.period}>
+      <span>{period.start}</span>
+      <br />
+      <span> - {period.end}</span>
+    </div>
     <div className={styles.content}>
       {index % 2 ? (
         <SlideInLeft className={styles.company}>{company}</SlideInLeft>
@@ -24,9 +28,19 @@ const WorkExperience = ({
         <SlideInRight className={styles.company}>{company}</SlideInRight>
       )}
       {index % 2 ? (
-        <SlideInRight className={styles.position}>{position}</SlideInRight>
+        <>
+          <SlideInRight className={styles.position}>{position}</SlideInRight>
+          <SlideInRight className={styles.periodInner}>
+            {period.start} - {period.end}
+          </SlideInRight>
+        </>
       ) : (
-        <SlideInLeft className={styles.position}>{position}</SlideInLeft>
+        <>
+          <SlideInLeft className={styles.position}>{position}</SlideInLeft>
+          <SlideInLeft className={styles.periodInner}>
+            {period.start} - {period.end}
+          </SlideInLeft>
+        </>
       )}
       {descriptions &&
         (descriptions as string[]).map((desc, i) =>
