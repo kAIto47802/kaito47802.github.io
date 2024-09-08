@@ -3,9 +3,9 @@
 import { GA_TAG_ID, IS_GATAG, pageview } from '@/libs/gtag';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 
-const GoogleAnalytics = () => {
+const GoogleAnalyticsInner = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -37,4 +37,11 @@ const GoogleAnalytics = () => {
   );
 };
 
+const GoogleAnalytics = () => {
+  return (
+    <Suspense>
+      <GoogleAnalyticsInner />
+    </Suspense>
+  );
+};
 export default GoogleAnalytics;
