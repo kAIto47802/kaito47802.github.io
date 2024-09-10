@@ -22,7 +22,7 @@
 }
 .basicBox.inView::before {
   transform: translateX(0);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
 }
 
 .outView .githubProfile {

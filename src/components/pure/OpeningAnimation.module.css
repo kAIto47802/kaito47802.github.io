@@ -1,0 +1,32 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container::before,
+.container::after {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #070847;
+  z-index: 500;
+}
+
+.container::before {
+  left: 0;
+}
+
+.container::after {
+  left: 50%;
+}
+
+.inView::before,
+.inView::after {
+  width: 0%;
+  transition: width 0.25s cubic-bezier(0.17, 0.67, 0.25, 0.96) 0.1s;
+}

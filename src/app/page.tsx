@@ -11,6 +11,7 @@ import AnimatedHeader from '@/components/pure/AnimatedHeader';
 import CustomParticles from '@/components/pure/CustomParticles';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
+import OpeningAnimation from '@/components/pure/OpeningAnimaiton';
 import {
   AwardsAndHonors as AwardsAndHonorsType,
   Publication as PublicationType,
@@ -23,6 +24,7 @@ const Home = () => {
     <>
       <Header />
       <main className={styles.main}>
+        <OpeningAnimation />
         <CustomParticles />
         <div className={styles.basic}>
           <TitleBox />

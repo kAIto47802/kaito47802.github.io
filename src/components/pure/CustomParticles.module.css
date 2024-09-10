@@ -2,6 +2,15 @@
   position: absolute;
   width: 100px;
   height: 100px;
+  z-index: 510;
+  transition: z-index 0.01s linear 0.25s;
+}
+
+.outView .particles {
+  z-index: 510;
+}
+
+.inView .particles {
   z-index: 0;
 }
 
