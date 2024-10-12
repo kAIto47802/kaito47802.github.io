@@ -22,6 +22,7 @@
         "conference": "IEEE Spoken Language Technology Workshop (SLT)",
         "year": "2024",
         "github": "https://github.com/sarulab-speech/UTMOSv2",
+        "arxiv": "2409.09305",
         "type": "international conference"
       },
       {
@@ -31,6 +32,20 @@
         "year": "2024",
         "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "domestic conference"
+      },
+      {
+        "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
+        "authors": "Kaito Baba, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Satoshi Kodera",
+        "conference": "AIM-FM Workshop @ NeurIPS",
+        "year": "2024",
+        "type": "workshop"
+      },
+      {
+        "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
+        "authors": "Junichiro Takahashi, Yasukawa Kan, Kaito Baba, Satoshi Kodera",
+        "conference": "AIM-FM Workshop @ NeurIPS",
+        "year": "2024",
+        "type": "workshop"
       }
     ]
   },

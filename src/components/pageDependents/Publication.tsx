@@ -1,8 +1,9 @@
+import ArrowContent from '@/components/pure/ArrowContent';
+import ArXivIcon from '@/components/pure/ArXivIcon';
+import GitHubIcon from '@/components/pure/GitHubIcon';
 import SlideInLeft from '@/components/pure/SlideInLeft';
 import SlideInRight from '@/components/pure/SlideInRight';
 import { Publication as PublicationType } from '@/types';
-import ArrowContent from '../pure/ArrowContent';
-import GitHubIcon from '../pure/GitHubIcon';
 import styles from './Publication.module.css';
 
 interface PublicationProps extends PublicationType {
@@ -16,6 +17,7 @@ const Publication = ({
   conference,
   year,
   github,
+  arxiv,
 }: PublicationProps) => (
   <ArrowContent className={styles.publication}>
     {index % 2 ? (
@@ -31,12 +33,18 @@ const Publication = ({
     {index % 2 ? (
       <SlideInLeft className={styles.conference}>
         {conference}, {year}
-        {github && <GitHubIcon link={github} />}
+        <div className={styles.icons}>
+          {github && <GitHubIcon link={github} />}
+          {arxiv && <ArXivIcon num={arxiv} />}
+        </div>
       </SlideInLeft>
     ) : (
       <SlideInRight className={styles.conference}>
         {conference}, {year}
-        {github && <GitHubIcon link={github} />}
+        <div className={styles.icons}>
+          {github && <GitHubIcon link={github} />}
+          {arxiv && <ArXivIcon num={arxiv} />}
+        </div>
       </SlideInRight>
     )}
   </ArrowContent>

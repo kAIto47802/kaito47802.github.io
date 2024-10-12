@@ -4,7 +4,8 @@ export interface Publication {
   conference: string;
   year: number;
   github?: string;
-  type: 'international conference' | 'domestic conference';
+  arxiv?: string;
+  type: 'international conference' | 'domestic conference' | 'workshop';
 }
 
 export interface AwardsAndHonors {
