@@ -1,7 +1,17 @@
 import Image from 'next/image';
 import styles from './PosterIcon.module.css';
 
-const PosterIcon = ({ text, link, color, className }: { text: string, link: string, color?: string, className?: string }) => (
+const PosterIcon = ({
+  text,
+  link,
+  color,
+  className,
+}: {
+  text: string;
+  link: string;
+  color?: string;
+  className?: string;
+}) => (
   <>
     <a href={link} className={`${styles.poster} ${className ?? ''}`}>
       <Image
