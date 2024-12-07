@@ -1,3 +1,8 @@
+export interface Poster {
+  text: string;
+  link: string;
+}
+
 export interface Publication {
   title: string;
   authors: string;
@@ -5,6 +10,7 @@ export interface Publication {
   year: number;
   github?: string;
   arxiv?: string;
+  poster?: Poster;
   type: 'international conference' | 'domestic conference' | 'workshop';
 }
 

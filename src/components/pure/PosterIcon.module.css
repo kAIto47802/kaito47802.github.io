@@ -1,0 +1,12 @@
+.poster {
+  height: 1.2rem;
+  margin-top: 0.4rem;
+  position: relative;
+  display: inline-block;
+}
+
+.poster img {
+  object-fit: contain;
+  position: relative !important;
+  width: auto !important;
+}

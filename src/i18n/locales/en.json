@@ -26,6 +26,10 @@
         "year": "2024",
         "github": "https://github.com/sarulab-speech/UTMOSv2",
         "arxiv": "2409.09305",
+        "poster": {
+          "text": "IEEE%20SLT%202024",
+          "link": "https://github.com/sarulab-speech/UTMOSv2/blob/main/poster.pdf"
+        },
         "type": "international conference"
       },
       {
@@ -41,6 +45,7 @@
         "authors": "Kaito Baba, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Satoshi Kodera",
         "conference": "AIM-FM Workshop @ NeurIPS",
         "year": "2024",
+        "arxiv": "2411.09933",
         "type": "workshop"
       },
       {
@@ -176,7 +181,8 @@
           "end": "Present"
         },
         "descriptions": [
-          "Conducting data collection, analysis, and predictive model creation for investors."
+          "Conducting data collection, analysis, and predictive model creation for investors.",
+          "Developing a system for an internal tool."
         ]
       },
       {

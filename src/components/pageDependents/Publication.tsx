@@ -1,6 +1,7 @@
 import ArrowContent from '@/components/pure/ArrowContent';
 import ArXivIcon from '@/components/pure/ArXivIcon';
 import GitHubIcon from '@/components/pure/GitHubIcon';
+import PosterIcon from '@/components/pure/PosterIcon';
 import SlideInLeft from '@/components/pure/SlideInLeft';
 import SlideInRight from '@/components/pure/SlideInRight';
 import { Publication as PublicationType } from '@/types';
@@ -18,6 +19,7 @@ const Publication = ({
   year,
   github,
   arxiv,
+  poster,
 }: PublicationProps) => (
   <ArrowContent className={styles.publication}>
     {index % 2 ? (
@@ -36,6 +38,7 @@ const Publication = ({
         <div className={styles.icons}>
           {github && <GitHubIcon link={github} />}
           {arxiv && <ArXivIcon num={arxiv} />}
+          {poster && <PosterIcon text={poster.text} link={poster.link} />}
         </div>
       </SlideInLeft>
     ) : (
@@ -44,6 +47,7 @@ const Publication = ({
         <div className={styles.icons}>
           {github && <GitHubIcon link={github} />}
           {arxiv && <ArXivIcon num={arxiv} />}
+          {poster && <PosterIcon text={poster.text} link={poster.link} />}
         </div>
       </SlideInRight>
     )}
