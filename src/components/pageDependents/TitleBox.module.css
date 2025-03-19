@@ -25,11 +25,17 @@
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
 }
 
-.outView .githubProfile {
+.scholarProfile {
+  margin-left: 0.5rem;
+}
+
+.outView .githubProfile,
+.outView .scholarProfile {
   opacity: 0;
 }
 
-.inView .githubProfile {
+.inView .githubProfile,
+.inView .scholarProfile {
   opacity: 1;
   transition: opacity 0.5s ease-in-out 0.5s;
 }
@@ -190,7 +196,8 @@
     position: relative;
     left: -4rem;
   }
-  .githubProfile {
+  .githubProfile,
+  .scholarProfile {
     position: relative;
     left: -4rem;
   }

@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import DropInText from '../pure/DropInText';
 import GitHubIcon from '../pure/GitHubIcon';
+import ScholarIcon from '../pure/ScholarIcon';
 import SlideInText from '../pure/SlideInText';
 import TypeWriter from '../pure/TypeWriter';
 import styles from './TitleBox.module.css';
@@ -57,6 +58,10 @@ const TitleBox = () => {
           <GitHubIcon
             className={styles.githubProfile}
             link='https://github.com/kAIto47802'
+          />
+          <ScholarIcon
+            className={styles.scholarProfile}
+            url='https://github.com/kAIto47802'
           />
         </div>
       </div>
