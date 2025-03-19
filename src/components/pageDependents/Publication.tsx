@@ -5,6 +5,7 @@ import PosterIcon from '@/components/pure/PosterIcon';
 import SlideInLeft from '@/components/pure/SlideInLeft';
 import SlideInRight from '@/components/pure/SlideInRight';
 import { Publication as PublicationType } from '@/types';
+import LinkIcon from '../pure/LinkIcon';
 import styles from './Publication.module.css';
 
 interface PublicationProps extends PublicationType {
@@ -20,6 +21,7 @@ const Publication = ({
   github,
   arxiv,
   poster,
+  link,
 }: PublicationProps) => (
   <ArrowContent className={styles.publication}>
     {index % 2 ? (
@@ -39,6 +41,7 @@ const Publication = ({
           {github && <GitHubIcon link={github} />}
           {arxiv && <ArXivIcon num={arxiv} />}
           {poster && <PosterIcon text={poster.text} link={poster.link} />}
+          {link && <LinkIcon link={link} />}
         </div>
       </SlideInLeft>
     ) : (
@@ -48,6 +51,7 @@ const Publication = ({
           {github && <GitHubIcon link={github} />}
           {arxiv && <ArXivIcon num={arxiv} />}
           {poster && <PosterIcon text={poster.text} link={poster.link} />}
+          {link && <LinkIcon link={link} />}
         </div>
       </SlideInRight>
     )}

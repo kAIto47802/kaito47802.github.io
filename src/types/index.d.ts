@@ -11,7 +11,8 @@ export interface Publication {
   github?: string;
   arxiv?: string;
   poster?: Poster;
-  type: 'international conference' | 'domestic conference' | 'workshop';
+  link?: string;
+  type: 'international conference' | 'domestic conference' | 'article' | 'workshop';
 }
 
 export interface AwardsAndHonors {

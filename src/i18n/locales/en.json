@@ -14,11 +14,46 @@
       "text": "Domestic Conference",
       "subtext": ""
     },
+    "articles": {
+      "text": "Articles",
+      "subtext": ""
+    },
     "workshop": {
       "text": "Workshop",
       "subtext": ""
     },
     "content": [
+      {
+        "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
+        "authors": "Kaito Baba",
+        "conference": "Medium",
+        "year": "2025",
+        "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810",
+        "type": "article"
+      },
+      {
+        "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
+        "authors": "Kaito Baba",
+        "conference": "Preferred Networks Tech Blog",
+        "year": "2025",
+        "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/",
+        "type": "article"
+      },
+      {
+        "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
+        "authors": "Kaito Baba, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Satoshi Kodera",
+        "conference": "AIM-FM Workshop @ NeurIPS",
+        "year": "2024",
+        "arxiv": "2411.09933",
+        "type": "workshop"
+      },
+      {
+        "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
+        "authors": "Junichiro Takahashi, Yasukawa Kan, Kaito Baba, Satoshi Kodera",
+        "conference": "AIM-FM Workshop @ NeurIPS",
+        "year": "2024",
+        "type": "workshop"
+      },
       {
         "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
         "authors": "Kaito Baba, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
@@ -39,21 +74,6 @@
         "year": "2024",
         "github": "https://github.com/sarulab-speech/UTMOSv2",
         "type": "domestic conference"
-      },
-      {
-        "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
-        "authors": "Kaito Baba, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Satoshi Kodera",
-        "conference": "AIM-FM Workshop @ NeurIPS",
-        "year": "2024",
-        "arxiv": "2411.09933",
-        "type": "workshop"
-      },
-      {
-        "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
-        "authors": "Junichiro Takahashi, Yasukawa Kan, Kaito Baba, Satoshi Kodera",
-        "conference": "AIM-FM Workshop @ NeurIPS",
-        "year": "2024",
-        "type": "workshop"
       }
     ]
   },
