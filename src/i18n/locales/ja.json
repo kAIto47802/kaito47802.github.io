@@ -224,6 +224,45 @@
       }
     ]
   },
+  "education": {
+    "title": "学歴",
+    "content": [
+      {
+        "institution": "東京大学工学部計数工学科",
+        "degree": "学士",
+        "period": {
+          "start": "2022/09",
+          "end": "2025/03"
+        },
+        "notes": ["Prof. Taiji Suzuki's Laboratory"]
+      },
+      {
+        "institution": "東京大学理科一類",
+        "degree": "学士",
+        "period": {
+          "start": "2021/04",
+          "end": "2022/08"
+        }
+      }
+    ]
+  },
+  "otherExperience": {
+    "title": "その他の経験",
+    "content": [
+      {
+        "place": "国立清華大学 (National Tsing Hua University)",
+        "period": {
+          "start": "2025/02",
+          "end": "2025/03"
+        },
+        "descriptions": [
+          "短期留学 (修士課程)",
+          "工業工程與工程管理學系 (Department of Industrial Engineering and Engineering Management)"
+        ],
+        "notes": ["Worked with Prof. Wing-Kai Hon", "効率的なアルゴリズムに関する研究"]
+      }
+    ]
+  },
   "technicalSkills": {
     "title": "技術スキル",
     "dealWith": {

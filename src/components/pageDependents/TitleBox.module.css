@@ -52,6 +52,17 @@
   transition: opacity 0.5s ease-in-out 0.5s;
 }
 
+.outView .contact {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.inView .contact {
+  transform: translateX(0);
+  transition:
+    transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
+    opacity 0.4s ease-in-out 0.5s;
+}
+
 .icon {
   position: relative;
   z-index: 200;

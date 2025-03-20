@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
 import AwardsAndHonors from '@/components/pageDependents/AwardsAndHonors';
+import Education from '@/components/pageDependents/Education';
+import OtherExperience from '@/components/pageDependents/OtherExperience';
 import TechnicalSkills from '@/components/pageDependents/TechnicalSkills';
 import TitleBox from '@/components/pageDependents/TitleBox';
 import WorkExperience from '@/components/pageDependents/WorkExperience';
@@ -14,6 +16,8 @@ import Heading2 from '@/components/pure/Heading2';
 import OpeningAnimation from '@/components/pure/OpeningAnimaiton';
 import {
   AwardsAndHonors as AwardsAndHonorsType,
+  Education as EducationType,
+  OtherExperience as OtherExperienceType,
   Publication as PublicationType,
   WorkExperience as WorkExperienceType,
 } from '@/types';
@@ -85,6 +89,24 @@ const Home = () => {
               t('workExperience.content', { returnObjects: true }) as WorkExperienceType[]
             ).map((workExperience, index) => (
               <WorkExperience key={index} index={index} {...workExperience} />
+            ))}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('education.title')} />
+            {(t('education.content', { returnObjects: true }) as EducationType[]).map(
+              (education, index) => (
+                <Education key={index} index={index} {...education} />
+              ),
+            )}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('otherExperience.title')} />
+            {(
+              t('otherExperience.content', {
+                returnObjects: true,
+              }) as OtherExperienceType[]
+            ).map((otherExperience, index) => (
+              <OtherExperience key={index} index={index} {...otherExperience} />
             ))}
           </div>
           <div className={styles.contentBox}>

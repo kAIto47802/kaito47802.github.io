@@ -31,3 +31,24 @@ export interface WorkExperience {
   };
   descriptions: string[];
 }
+
+export interface Education {
+  institution: string;
+  department: string;
+  degree: string;
+  period: {
+    start: string;
+    end: string;
+  };
+  notes: string[];
+}
+
+export interface OtherExperience {
+  place: string;
+  period: {
+    start: string;
+    end: string;
+  };
+  descriptions: string[];
+  notes: string[];
+}

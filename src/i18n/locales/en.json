@@ -229,6 +229,50 @@
       }
     ]
   },
+  "education": {
+    "title": "Education",
+    "content": [
+      {
+        "institution": "The University of Tokyo",
+        "degree": "Bachelor",
+        "department": "Department of Mathematical Engineering and Information Physics, Faculty of Engineering",
+        "period": {
+          "start": "2022/09",
+          "end": "2025/03"
+        },
+        "notes": ["Prof. Taiji Suzuki's Laboratory"]
+      },
+      {
+        "institution": "The University of Tokyo",
+        "degree": "Bachelor",
+        "department": "Natural Science 1",
+        "period": {
+          "start": "2021/04",
+          "end": "2022/08"
+        }
+      }
+    ]
+  },
+  "otherExperience": {
+    "title": "Other Experience",
+    "content": [
+      {
+        "place": "National Tsing Hua University",
+        "period": {
+          "start": "2025/02",
+          "end": "2025/03"
+        },
+        "descriptions": [
+          "Short-term Exchange Program (Master Course)",
+          "Department of Industrial Engineering and Engineering Management"
+        ],
+        "notes": [
+          "Worked with Prof. Wing-Kai Hon",
+          "Conducted research on efficient algorithm design"
+        ]
+      }
+    ]
+  },
   "technicalSkills": {
     "title": "Technical Skills",
     "dealWith": {

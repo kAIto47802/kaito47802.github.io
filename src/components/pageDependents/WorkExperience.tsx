@@ -43,7 +43,7 @@ const WorkExperience = ({
         </>
       )}
       {descriptions &&
-        (descriptions as string[]).map((desc, i) =>
+        descriptions.map((desc, i) =>
           index % 2 ? (
             <SlideInLeft key={i} className={styles.description}>
               {desc}
