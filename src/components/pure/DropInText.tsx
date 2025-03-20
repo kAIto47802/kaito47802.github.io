@@ -12,14 +12,14 @@ const DropInText = ({
 }) => {
   const { ref, inView } = useInView({ triggerOnce });
   return (
-    <div
+    <span
       ref={ref}
       className={`${styles.dropInText} ${inView ? styles.inView : styles.outView} ${className ?? ''}`}
     >
       {text.split('').map((char, index) => (
         <span key={index}>{char}</span>
       ))}
-    </div>
+    </span>
   );
 };
 export default DropInText;

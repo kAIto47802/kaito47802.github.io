@@ -25,6 +25,18 @@
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
 }
 
+.contact::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 0.9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.2em;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJfeDMyXyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0id2lkdGg6IDMycHg7IGhlaWdodDogMzJweDsgb3BhY2l0eTogMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CS5zdDB7ZmlsbDojNEI0QjRCO308L3N0eWxlPjxnPgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTEwLjY3OCwxMTIuMjc1Yy0yLjMwOC0xMS42MjYtNy40NjMtMjIuMjY1LTE0LjY2Mi0zMS4wNTRjLTEuNTE4LTEuOTE1LTMuMTA0LTMuNjMtNC44MjMtNS4zNDUgYy0xMi43NTUtMTIuODE4LTMwLjY1Ny0yMC44MTQtNTAuMjE0LTIwLjgxNEg3MS4wMjFjLTE5LjU1NywwLTM3LjM5NSw3Ljk5Ni01MC4yMSwyMC44MTRjLTEuNzE1LDEuNzE1LTMuMzAxLDMuNDMtNC44MjMsNS4zNDUgQzguNzg1LDkwLjAwOSwzLjYzLDEwMC42NDksMS4zODYsMTEyLjI3NUMwLjQ2NCwxMTYuNzYyLDAsMTIxLjM5OSwwLDEyNi4wODdWMzg1LjkyYzAsOS45NjgsMi4xMTQsMTkuNTUsNS44ODQsMjguMjAzIGMzLjQ5Nyw4LjI2LDguNjUzLDE1LjczNCwxNC45MjYsMjIuMDAxYzEuNTksMS41ODYsMy4xNjksMy4wNDQsNC44OTIsNC40OTRjMTIuMjg2LDEwLjE3NSwyOC4xNDUsMTYuMzIsNDUuMzE5LDE2LjMyaDM2OS45NTggYzE3LjE4LDAsMzMuMTA4LTYuMTQ1LDQ1LjMyMy0xNi4zODRjMS43MTgtMS4zODYsMy4zMDUtMi44NDQsNC44OTEtNC40M2M2LjI3LTYuMjY3LDExLjQyNS0xMy43NDEsMTQuOTk0LTIyLjAwMXYtMC4wNjQgYzMuNzY5LTguNjUzLDUuODEyLTE4LjE3MSw1LjgxMi0yOC4xMzhWMTI2LjA4N0M1MTIsMTIxLjM5OSw1MTEuNTQzLDExNi43NjIsNTEwLjY3OCwxMTIuMjc1eiBNNDYuNTA5LDEwMS41NzEgYzYuMzQ1LTYuMzM4LDE0Ljg2Ni0xMC4xNzUsMjQuNTEyLTEwLjE3NWgzNjkuOTU4YzkuNjQ2LDAsMTguMjQyLDMuODM3LDI0LjUxMiwxMC4xNzVjMS4xMjIsMS4xMjksMi4xNzksMi4zODcsMy4xMTIsMy42MzcgTDI3NC42OTYsMjc0LjIwM2MtNS4zNDgsNC42ODctMTEuOTU0LDcuMDAyLTE4LjY5Niw3LjAwMmMtNi42NzQsMC0xMy4yNzYtMi4zMTUtMTguNjk1LTcuMDAyTDQzLjQ3MiwxMDUuMTM2IEM0NC4zMywxMDMuODg2LDQ1LjM4NywxMDIuNyw0Ni41MDksMTAxLjU3MXogTTM2LjMzNCwzODUuOTJWMTQyLjczNUwxNzYuNjU4LDI2NS4xNUwzNi40MDUsMzg3LjQzNSBDMzYuMzM0LDM4Ni45NzEsMzYuMzM0LDM4Ni40NDksMzYuMzM0LDM4NS45MnogTTQ0MC45NzksNDIwLjU5N0g3MS4wMjFjLTYuMjgxLDAtMTIuMTU4LTEuNjUxLTE3LjE3NC00LjU1MmwxNDcuOTc4LTEyOC45NTkgbDEzLjgxNSwxMi4wMThjMTEuNTYxLDEwLjA0NiwyNi4wMjgsMTUuMTM0LDQwLjM2LDE1LjEzNGMxNC40MDYsMCwyOC44NzItNS4wODgsNDAuNDMyLTE1LjEzNGwxMy44MDgtMTIuMDE4bDE0Ny45MiwxMjguOTU5IEM0NTMuMTM3LDQxOC45NDYsNDQ3LjI2LDQyMC41OTcsNDQwLjk3OSw0MjAuNTk3eiBNNDc1LjY2NiwzODUuOTJjMCwwLjUyOSwwLDEuMDUxLTAuMDY4LDEuNTE1TDMzNS4zNDYsMjY1LjIyMUw0NzUuNjY2LDE0Mi44IFYzODUuOTJ6IiBzdHlsZT0iZmlsbDogcmdiKDU4LCAxNzEsIDIxMCk7Ij48L3BhdGg+PC9nPjwvc3ZnPg==');
+}
+
 .scholarProfile {
   margin-left: 0.5rem;
 }
@@ -154,14 +166,41 @@
 .name {
   font-size: 3rem;
 }
+.id {
+  font-size: 2.5rem;
+  margin-left: 0.7rem;
+}
 @media (max-width: 800px) {
   .name {
     font-size: 2.8rem;
+  }
+  .id {
+    font-size: 2.2rem;
+    margin-left: 0.7rem;
   }
 }
 @media (max-width: 750px) {
   .name {
     font-size: 2.5rem;
+  }
+  .id {
+    font-size: 2rem;
+    margin-left: 0.6rem;
+  }
+}
+@media (max-width: 670px) {
+  .id {
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .name {
+    font-size: 2.4rem;
+  }
+  .id {
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
   }
 }
 
@@ -191,7 +230,12 @@
   .name {
     font-size: 2.8rem;
   }
-  .affiliation {
+  .id {
+    font-size: 2.2rem;
+    margin-left: 0.5rem;
+  }
+  .affiliation,
+  .contact {
     width: 85vw;
     position: relative;
     left: -4rem;
@@ -202,6 +246,24 @@
     left: -4rem;
   }
 }
+@media (max-width: 580px) {
+  .id {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 555px) {
+  .id {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 540px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  .id {
+    font-size: 1.6rem;
+  }
+}
 @media (max-width: 500px) {
   .iconBox {
     width: 3.5rem !important;
@@ -209,5 +271,46 @@
   }
   .name {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 490px) {
+  .name {
+    font-size: 2.4rem;
+  }
+  .id {
+    font-size: 1.4rem;
+    margin-left: 0.3rem;
+  }
+}
+@media (max-width: 460px) {
+  .name {
+    font-size: 2.3rem;
+  }
+  .id {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 440px) {
+  .iconBox {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .name {
+    font-size: 2.2rem;
+  }
+  .id {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 400px) {
+  .iconBox {
+    width: 2.7rem !important;
+    height: 2.7rem !important;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .id {
+    font-size: 1rem;
   }
 }
