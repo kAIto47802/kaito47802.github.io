@@ -11,6 +11,7 @@ import TitleBox from '@/components/pageDependents/TitleBox';
 import WorkExperience from '@/components/pageDependents/WorkExperience';
 import AnimatedHeader from '@/components/pure/AnimatedHeader';
 import CustomParticles from '@/components/pure/CustomParticles';
+import Footer from '@/components/pure/Footer';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
 import OpeningAnimation from '@/components/pure/OpeningAnimaiton';
@@ -115,6 +116,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
