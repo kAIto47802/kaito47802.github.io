@@ -14,7 +14,7 @@ import CustomParticles from '@/components/pure/CustomParticles';
 import Footer from '@/components/pure/Footer';
 import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
-import OpeningAnimation from '@/components/pure/OpeningAnimaiton';
+import OpeningAnimation from '@/components/pure/OpeningAnimation';
 import {
   AwardsAndHonors as AwardsAndHonorsType,
   Education as EducationType,
@@ -41,38 +41,56 @@ const Home = () => {
               text={t('publications.internationalConference.text')}
               subtext={t('publications.internationalConference.subtext')}
             />
-            {(t('publications.content', { returnObjects: true }) as PublicationType[])
-              .filter((publication) => publication.type === 'international conference')
-              .map((publication, index) => (
-                <Publication key={index} index={index} {...publication} />
-              ))}
+            {(
+              t('publications.content.internationalConference', {
+                returnObjects: true,
+              }) as PublicationType[]
+            ).map((publication, index) => (
+              <Publication
+                key={index}
+                index={index}
+                type='internationalConference'
+                {...publication}
+              />
+            ))}
             <Heading2
               text={t('publications.workshop.text')}
               subtext={t('publications.workshop.subtext')}
             />
-            {(t('publications.content', { returnObjects: true }) as PublicationType[])
-              .filter((publication) => publication.type === 'workshop')
-              .map((publication, index) => (
-                <Publication key={index} index={index} {...publication} />
-              ))}
+            {(
+              t('publications.content.workshop', {
+                returnObjects: true,
+              }) as PublicationType[]
+            ).map((publication, index) => (
+              <Publication key={index} index={index} type='workshop' {...publication} />
+            ))}
             <Heading2
               text={t('publications.articles.text')}
               subtext={t('publications.articles.subtext')}
             />
-            {(t('publications.content', { returnObjects: true }) as PublicationType[])
-              .filter((publication) => publication.type === 'article')
-              .map((publication, index) => (
-                <Publication key={index} index={index} {...publication} />
-              ))}
+            {(
+              t('publications.content.article', {
+                returnObjects: true,
+              }) as PublicationType[]
+            ).map((publication, index) => (
+              <Publication key={index} index={index} type='article' {...publication} />
+            ))}
             <Heading2
               text={t('publications.domesticConference.text')}
               subtext={t('publications.domesticConference.subtext')}
             />
-            {(t('publications.content', { returnObjects: true }) as PublicationType[])
-              .filter((publication) => publication.type === 'domestic conference')
-              .map((publication, index) => (
-                <Publication key={index} index={index} {...publication} />
-              ))}
+            {(
+              t('publications.content.domesticConference', {
+                returnObjects: true,
+              }) as PublicationType[]
+            ).map((publication, index) => (
+              <Publication
+                key={index}
+                index={index}
+                type='domesticConference'
+                {...publication}
+              />
+            ))}
           </div>
           <div className={styles.contentBox}>
             <AnimatedHeader text={t('awardsAndHonors.title')} />

@@ -39,16 +39,25 @@ const OtherExperience = ({
             </SlideInLeft>
           ),
         )}
+      {index % 2 ? (
+        <SlideInRight className={styles.periodInner}>
+          {period.start} - {period.end}
+        </SlideInRight>
+      ) : (
+        <SlideInLeft className={styles.periodInner}>
+          {period.start} - {period.end}
+        </SlideInLeft>
+      )}
       {notes &&
         notes.map((note, i) =>
           index % 2 ? (
-            <SlideInRight key={i} className={styles.note}>
-              {note}
-            </SlideInRight>
-          ) : (
             <SlideInLeft key={i} className={styles.note}>
               {note}
             </SlideInLeft>
+          ) : (
+            <SlideInRight key={i} className={styles.note}>
+              {note}
+            </SlideInRight>
           ),
         )}
     </div>

@@ -22,11 +22,11 @@
 }
 
 .yearMonth {
-  width: 4.5rem;
+  width: 6rem;
 }
 @media (max-width: 750px) {
   .yearMonth {
-    width: 4rem;
+    width: 5.5rem;
   }
 }
 

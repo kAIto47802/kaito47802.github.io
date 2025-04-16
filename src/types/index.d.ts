@@ -1,5 +1,6 @@
-export interface Poster {
+export interface ExternalLink {
   text: string;
+  name: string;
   link: string;
 }
 
@@ -10,9 +11,9 @@ export interface Publication {
   year: number;
   github?: string;
   arxiv?: string;
-  poster?: Poster;
+  poster?: ExternalLink;
+  paper?: ExternalLink;
   link?: string;
-  type: 'international conference' | 'domestic conference' | 'article' | 'workshop';
 }
 
 export interface AwardsAndHonors {

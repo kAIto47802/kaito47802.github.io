@@ -22,7 +22,7 @@
 }
 
 .period {
-  width: 9rem;
+  width: 12rem;
 }
 
 .period span {
@@ -31,12 +31,7 @@
 
 @media (max-width: 900px) {
   .period {
-    width: 8.5rem;
-  }
-}
-@media (max-width: 900px) {
-  .period {
-    width: 5rem;
+    width: 6rem;
   }
 }
 @media (min-width: 900px) {

@@ -1,8 +1,8 @@
 {
   "basic": {
     "affiliation": {
-      "textJa": "東京大学工学部計数工学科4年",
-      "text": "Fourth year undergraduate student at the University of Tokyo\nDepartment of Mathematical Engineering and Information Physics, Faculty of Engineering"
+      "textJa": "東京大学大学院情報理工学系研究科修士1年",
+      "text": "First-year master's student at the University of Tokyo\nGraduate School of Information Science and Technology"
     }
   },
   "publications": {
@@ -23,60 +23,72 @@
       "text": "ワークショップ",
       "subtext": "Workshop"
     },
-    "content": [
-      {
-        "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
-        "authors": "Kaito Baba",
-        "conference": "Medium",
-        "year": "2025",
-        "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810",
-        "type": "article"
-      },
-      {
-        "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
-        "authors": "Kaito Baba",
-        "conference": "Preferred Networks Tech Blog",
-        "year": "2025",
-        "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/",
-        "type": "article"
-      },
-      {
-        "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
-        "authors": "Kaito Baba, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Satoshi Kodera",
-        "conference": "AIM-FM Workshop @ NeurIPS",
-        "year": "2024",
-        "arxiv": "2411.09933",
-        "type": "workshop"
-      },
-      {
-        "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
-        "authors": "Junichiro Takahashi, Yasukawa Kan, Kaito Baba, Satoshi Kodera",
-        "conference": "AIM-FM Workshop @ NeurIPS",
-        "year": "2024",
-        "type": "workshop"
-      },
-      {
-        "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
-        "authors": "Kaito Baba, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
-        "conference": "IEEE Spoken Language Technology Workshop (SLT)",
-        "year": "2024",
-        "github": "https://github.com/sarulab-speech/UTMOSv2",
-        "arxiv": "2409.09305",
-        "poster": {
-          "text": "IEEE%20SLT%202024",
-          "link": "https://github.com/sarulab-speech/UTMOSv2/blob/main/poster.pdf"
+    "content": {
+      "internationalConference": [
+        {
+          "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
+          "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
+          "conference": "IEEE Spoken Language Technology Workshop (SLT)",
+          "year": "2024",
+          "github": "https://github.com/sarulab-speech/UTMOSv2",
+          "arxiv": "2409.09305",
+          "poster": {
+            "text": "IEEE%20SLT",
+            "link": "https://github.com/sarulab-speech/UTMOSv2/blob/main/poster.pdf"
+          },
+          "paper": {
+            "text": "IEEE%20SLT",
+            "link": "https://ieeexplore.ieee.org/document/10832315"
+          }
+        }
+      ],
+      "workshop": [
+        {
+          "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
+          "authors": "<underline>Kaito Baba</underline>, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, and Satoshi Kodera",
+          "conference": "AIM-FM Workshop @ NeurIPS",
+          "year": "2024",
+          "arxiv": "2411.09933",
+          "poster": {
+            "text": "NeurIPS%20Workshop",
+            "link": "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/103909.png?t=1733873689.231159",
+            "color": "9d7bae"
+          }
         },
-        "type": "international conference"
-      },
-      {
-        "title": "UTMOSv2: 自然性MOS予測におけるスペクトログラム特徴量とSSL特徴量の統合的利用",
-        "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",
-        "conference": "日本音響学会第152回 (2024年秋季) 研究発表会",
-        "year": "2024",
-        "github": "https://github.com/sarulab-speech/UTMOSv2",
-        "type": "domestic conference"
-      }
-    ]
+        {
+          "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
+          "authors": "Junichiro Takahashi, Yasukawa Kan, <underline>Kaito Baba</underline>, and Satoshi Kodera",
+          "conference": "AIM-FM Workshop @ NeurIPS",
+          "year": "2024",
+          "arxiv": "2504.09302"
+        }
+      ],
+      "article": [
+        {
+          "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Medium",
+          "year": "2025",
+          "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810"
+        },
+        {
+          "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Preferred Networks Tech Blog",
+          "year": "2025",
+          "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/"
+        }
+      ],
+      "domesticConference": [
+        {
+          "title": "UTMOSv2: 自然性MOS予測におけるスペクトログラム特徴量とSSL特徴量の統合的利用",
+          "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",
+          "conference": "日本音響学会第152回 (2024年秋季) 研究発表会",
+          "year": "2024",
+          "github": "https://github.com/sarulab-speech/UTMOSv2"
+        }
+      ]
+    }
   },
   "awardsAndHonors": {
     "title": "受賞歴",
@@ -86,7 +98,7 @@
         "descriptions": [
           "世界最大規模の機械学習コンペティションであるKaggleでこれまでに4回銅メダルを獲得しました。"
         ],
-        "yearMonth": "~2024/08",
+        "yearMonth": "~2024年8月",
         "emphasize": false
       },
       {
@@ -94,7 +106,7 @@
         "descriptions": [
           "合成音声の自然性MOSを予測する機械学習モデルを作成する国際コンペティションで上記の順位を獲得しました。"
         ],
-        "yearMonth": "2024/06",
+        "yearMonth": "2024年6月",
         "emphasize": false
       },
       {
@@ -102,13 +114,13 @@
         "descriptions": [
           "顧客が貸し倒れするか否かを予測する機械学習モデルを作成しました。"
         ],
-        "yearMonth": "2024/03",
+        "yearMonth": "2024年3月",
         "emphasize": false
       },
       {
         "title": "ライフカード主催ハッカソン 3位🥉",
         "descriptions": ["与信スコアを予測する機械学習モデルを作成しました。"],
-        "yearMonth": "2023/10",
+        "yearMonth": "2023年10月",
         "emphasize": false
       },
       {
@@ -116,19 +128,13 @@
         "descriptions": [
           "深層強化学習と探索アルゴリズムを組み合わせてオセロAIを開発しました。"
         ],
-        "yearMonth": "2023/09",
+        "yearMonth": "2023年9月",
         "emphasize": true
       },
       {
         "title": "ソフトバンク主催ハッカソン 本選4位 特別賞🏅",
         "descriptions": ["物体検知モデルを搭載したWebアプリケーションを開発しました。"],
-        "yearMonth": "2023/03",
-        "emphasize": false
-      },
-      {
-        "title": "松尾研究室主催深層強化学習スプリングセミナー 優秀賞🏅",
-        "descriptions": [],
-        "yearMonth": "2023/03",
+        "yearMonth": "2023年3月",
         "emphasize": false
       }
     ]
@@ -140,7 +146,7 @@
         "company": "株式会社Preferred Networks",
         "position": "パートタイムエンジニア",
         "period": {
-          "start": "2024/07",
+          "start": "2024年7月",
           "end": "現在"
         },
         "descriptions": [
@@ -151,7 +157,7 @@
         "company": "東京大学医学部附属病院",
         "position": "学術専門職員（特定短時間勤務有期雇用教職員）",
         "period": {
-          "start": "2024/05",
+          "start": "2024年5月",
           "end": "現在"
         },
         "descriptions": ["医療AIの研究開発を医師と共に行っております。"]
@@ -160,8 +166,8 @@
         "company": "株式会社 SIGNATE",
         "position": "技術アドバイザー・教材作成担当（業務委託）",
         "period": {
-          "start": "2023/12",
-          "end": "2024/05"
+          "start": "2023年12月",
+          "end": "2024年5月"
         },
         "descriptions": [
           "LLM の技術アドバイザーとして，主にRAGに関する資料作成や技術アドバイスを行っておりました。",
@@ -172,8 +178,8 @@
         "company": "株式会社 kuzen",
         "position": "フルスタックエンジニア（インターンシップ）",
         "period": {
-          "start": "2023/11",
-          "end": "2024/04"
+          "start": "2023年11月",
+          "end": "2024年4月"
         },
         "descriptions": [
           "フロントエンドやバックエンドの実装，LangChainを用いたRAGシステムの開発などを行っておりました。"
@@ -183,8 +189,8 @@
         "company": "株式会社リクルート",
         "position": "データサイエンティスト（インターンシップ）",
         "period": {
-          "start": "2023/10",
-          "end": "2023/12"
+          "start": "2023年10月",
+          "end": "2023年12月"
         },
         "descriptions": [
           "データ推進室の検索グループにて，社内ドキュメントの検索体験の向上を目的として，RAGのシステム開発を行っておりました。"
@@ -194,7 +200,7 @@
         "company": "東京大学エッジキャピタルパートナーズ UTEC",
         "position": "リサーチアシスタント",
         "period": {
-          "start": "2023/07",
+          "start": "2023年7月",
           "end": "現在"
         },
         "descriptions": [
@@ -206,8 +212,8 @@
         "company": "株式会社 LearnWiz",
         "position": "フロントエンドエンジニア（業務委託）",
         "period": {
-          "start": "2023/04",
-          "end": "2023/09"
+          "start": "2023年4月",
+          "end": "2023年9月"
         },
         "descriptions": [
           "Web アプリケーションのフロントエンド開発とUI/UXデザインの提案を行っておりました。"
@@ -217,8 +223,8 @@
         "company": "GHELIA 株式会社",
         "position": "AIリサーチャー（インターンシップ）",
         "period": {
-          "start": "2023/01",
-          "end": "2023/09"
+          "start": "2023年1月",
+          "end": "2023年9月"
         },
         "descriptions": ["画像認識に関する深層学習の研究開発を行っておりました。"]
       }
@@ -231,8 +237,8 @@
         "institution": "東京大学工学部計数工学科",
         "degree": "学士",
         "period": {
-          "start": "2022/09",
-          "end": "2025/03"
+          "start": "2022年9月",
+          "end": "2025年3月"
         },
         "notes": ["Prof. Taiji Suzuki's Laboratory"]
       },
@@ -240,8 +246,8 @@
         "institution": "東京大学理科一類",
         "degree": "学士",
         "period": {
-          "start": "2021/04",
-          "end": "2022/08"
+          "start": "2021年4月",
+          "end": "2022年8月"
         }
       }
     ]
@@ -252,8 +258,8 @@
       {
         "place": "国立清華大学 (National Tsing Hua University)",
         "period": {
-          "start": "2025/02",
-          "end": "2025/03"
+          "start": "2025年2月",
+          "end": "2025年3月"
         },
         "descriptions": [
           "短期留学 (修士課程)",

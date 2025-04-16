@@ -1,13 +1,15 @@
 import Image from 'next/image';
-import styles from './PosterIcon.module.css';
+import styles from './ExternalLinkIcon.module.css';
 
-const PosterIcon = ({
+const ExternalLinkIcon = ({
   text,
+  name,
   link,
   color,
   className,
 }: {
   text: string;
+  name: string;
   link: string;
   color?: string;
   className?: string;
@@ -15,11 +17,11 @@ const PosterIcon = ({
   <>
     <a href={link} className={`${styles.poster} ${className ?? ''}`}>
       <Image
-        src={`https://img.shields.io/badge/${text}-Poster-${color || 'blue'}.svg`}
+        src={`https://img.shields.io/badge/${text}-${name}-${color || 'blue'}.svg`}
         alt='Poster'
         fill
       />
     </a>
   </>
 );
-export default PosterIcon;
+export default ExternalLinkIcon;

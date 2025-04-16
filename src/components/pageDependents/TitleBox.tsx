@@ -4,6 +4,7 @@ import { Athiti, Caveat, Noticia_Text, Raleway } from 'next/font/google';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
+import CvIcon from '../pure/CvIcon';
 import DropInText from '../pure/DropInText';
 import GitHubIcon from '../pure/GitHubIcon';
 import ScholarIcon from '../pure/ScholarIcon';
@@ -72,6 +73,7 @@ const TitleBox = () => {
             className={styles.scholarProfile}
             url='https://scholar.google.com/citations?user=oJvSC5wAAAAJ'
           />
+          <CvIcon className={styles.scholarProfile} url='cv.pdf' />
         </div>
       </div>
     </div>
