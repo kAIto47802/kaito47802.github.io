@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Kaito Baba | Homepage',
-  description: "This is Kaito Baba's profile page.",
+  description: "This is Kaito Baba's profile page. | 馬場凱渡のプロフィールページです。",
   metadataBase: new URL('https://kaito47802.github.io'),
   openGraph: { images: 'opengraph-image.png' },
   twitter: {

@@ -44,6 +44,8 @@ const TitleBox = () => {
             triggerOnce
             className={`${noticia.className} ${styles.name}`}
           />
+          {/*To refine the summary snippet displayed in search results.*/}
+          <span> </span>
           <DropInText
             text='(kAIto47802)'
             triggerOnce
@@ -51,11 +53,13 @@ const TitleBox = () => {
           />
           <div className={styles.affiliation}>
             {i18n.language == 'ja' && (
-              <SlideInText
-                text={t('basic.affiliation.textJa')}
-                triggerOnce
-                className={styles.fuiji}
-              />
+              <>
+                <SlideInText
+                  text={`馬場凱渡:${t('basic.affiliation.textJa')}`}
+                  triggerOnce
+                  className={styles.fuiji}
+                />
+              </>
             )}
             <TypeWriter
               className={`${caveat.className} ${styles.caveat}`}
