@@ -9,7 +9,10 @@ export interface Publication {
   authors: string;
   conference: string;
   year: number;
-  github?: string;
+  github?: {
+    repo: string;
+    withStar?: boolean;
+  };
   arxiv?: string;
   poster?: ExternalLink;
   paper?: ExternalLink;

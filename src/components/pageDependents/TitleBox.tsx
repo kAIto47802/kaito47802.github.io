@@ -69,10 +69,7 @@ const TitleBox = () => {
           <div className={`${athiti.className} ${styles.contact}`}>
             k.ai.to47802 [at] gmail.com
           </div>
-          <GitHubIcon
-            className={styles.githubProfile}
-            link='https://github.com/kAIto47802'
-          />
+          <GitHubIcon className={styles.githubProfile} repo='kAIto47802' />
           <ScholarIcon
             className={styles.scholarProfile}
             url='https://scholar.google.com/citations?user=oJvSC5wAAAAJ'

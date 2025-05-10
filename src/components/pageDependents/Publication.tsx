@@ -53,7 +53,7 @@ const Publication = ({
         <SlideInLeft className={styles.conference}>
           {conference}, {year}
           <div className={styles.icons}>
-            {github && <GitHubIcon link={github} />}
+            {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}
@@ -64,7 +64,7 @@ const Publication = ({
         <SlideInRight className={styles.conference}>
           {conference}, {year}
           <div className={styles.icons}>
-            {github && <GitHubIcon link={github} />}
+            {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}

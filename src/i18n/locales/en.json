@@ -29,7 +29,10 @@
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
           "conference": "IEEE Spoken Language Technology Workshop (SLT)",
           "year": "2024",
-          "github": "https://github.com/sarulab-speech/UTMOSv2",
+          "github": {
+            "repo": "sarulab-speech/UTMOSv2",
+            "withStar": true
+          },
           "arxiv": "2409.09305",
           "poster": {
             "text": "IEEE%20SLT",
@@ -84,7 +87,10 @@
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
           "conference": "Acoustical Society of Japan Autumn Meeting 2024",
           "year": "2024",
-          "github": "https://github.com/sarulab-speech/UTMOSv2"
+          "github": {
+            "repo": "sarulab-speech/UTMOSv2",
+            "withStar": true
+          }
         }
       ]
     }
