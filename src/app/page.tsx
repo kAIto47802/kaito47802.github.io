@@ -65,8 +65,8 @@ const Home = () => {
               <Publication key={index} index={index} type='workshop' {...publication} />
             ))}
             <Heading2
-              text={t('publications.articles.text')}
-              subtext={t('publications.articles.subtext')}
+              text={t('publications.article.text')}
+              subtext={t('publications.article.subtext')}
             />
             {(
               t('publications.content.article', {

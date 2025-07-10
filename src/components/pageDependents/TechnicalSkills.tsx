@@ -30,10 +30,10 @@ const TechnicalSkills = () => {
         {t('technicalSkills.language.intermediate.content')}
       </SlideInLeft>
       <SlideInRight className={styles.title}>
-        <ArrowContent>{t('technicalSkills.other.title')}</ArrowContent>
+        <ArrowContent>{t('technicalSkills.tools.title')}</ArrowContent>
       </SlideInRight>
       <SlideInLeft className={styles.content}>
-        {t('technicalSkills.other.content')}
+        {t('technicalSkills.tools.content')}
       </SlideInLeft>
     </>
   );
