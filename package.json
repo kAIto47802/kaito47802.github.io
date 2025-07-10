@@ -5,6 +5,9 @@
   "scripts": {
     "predev": "rm -fr .next",
     "dev": "next dev",
+    "gen-latex": "node scripts/gen-latex.js",
+    "build:pdf": "pdflatex -interaction=nonstopmode cv.tex && mv cv.pdf public/ && rm -f cv.aux cv.log cv.out cv.synctex.gz",
+    "prebuild": "npm run gen-latex && npm run build:pdf",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
@@ -14,6 +17,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
+    "handlebars": "^4.7.8",
     "i18next": "^23.14.0",
     "i18next-browser-languagedetector": "^8.0.0",
     "next": "14.2.6",

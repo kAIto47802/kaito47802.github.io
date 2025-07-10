@@ -1,0 +1,209 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{left=12mm, right=12mm, top=10mm, bottom=14mm}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=1pt, topsep=1pt, partopsep=1pt, after=\vspace{4pt}}
+\setlist[description]{itemsep=1pt, topsep=1pt, parsep=0pt}
+
+
+\usepackage[T1]{fontenc}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries\scshape}{}{0em}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{2ex plus 0.2ex}
+
+\usepackage{xparse}
+
+
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+\begin{center}
+  {\Large \bf Kaito Baba}\\
+
+  Email: \texttt{k.ai.to47802@gmail.com}, \texttt{baba-kaito662@g.ecc.u-tokyo.ac.jp}
+
+  GitHub: \texttt{\url{https://github.com/kAIto47802}}
+
+  Homepage: \texttt{\url{https://kaito47802.github.io}}
+\end{center}
+
+
+\section{ {{~{education.title}~}} }
+
+{{#each education.content~}}
+\textbf{ {{~{this.institution}~}} }
+\hspace{\fill}{{{this.location}}}\\
+{{{this.description}}}
+\hspace{\fill}{{{this.period.start}}}--{{{this.period.end}}}\\
+{{#if this.notes}}
+{{#each this.notes}}
+\textit{ {{~{this}~}} }
+{{/each}}
+{{/if}}
+{{#unless @last}}
+\vspace{2mm}
+
+{{/unless}}
+{{~/each}}
+
+
+\section{ {{~{publications.title}~}} }
+
+\newcommand{\pubitem}[4]{
+  \item #1. #2. \textit{#3}, #4.
+}
+
+\textbf{ {{~{publications.internationalConference.text}~}} }
+\begin{itemize}
+  {{#each publications.content.internationalConference}}
+  \pubitem{
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }
+  {{/each}}
+\end{itemize}
+
+\textbf{ {{~{publications.workshop.text}~}} }
+\begin{itemize}
+  {{#each publications.content.workshop}}
+  \pubitem{
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }
+  {{/each}}
+\end{itemize}
+
+\textbf{ {{~{publications.article.text}~}} }
+\begin{itemize}
+  {{#each publications.content.article}}
+  {{#if this.includeInCV}}
+  \pubitem{
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }
+  {{/if}}
+  {{/each}}
+\end{itemize}
+
+\textbf{ {{~{publications.domesticConference.text}~}} }
+\begin{itemize}
+  {{#each publications.content.domesticConference}}
+  \pubitem{
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }
+  {{/each}}
+\end{itemize}
+
+\section{ {{~{awardsAndHonors.title}~}} }
+\begin{description}[labelwidth=16mm, labelsep=1em, leftmargin=!, font=\normalfont]
+  {{#each awardsAndHonors.content}}
+  \item[{{{this.yearMonth}}}] {{{this.titleInCV}}}
+  \begin{itemize}[topsep=-2pt]
+    {{#each this.descriptions}}
+    \item {{{this}}}
+    {{/each}}
+  \end{itemize}
+  {{/each}}
+\end{description}
+
+
+\section{ {{~{workExperience.title}~}} }
+
+{{#each workExperience.content}}
+\textbf{ {{~{this.company}~}} }
+\hspace{\fill}{{{this.location}}}\\
+\textit{ {{~{this.position}~}} }
+\hspace{\fill}{{{this.period.start}}}--{{{this.period.end}}}
+\begin{itemize}[parsep=0pt, after=\vspace{5pt}]
+  {{#each this.descriptions}}
+  \item {{{this}}}
+  {{/each}}
+\end{itemize}
+{{#unless @last}}
+
+{{/unless}}
+{{/each}}
+
+
+\section{ {{~{otherExperience.title}~}} }
+
+{{#each otherExperience.content}}
+\textbf{ {{~{this.place}~}} }
+\hspace{\fill}{{this.location}}\\
+{{#each this.descriptions}}
+{{#if @first}}
+\textit{ {{~{this}~}} }
+\hspace{\fill}{{{../period.start}}}--{{{../period.end}}}{{#unless @last}}\\\{{/unless}}
+{{else}}
+{{{this}}}{{#unless @last}}\\\{{/unless}}
+{{/if}}
+{{/each}}
+\begin{itemize}[parsep=0pt, after=\vspace{5pt}]
+  {{#each this.notes}}
+  \item {{{this}}}
+  {{/each}}
+\end{itemize}
+{{#unless @last}}
+
+{{/unless}}
+{{/each}}
+
+
+\section{ {{~{technicalSkills.title}~}} }
+
+\begin{itemize}[parsep=-2pt]
+  \item {{{technicalSkills.dealWith.title}}}
+  \begin{itemize}[parsep=0pt, after=\vspace{5pt}]
+    \item {{{technicalSkills.dealWith.content}}}
+  \end{itemize}
+  \item {{{technicalSkills.language.title}}}
+  \begin{itemize}[parsep=0pt, after=\vspace{5pt}]
+    \item {{{technicalSkills.language.advanced.title}}}\\
+      {{{escapeLatex technicalSkills.language.advanced.content}}}
+    \item {{{technicalSkills.language.intermediate.title}}}\\
+      {{{escapeLatex technicalSkills.language.intermediate.content}}}
+  \end{itemize}
+  \item {{{technicalSkills.tools.title}}}
+  \begin{itemize}[parsep=0pt, after=\vspace{5pt}]
+    \item {{{technicalSkills.tools.content}}}
+  \end{itemize}
+\end{itemize}
+
+
+\section{ {{~{certifications.title}~}} }
+
+\begin{itemize}
+  {{#each certifications.content}}
+  \item {{{this.name}}} ({{{this.year}}})
+  {{/each}}
+\end{itemize}
+
+\end{document}
