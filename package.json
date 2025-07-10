@@ -7,7 +7,7 @@
     "dev": "next dev",
     "gen-latex": "node scripts/gen-latex.js",
     "build:pdf": "pdflatex -interaction=nonstopmode cv.tex && mv cv.pdf public/ && rm -f cv.aux cv.log cv.out cv.synctex.gz",
-    "prebuild": "npm run gen-latex && npm run build:pdf",
+    "build:cv": "npm run gen-latex && npm run build:pdf",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
