@@ -66,8 +66,9 @@ const TitleBox = () => {
               text={t('basic.affiliation.text')}
             />
           </div>
-          <div className={`${athiti.className} ${styles.contact}`}>
-            k.ai.to47802 [at] gmail.com
+          <div className={`${athiti.className} ${styles.contacts}`}>
+            <div className={styles.contact}>k.ai.to47802 [at] gmail.com</div>
+            <div className={styles.contact}>baba-kaito662 [at] g.ecc.u-tokyo.ac.jp</div>
           </div>
           <GitHubIcon className={styles.githubProfile} repo='kAIto47802' />
           <ScholarIcon

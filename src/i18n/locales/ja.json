@@ -5,23 +5,27 @@
       "text": "First-year master's student at the University of Tokyo\nGraduate School of Information Science and Technology"
     }
   },
+  "biography": {
+    "title": "Biography",
+    "text": "東京大学大学院情報理工学系研究科修士課程1年。大規模言語モデル (LLM)、深層学習、最適化、学習理論、アルゴリズムなどの研究に興味があります。"
+  },
   "publications": {
     "title": "発表論文",
     "internationalConference": {
-      "text": "国際会議",
-      "subtext": "International Conference"
+      "text": "国際会議論文 (査読あり)",
+      "subtext": "International Conference Proceedings"
     },
     "domesticConference": {
-      "text": "国内会議",
-      "subtext": "Domestic Conference"
+      "text": "国内会議論文",
+      "subtext": "Domestic Conference Proceedings"
     },
     "article": {
       "text": "記事",
       "subtext": "Articles"
     },
     "workshop": {
-      "text": "ワークショップ",
-      "subtext": "Workshop"
+      "text": "国際会議ワークショップ論文 (査読あり)",
+      "subtext": "Workshop Papers at International Conferences"
     },
     "content": {
       "internationalConference": [

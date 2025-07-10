@@ -25,6 +25,20 @@
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
 }
 
+.contacts {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1040px) {
+  .contacts {
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact {
+    height: 1.2rem;
+  }
+}
+
 .contact::before {
   content: '';
   display: inline-block;

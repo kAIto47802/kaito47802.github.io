@@ -4,14 +4,18 @@
       "text": "First-year master's student at the University of Tokyo\nGraduate School of Information Science and Technology"
     }
   },
+  "biography": {
+    "title": "Biography",
+    "text": "I am a first-year master’s student at the Graduate School of Information Science and Technology at The University of Tokyo. My primary research interests lie in large language models (LLMs), deep learning, optimization, learning theory, and algorithm design."
+  },
   "publications": {
     "title": "Publications",
     "internationalConference": {
-      "text": "International Conference",
+      "text": "International Conference Proceedings (Refereed)",
       "subtext": ""
     },
     "domesticConference": {
-      "text": "Domestic Conference",
+      "text": "Domestic Conference Proceedings",
       "subtext": ""
     },
     "article": {
@@ -19,7 +23,7 @@
       "subtext": ""
     },
     "workshop": {
-      "text": "Workshop",
+      "text": "Workshop Papers at International Conferences (Refereed)",
       "subtext": ""
     },
     "content": {

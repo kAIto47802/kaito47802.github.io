@@ -36,6 +36,10 @@ const Home = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.contentBox}>
+            <AnimatedHeader text={t('biography.title')} />
+            <div className={styles.bio}>{t('biography.text')}</div>
+          </div>
+          <div className={styles.contentBox}>
             <AnimatedHeader text={t('publications.title')} />
             <Heading2
               text={t('publications.internationalConference.text')}
