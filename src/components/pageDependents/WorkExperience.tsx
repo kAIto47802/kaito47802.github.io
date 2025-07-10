@@ -19,7 +19,7 @@ const WorkExperience = ({
     <div className={styles.period}>
       <span>{period.start}</span>
       <br />
-      <span> - {period.end}</span>
+      <span>–{period.end}</span>
     </div>
     <div className={styles.content}>
       {index % 2 ? (
@@ -31,14 +31,14 @@ const WorkExperience = ({
         <>
           <SlideInRight className={styles.position}>{position}</SlideInRight>
           <SlideInRight className={styles.periodInner}>
-            {period.start} - {period.end}
+            {period.start}–{period.end}
           </SlideInRight>
         </>
       ) : (
         <>
           <SlideInLeft className={styles.position}>{position}</SlideInLeft>
           <SlideInLeft className={styles.periodInner}>
-            {period.start} - {period.end}
+            {period.start}–{period.end}
           </SlideInLeft>
         </>
       )}

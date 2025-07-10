@@ -19,7 +19,7 @@ const OtherExperience = ({
     <div className={styles.period}>
       <span>{period.start}</span>
       <br />
-      <span> - {period.end}</span>
+      <span>–{period.end}</span>
     </div>
     <div className={styles.content}>
       {index % 2 ? (
@@ -41,11 +41,11 @@ const OtherExperience = ({
         )}
       {index % 2 ? (
         <SlideInRight className={styles.periodInner}>
-          {period.start} - {period.end}
+          {period.start}–{period.end}
         </SlideInRight>
       ) : (
         <SlideInLeft className={styles.periodInner}>
-          {period.start} - {period.end}
+          {period.start}–{period.end}
         </SlideInLeft>
       )}
       {notes &&

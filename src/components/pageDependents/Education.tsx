@@ -20,7 +20,7 @@ const Education = ({
     <div className={styles.period}>
       <span>{period.start}</span>
       <br />
-      <span> - {period.end}</span>
+      <span>–{period.end}</span>
     </div>
     <div className={styles.content}>
       {index % 2 ? (
@@ -35,7 +35,7 @@ const Education = ({
           )}
           <SlideInRight className={styles.department}>{degree}</SlideInRight>
           <SlideInLeft className={styles.periodInner}>
-            {period.start} - {period.end}
+            {period.start}–{period.end}
           </SlideInLeft>
         </>
       ) : (
@@ -45,7 +45,7 @@ const Education = ({
           )}
           <SlideInLeft className={styles.department}>{degree}</SlideInLeft>
           <SlideInRight className={styles.periodInner}>
-            {period.start} - {period.end}
+            {period.start}–{period.end}
           </SlideInRight>
         </>
       )}
