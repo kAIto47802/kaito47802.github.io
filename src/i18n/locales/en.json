@@ -14,7 +14,7 @@
       "text": "Domestic Conference",
       "subtext": ""
     },
-    "articles": {
+    "article": {
       "text": "Articles",
       "subtext": ""
     },
@@ -46,9 +46,16 @@
       ],
       "workshop": [
         {
+          "title": "Prover Agent: An Agent-based Framework for Formal Mathematical Proofs",
+          "authors": "<underline>Kaito Baba</underline>, Chaoran Liu, Shuhei Kurita, and Akiyoshi Sannai",
+          "conference": "ICML Workshop on AI for Math",
+          "year": "2025",
+          "arxiv": "2506.19923"
+        },
+        {
           "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
           "authors": "<underline>Kaito Baba</underline>, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, and Satoshi Kodera",
-          "conference": "AIM-FM Workshop @ NeurIPS",
+          "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2411.09933",
           "poster": {
@@ -60,7 +67,7 @@
         {
           "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
           "authors": "Junichiro Takahashi, Yasukawa Kan, <underline>Kaito Baba</underline>, and Satoshi Kodera",
-          "conference": "AIM-FM Workshop @ NeurIPS",
+          "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2504.09302"
         }
@@ -71,21 +78,23 @@
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
           "year": "2025",
-          "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810"
+          "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810",
+          "includeInCV": true
         },
         {
           "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Preferred Networks Tech Blog",
           "year": "2025",
-          "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/"
+          "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/",
+          "includeInCV": false
         }
       ],
       "domesticConference": [
         {
           "title": " UTMOSv2: Integrated Use of Spectrogram and SSL Features for Naturalness MOS Prediction",
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
-          "conference": "Acoustical Society of Japan Autumn Meeting 2024",
+          "conference": "Acoustical Society of Japan Autumn Meeting",
           "year": "2024",
           "github": {
             "repo": "sarulab-speech/UTMOSv2",
@@ -99,15 +108,17 @@
     "title": "Awards and Honors",
     "content": [
       {
-        "title": "4 bronze medals🥉 in Kaggle competitions",
+        "title": "4 solo bronze medals🥉 in Kaggle competitions",
+        "titleInCV": "4 solo bronze medals in Kaggle competitions",
         "descriptions": [
           "Won 4 solo bronze medals so far in Kaggle, the world's largest machine learning competition."
         ],
-        "yearMonth": "~Aug. 2024",
+        "yearMonth": "--Aug. 2024",
         "emphasize": false
       },
       {
         "title": "1st place🥇 in 7 out of 16 metrics and 2nd place🥈 in the remaining 9 metrics in the VoiceMOS Challenge 2024 Track1",
+        "titleInCV": "\\textbf{1st place} in 7 out of 16 metrics and \\textbf{2nd place} in the remaining 9 metrics in the VoiceMOS Challenge 2024 Track1",
         "descriptions": [
           "Took the above ranking in a global competition to create a machine learning model to predict the naturalness MOS of synthetic speech."
         ],
@@ -115,7 +126,8 @@
         "emphasize": false
       },
       {
-        "title": "1st Place, Hackathon by AIFUL (aihack2024)🥇",
+        "title": "1st Place in Hackathon by AIFUL (aihack2024)🥇",
+        "titleInCV": "\\textbf{1st Place} in  Hackathon by AIFUL (aihack2024)",
         "descriptions": [
           "Developed a machine learning model for predicting the credit score of individuals."
         ],
@@ -123,13 +135,15 @@
         "emphasize": false
       },
       {
-        "title": "Special Prize, 3rd Place, Hackathon by LIFECARD🥉",
+        "title": "Special Prize, 3rd Place in Hackathon by LIFECARD🥉",
+        "titleInCV": "Special Prize, \\textbf{3rd Place} in Hackathon by LIFECARD",
         "descriptions": ["Created a machine learning model for credit scoring."],
         "yearMonth": "Oct. 2023",
         "emphasize": false
       },
       {
         "title": "World Rank 3, CodinGame Othello AI competition🥉",
+        "titleInCV": "\\textbf{World Rank 3} in CodinGame Othello AI competition",
         "descriptions": [
           "Developed an AI for the game of Othello (Reversi) by combining deep reinforcement learning and heuristic search algorithms."
         ],
@@ -137,7 +151,8 @@
         "emphasize": true
       },
       {
-        "title": "Special Prize, 4th Place in the Final Round, Hackathon by SoftBank🏅",
+        "title": "Special Prize, 4th Place in the Final Round in Hackathon by SoftBank🏅",
+        "titleInCV": "Special Prize, \\textbf{4th Place} in the Final Round in Hackathon by SoftBank",
         "descriptions": [
           "Developed a web application integrated with object detection AI."
         ],
@@ -151,6 +166,7 @@
     "content": [
       {
         "company": "Preferred Networks, Inc.",
+        "location": "Tokyo, Japan",
         "position": "Part-time Engineer",
         "period": {
           "start": "Jul. 2024",
@@ -162,6 +178,7 @@
       },
       {
         "company": "The University of Tokyo Hospital",
+        "location": "Tokyo, Japan",
         "position": "Technical Staff (Part-time)",
         "period": {
           "start": "May. 2024",
@@ -173,6 +190,7 @@
       },
       {
         "company": "SIGNATE Inc.",
+        "location": "Tokyo, Japan",
         "position": "Technical Advisor, Educational Material Creator (Outsourcing)",
         "period": {
           "start": "Dec. 2023",
@@ -185,6 +203,7 @@
       },
       {
         "company": "kuzen Inc.",
+        "location": "Tokyo, Japan",
         "position": "Full-stack Engineer (Internship)",
         "period": {
           "start": "Nov. 2023",
@@ -196,6 +215,7 @@
       },
       {
         "company": "Recruit Co., Ltd",
+        "location": "Tokyo, Japan",
         "position": "Datascientist (Internship)",
         "period": {
           "start": "Oct. 2023",
@@ -207,10 +227,11 @@
       },
       {
         "company": "The University of Tokyo Edge Capital Partners Co., Ltd. (UTEC)",
+        "location": "Tokyo, Japan",
         "position": "Research Assistant",
         "period": {
           "start": "Jul. 2023",
-          "end": "Present"
+          "end": "Apr. 2025"
         },
         "descriptions": [
           "Conducting data collection, analysis, and predictive model creation for investors.",
@@ -219,6 +240,7 @@
       },
       {
         "company": "LearnWiz Inc.",
+        "location": "Tokyo, Japan",
         "position": "Font-end Engineer (Outsourcing)",
         "period": {
           "start": "Apr. 2023",
@@ -230,6 +252,7 @@
       },
       {
         "company": "GHELIA Inc.",
+        "location": "Tokyo, Japan",
         "position": "AI Researcher (Internship)",
         "period": {
           "start": "Jan. 2023",
@@ -247,30 +270,25 @@
       {
         "institution": "The University of Tokyo, Graduate School of Information Science and Technology",
         "degree": "Master",
+        "description": "Master of Information Science and Technology",
+        "location": "Tokyo, Japan",
         "period": {
           "start": "Apr. 2025",
           "end": "Mar. 2027 (expected)"
         },
-        "notes": ["Prof. Hideki Nakayama's Laboratory"]
+        "notes": ["Supervisor: Prof. Hideki Nakayama"]
       },
       {
         "institution": "The University of Tokyo",
         "degree": "Bachelor",
+        "description": "Bachelor of Engineering in Mathematical Engineering and Information Physics",
+        "location": "Tokyo, Japan",
         "department": "Department of Mathematical Engineering and Information Physics, Faculty of Engineering",
         "period": {
-          "start": "Sep. 2022",
+          "start": "Apr. 2021",
           "end": "Mar. 2025"
         },
-        "notes": ["Prof. Taiji Suzuki's Laboratory"]
-      },
-      {
-        "institution": "The University of Tokyo",
-        "degree": "Bachelor",
-        "department": "Natural Science 1",
-        "period": {
-          "start": "Apr. 2021",
-          "end": "Aug. 2022"
-        }
+        "notes": ["Supervisor: Prof. Taiji Suzuki"]
       }
     ]
   },
@@ -279,6 +297,7 @@
     "content": [
       {
         "place": "National Tsing Hua University",
+        "location": "Hsinchu, Taiwan",
         "period": {
           "start": "Feb. 2025",
           "end": "Mar. 2025"
@@ -288,8 +307,8 @@
           "Department of Industrial Engineering and Engineering Management"
         ],
         "notes": [
-          "Worked with Prof. Wing-Kai Hon",
-          "Conducted research on efficient algorithm design"
+          "Worked with Prof. Wing-Kai Hon.",
+          "Conducted research on efficient algorithm design."
         ]
       }
     ]
@@ -298,7 +317,7 @@
     "title": "Technical Skills",
     "dealWith": {
       "title": "Deal with:",
-      "content": "Deep learning, reinforcement learning, front-end development, back-end development, iOS app development, etc."
+      "content": "Deep learning, reinforcement learning, front-end development, back-end development, etc."
     },
     "language": {
       "title": "Languages and Frameworks:",
@@ -311,9 +330,22 @@
         "content": "Haskell, OCaml, Scheme, Assembly (RISC-V), SQL, Fortran, Verilog, C# (Unity), Julia, Java, and Kotlin"
       }
     },
-    "other": {
-      "title": "Others:",
-      "content": "Git/GitHub, Docker, AWS, GCP, Linux, GitHub Actions, GraphQL, Arduino, Raspberry Pi, etc."
+    "tools": {
+      "title": "Tools:",
+      "content": "Git/GitHub, Docker, AWS, GCP, Linux, GitHub Actions, GraphQL, Terraform, Arduino, Raspberry Pi, etc."
     }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "content": [
+      {
+        "name": "Deep Learning for ENGINEER Certified by JDLA (Japan Deep Learning Association)",
+        "year": "2023"
+      },
+      {
+        "name": "The SUKEN Test in Mathematics Proficiency Grade 1",
+        "year": "2022"
+      }
+    ]
   }
 }
