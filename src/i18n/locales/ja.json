@@ -55,7 +55,15 @@
           "authors": "<underline>Kaito Baba</underline>, Chaoran Liu, Shuhei Kurita, and Akiyoshi Sannai",
           "conference": "ICML Workshop on AI for Math",
           "year": "2025",
-          "arxiv": "2506.19923"
+          "arxiv": "2506.19923",
+          "poster": {
+            "text": "ICML%20Workshop",
+            "link": "https://kaito47802.github.io/assets/prover_agent_poster.pdf"
+          },
+          "slide": {
+            "text": "Prover%20Agent",
+            "link": "https://kaito47802.github.io/assets/prover_agent_slide.pdf"
+          }
         },
         {
           "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",

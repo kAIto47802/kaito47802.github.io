@@ -16,6 +16,7 @@ export interface Publication {
   arxiv?: string;
   poster?: ExternalLink;
   paper?: ExternalLink;
+  slide?: ExternalLink;
   link?: string;
 }
 

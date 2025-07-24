@@ -23,6 +23,7 @@ const Publication = ({
   arxiv,
   poster,
   paper,
+  slide,
   link,
   type,
 }: PublicationProps) => {
@@ -57,6 +58,7 @@ const Publication = ({
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}
+            {slide && <ExternalLinkIcon {...slide} name='Slide' />}
             {link && <LinkIcon link={link} />}
           </div>
         </SlideInLeft>
@@ -68,6 +70,7 @@ const Publication = ({
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}
+            {slide && <ExternalLinkIcon {...slide} name='Slide' />}
             {link && <LinkIcon link={link} />}
           </div>
         </SlideInRight>
