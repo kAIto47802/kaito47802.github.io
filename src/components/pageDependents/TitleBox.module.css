@@ -25,6 +25,11 @@
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
 }
 
+.title {
+  margin: 0;
+  padding: 0;
+}
+
 .contacts {
   display: flex;
   gap: 1rem;
@@ -287,7 +292,7 @@
 }
 @media (max-width: 580px) {
   .id {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 @media (max-width: 555px) {

@@ -39,18 +39,20 @@ const TitleBox = () => {
           ))}
         </div>
         <div className={styles.basicText}>
-          <DropInText
-            text='Kaito Baba'
-            triggerOnce
-            className={`${noticia.className} ${styles.name}`}
-          />
-          {/*To refine the summary snippet displayed in search results.*/}
-          <span> </span>
-          <DropInText
-            text='(kAIto47802)'
-            triggerOnce
-            className={`${noticia.className} ${styles.id}`}
-          />
+          <h1 className={styles.title}>
+            <DropInText
+              text='Kaito Baba'
+              triggerOnce
+              className={`${noticia.className} ${styles.name}`}
+            />
+            {/*To refine the summary snippet displayed in search results.*/}
+            <span> </span>
+            <DropInText
+              text='(kAIto47802)'
+              triggerOnce
+              className={`${noticia.className} ${styles.id}`}
+            />
+          </h1>
           <div className={styles.affiliation}>
             {i18n.language == 'ja' && (
               <>
