@@ -47,3 +47,9 @@
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
 }
+
+.featured {
+  text-decoration: underline;
+  text-decoration-thickness: 1.4px;
+  text-decoration-color: #ff07ad;
+}

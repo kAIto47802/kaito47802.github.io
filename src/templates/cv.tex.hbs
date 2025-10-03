@@ -5,6 +5,8 @@
 \usepackage{hyperref}
 
 \usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{amssymb}
 
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=1pt, topsep=1pt, partopsep=1pt, after=\vspace{4pt}}
@@ -60,14 +62,16 @@
 
 \section{ {{~{publications.title}~}} }
 
-\NewDocumentCommand{\pubitem}{m m m m o}{
-  \item #1. \IfValueTF{#5}{\href{#5}{#2}}{#2}. \textit{#3}, #4.
+\NewDocumentCommand{\pubitem}{s m m m m o}{
+  \IfBooleanTF{#1}{\item[\small$\bigstar$\hspace{-1.2pt}]}{\item} #2. \IfValueTF{#6}{\href{#6}{#3}}{#3}. \textit{#4}, #5.
 }
+
+\rightline{\small $\bigstar$: Featured publications}
 
 \textbf{ {{~{publications.internationalConference.text}~}} }
 \begin{itemize}
   {{#each publications.content.internationalConference}}
-  \pubitem{
+  \pubitem{{#if this.featured}}*{{/if}}{%
     {{{this.authors}}}%
   }{%
     {{{this.title}}}%
@@ -82,7 +86,7 @@
 \textbf{ {{~{publications.workshop.text}~}} }
 \begin{itemize}
   {{#each publications.content.workshop}}
-  \pubitem{
+  \pubitem{{#if this.featured}}*{{/if}}{%
     {{{this.authors}}}%
   }{%
     {{{this.title}}}%

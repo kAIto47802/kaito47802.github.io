@@ -43,6 +43,7 @@ const Home = () => {
           </div>
           <div className={styles.contentBox}>
             <AnimatedHeader text={t('publications.title')} />
+            <div className={styles.note}>{t('publications.note')}</div>
             <Heading2
               text={t('publications.internationalConference.text')}
               subtext={t('publications.internationalConference.subtext')}

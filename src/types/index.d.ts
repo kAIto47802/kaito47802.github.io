@@ -9,6 +9,7 @@ export interface Publication {
   authors: string;
   conference: string;
   year: number;
+  featured?: boolean;
   github?: {
     repo: string;
     withStar?: boolean;

@@ -11,6 +11,7 @@
   },
   "publications": {
     "title": "発表論文",
+    "note": "下線: Featured publications",
     "internationalConference": {
       "text": "国際会議論文 (査読あり)",
       "subtext": "International Conference Proceedings"
@@ -34,6 +35,7 @@
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
           "conference": "IEEE Spoken Language Technology Workshop (SLT)",
           "year": "2024",
+          "featured": true,
           "github": {
             "repo": "sarulab-speech/UTMOSv2",
             "withStar": true
@@ -51,10 +53,17 @@
       ],
       "workshop": [
         {
-          "title": "Prover Agent: An Agent-based Framework for Formal Mathematical Proofs",
+          "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
+          "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
+          "conference": "ACM MM 2025 Workshop and Grand Challenge on Large Vision Language Model Learning and Applications",
+          "year": "2025"
+        },
+        {
+          "title": "Prover Agent: An Agent-Based Framework for Formal Mathematical Proofs",
           "authors": "<underline>Kaito Baba</underline>, Chaoran Liu, Shuhei Kurita, and Akiyoshi Sannai",
           "conference": "ICML Workshop on AI for Math",
           "year": "2025",
+          "featured": true,
           "arxiv": "2506.19923",
           "poster": {
             "text": "ICML%20Workshop",
@@ -87,6 +96,22 @@
       ],
       "article": [
         {
+          "title": "[Optuna v4.5] Gaussian Process-Based Sampler (GPSampler) Can Now Perform Constrained Multi-Objective Optimization",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Medium",
+          "year": "2025",
+          "link": "https://medium.com/optuna/optuna-v4-5-81e78d8e077a",
+          "includeInCV": true
+        },
+        {
+          "title": "[Optuna v4.5] ガウス過程を利用した Sampler の制約付き多目的最適化対応",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Preferred Networks Tech Blog",
+          "year": "2025",
+          "link": "https://tech.preferred.jp/ja/blog/optuna-gp-sampler-supports-multi-objective-constrained-optimization/",
+          "includeInCV": false
+        },
+        {
           "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
@@ -102,6 +127,12 @@
         }
       ],
       "domesticConference": [
+        {
+          "title": "LAVA Challenge: Benchmarking Japanese-English Document Understanding with Large Vision-Language Models",
+          "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
+          "conference": "画像の認識・理解シンポジウム (MIRU)",
+          "year": "2025"
+        },
         {
           "title": "UTMOSv2: 自然性MOS予測におけるスペクトログラム特徴量とSSL特徴量の統合的利用",
           "authors": "馬場 凱渡，中田 亘，齋藤 佑樹，猿渡 洋",

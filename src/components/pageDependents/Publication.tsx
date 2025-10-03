@@ -19,6 +19,7 @@ const Publication = ({
   title,
   conference,
   year,
+  featured,
   github,
   arxiv,
   poster,
@@ -31,9 +32,13 @@ const Publication = ({
   return (
     <ArrowContent className={styles.publication}>
       {index % 2 ? (
-        <SlideInLeft className={styles.title}>{title}</SlideInLeft>
+        <SlideInLeft className={`${styles.title} ${featured ? styles.featured : ''}`}>
+          {title}
+        </SlideInLeft>
       ) : (
-        <SlideInRight className={styles.title}>{title}</SlideInRight>
+        <SlideInRight className={`${styles.title} ${featured ? styles.featured : ''}`}>
+          {title}
+        </SlideInRight>
       )}
       {index % 2 ? (
         <SlideInRight className={styles.authors}>
