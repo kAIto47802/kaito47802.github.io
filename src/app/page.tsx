@@ -3,6 +3,7 @@ import Publication from '@/components/pageDependents/Publication';
 import { useTranslation } from 'react-i18next';
 import styles from './page.module.css';
 
+import AcademicService from '@/components/pageDependents/AcademicService';
 import AwardsAndHonors from '@/components/pageDependents/AwardsAndHonors';
 import Education from '@/components/pageDependents/Education';
 import OtherExperience from '@/components/pageDependents/OtherExperience';
@@ -16,6 +17,7 @@ import Header from '@/components/pure/Header';
 import Heading2 from '@/components/pure/Heading2';
 import OpeningAnimation from '@/components/pure/OpeningAnimation';
 import {
+  AcademicService as AcademicServiceType,
   AwardsAndHonors as AwardsAndHonorsType,
   Education as EducationType,
   OtherExperience as OtherExperienceType,
@@ -94,6 +96,16 @@ const Home = () => {
                 type='domesticConference'
                 {...publication}
               />
+            ))}
+          </div>
+          <div className={styles.contentBox}>
+            <AnimatedHeader text={t('academicService.title')} />
+            {(
+              t('academicService.content', {
+                returnObjects: true,
+              }) as AcademicServiceType[]
+            ).map((service, index) => (
+              <AcademicService key={index} index={index} {...service} />
             ))}
           </div>
           <div className={styles.contentBox}>

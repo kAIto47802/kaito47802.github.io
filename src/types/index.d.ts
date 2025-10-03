@@ -27,6 +27,11 @@ export interface AwardsAndHonors {
   emphasize: boolean;
 }
 
+export interface AcademicService {
+  title: string;
+  descriptions: string[];
+}
+
 export interface WorkExperience {
   company: string;
   position: string;

@@ -116,6 +116,17 @@
       ]
     }
   },
+  "academicService": {
+    "title": "Academic Service",
+    "content": [
+      {
+        "title": "Organizing Committee Member",
+        "descriptions": [
+          "ACM MM 2025 Workshop and Grand Challenge on Large Vision Language Model Learning and Applications Grand Challenge"
+        ]
+      }
+    ]
+  },
   "awardsAndHonors": {
     "title": "Awards and Honors",
     "content": [
