@@ -30,6 +30,17 @@
     "content": {
       "internationalConference": [
         {
+          "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
+          "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
+          "conference": "The 33rd ACM International Conference on Multimedia",
+          "year": "2025",
+          "paper": {
+            "text": "ACM%20MM",
+            "link": "https://dl.acm.org/doi/10.1145/3746027.3761994",
+            "color": "cc1962"
+          }
+        },
+        {
           "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
           "conference": "IEEE Spoken Language Technology Workshop (SLT)",
@@ -52,25 +63,22 @@
       ],
       "workshop": [
         {
-          "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
-          "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
-          "conference": "ACM MM 2025 Workshop and Grand Challenge on Large Vision Language Model Learning and Applications",
-          "year": "2025"
-        },
-        {
           "title": "Prover Agent: An Agent-Based Framework for Formal Mathematical Proofs",
           "authors": "<underline>Kaito Baba</underline>, Chaoran Liu, Shuhei Kurita, and Akiyoshi Sannai",
           "conference": "ICML Workshop on AI for Math",
           "year": "2025",
           "featured": true,
+          "github": {
+            "repo": "kAIto47802/Prover-Agent"
+          },
           "arxiv": "2506.19923",
           "poster": {
-            "text": "ICML%20Workshop",
-            "link": "https://kaito47802.github.io/assets/prover_agent_poster.pdf"
+            "text": "ICML%20AI4Math",
+            "link": "https://github.com/kAIto47802/Prover-Agent/tree/main/docs/icml2025_workshop_ai4math"
           },
           "slide": {
             "text": "Prover%20Agent",
-            "link": "https://kaito47802.github.io/assets/prover_agent_slide.pdf"
+            "link": "https://github.com/kAIto47802/Prover-Agent/tree/main/docs/icml2025_workshop_ai4math"
           }
         },
         {
@@ -80,7 +88,7 @@
           "year": "2024",
           "arxiv": "2411.09933",
           "poster": {
-            "text": "NeurIPS%20Workshop",
+            "text": "NeurIPS%20AIM--FM",
             "link": "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/103909.png?t=1733873689.231159",
             "color": "9d7bae"
           }

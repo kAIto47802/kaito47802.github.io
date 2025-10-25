@@ -79,7 +79,14 @@
     {{{this.conference}}}%
   }{%
     {{{this.year}}}%
-  }{{#if this.arxiv}}[https://arxiv.org/abs/{{{this.arxiv}}}]{{/if}}
+  }%
+  {{#if this.paper}}
+    [{{{this.paper.link}}}]
+  {{else}}
+    {{#if this.arxiv}}
+      [https://arxiv.org/abs/{{{this.arxiv}}}]
+    {{/if}}
+  {{/if}}
   {{/each}}
 \end{itemize}
 
