@@ -105,6 +105,21 @@
   {{/each}}
 \end{itemize}
 
+\textbf{ {{~{publications.preprint.text}~}} }
+\begin{itemize}
+  {{#each publications.content.preprint}}
+  \pubitem{{#if this.featured}}*{{/if}}{%
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }{{#if this.arxiv}}[https://arxiv.org/abs/{{{this.arxiv}}}]{{/if}}
+  {{/each}}
+\end{itemize}
+
 \textbf{ {{~{publications.article.text}~}} }
 \begin{itemize}
   {{#each publications.content.article}}

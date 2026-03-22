@@ -15,16 +15,20 @@
       "text": "International Conference Proceedings (Refereed)",
       "subtext": ""
     },
-    "domesticConference": {
-      "text": "Domestic Conference Proceedings",
+    "workshop": {
+      "text": "Workshop Papers at International Conferences (Refereed)",
+      "subtext": ""
+    },
+    "preprint": {
+      "text": "Preprints",
       "subtext": ""
     },
     "article": {
       "text": "Articles",
       "subtext": ""
     },
-    "workshop": {
-      "text": "Workshop Papers at International Conferences (Refereed)",
+    "domesticConference": {
+      "text": "Domestic Conference Proceedings",
       "subtext": ""
     },
     "content": {
@@ -95,10 +99,31 @@
         },
         {
           "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
-          "authors": "Junichiro Takahashi, Yasukawa Kan, <underline>Kaito Baba</underline>, and Satoshi Kodera",
+          "authors": "Junichiro Takahashi, JingChuan Guan, Masataka Sato, <underline>Kaito Baba</underline>, Kazuto Haruguchi, Daichi Nagashima, Satoshi Kodera, and Norihiko Takeda",
           "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2504.09302"
+        }
+      ],
+      "preprint": [
+        {
+          "title": "Multi-Modal Multi-Agent Reinforcement Learning for Radiology Report Generation: Radiologist-Like Workflow with Clinically Verifiable Rewards",
+          "authors": "<underline>Kaito Baba</underline> and Satoshi Kodera",
+          "conference": "arXiv preprint arXiv:2603.16876",
+          "year": "2026",
+          "featured": false,
+          "arxiv": "2603.16876"
+        },
+        {
+          "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
+          "authors": "<underline>Kaito Baba</underline>, Yoshihiko Ozaki, and Shuhei Watanabe",
+          "conference": "arXiv preprint arXiv:2601.20800",
+          "year": "2026",
+          "featured": true,
+          "github": {
+            "repo": "kAIto47802/condPED-ANOVA"
+          },
+          "arxiv": "2601.20800"
         }
       ],
       "article": [
@@ -357,6 +382,22 @@
   "otherExperience": {
     "title": "Other Experience",
     "content": [
+      {
+        "place": "Sorbonne University",
+        "location": "Paris, France",
+        "period": {
+          "start": "Feb. 2026",
+          "end": "Apr. 2026"
+        },
+        "descriptions": [
+          "Internship",
+          "Laboratoire d’informatique de Sorbonne Université (LIP6)"
+        ],
+        "notes": [
+          "Worked with Prof. Evripidis Bampis.",
+          "Conducted research on learning-augmented algorithms."
+        ]
+      },
       {
         "place": "National Tsing Hua University",
         "location": "Hsinchu, Taiwan",

@@ -16,17 +16,21 @@
       "text": "国際会議論文 (査読あり)",
       "subtext": "International Conference Proceedings"
     },
-    "domesticConference": {
-      "text": "国内会議論文",
-      "subtext": "Domestic Conference Proceedings"
+    "workshop": {
+      "text": "国際会議ワークショップ論文 (査読あり)",
+      "subtext": "Workshop Papers at International Conferences"
+    },
+    "preprint": {
+      "text": "プレプリント",
+      "subtext": "Preprints"
     },
     "article": {
       "text": "記事",
       "subtext": "Articles"
     },
-    "workshop": {
-      "text": "国際会議ワークショップ論文 (査読あり)",
-      "subtext": "Workshop Papers at International Conferences"
+    "domesticConference": {
+      "text": "国内会議論文",
+      "subtext": "Domestic Conference Proceedings"
     },
     "content": {
       "internationalConference": [
@@ -96,10 +100,31 @@
         },
         {
           "title": "Application of Contrastive Learning on ECG Data: Evaluating Performance in Japanese and Classification with Around 100 Labels",
-          "authors": "Junichiro Takahashi, Yasukawa Kan, <underline>Kaito Baba</underline>, and Satoshi Kodera",
+          "authors": "Junichiro Takahashi, JingChuan Guan, Masataka Sato, <underline>Kaito Baba</underline>, Kazuto Haruguchi, Daichi Nagashima, Satoshi Kodera, and Norihiko Takeda",
           "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2504.09302"
+        }
+      ],
+      "preprint": [
+        {
+          "title": "Multi-Modal Multi-Agent Reinforcement Learning for Radiology Report Generation: Radiologist-Like Workflow with Clinically Verifiable Rewards",
+          "authors": "<underline>Kaito Baba</underline> and Satoshi Kodera",
+          "conference": "arXiv preprint arXiv:2603.16876",
+          "year": "2026",
+          "featured": false,
+          "arxiv": "2603.16876"
+        },
+        {
+          "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
+          "authors": "<underline>Kaito Baba</underline>, Yoshihiko Ozaki, and Shuhei Watanabe",
+          "conference": "arXiv preprint arXiv:2601.20800",
+          "year": "2026",
+          "featured": true,
+          "github": {
+            "repo": "kAIto47802/condPED-ANOVA"
+          },
+          "arxiv": "2601.20800"
         }
       ],
       "article": [
@@ -340,13 +365,30 @@
     "title": "その他の経験",
     "content": [
       {
+        "place": "ソルボンヌ大学 (Sorbonne University)",
+        "location": "Paris, France",
+        "period": {
+          "start": "2026年2月",
+          "end": "2026年4月"
+        },
+        "descriptions": [
+          "Internship",
+          "Laboratoire d’informatique de Sorbonne Université (LIP6)"
+        ],
+        "notes": [
+          "Worked with Prof. Evripidis Bampis.",
+          "Conducted research on learning-augmented algorithms."
+        ]
+      },
+      {
         "place": "国立清華大学 (National Tsing Hua University)",
+        "location": "Hsinchu, Taiwan",
         "period": {
           "start": "2025年2月",
           "end": "2025年3月"
         },
         "descriptions": [
-          "短期留学 (修士課程)",
+          "Short-term Exchange Program",
           "工業工程與工程管理學系 (Department of Industrial Engineering and Engineering Management)"
         ],
         "notes": ["Worked with Prof. Wing-Kai Hon", "効率的なアルゴリズムに関する研究"]
