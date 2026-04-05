@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
 
 permissions:
   contents: read
@@ -17,6 +19,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.decide.outputs.should_deploy }}
+      stars_changed: ${{ steps.compare.outputs.changed }}
 
     steps:
       - name: Checkout
@@ -49,15 +54,63 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
+      - name: Download current deployed github-stars.json
+        run: |
+          mkdir -p /tmp/github-stars-compare
+          curl -sSL "https://kaito47802.github.io/data/github-stars.json" -o /tmp/github-stars-compare/current.json || true
+          if jq empty /tmp/github-stars-compare/current.json >/dev/null 2>&1; then
+            echo "Downloaded valid current github-stars.json"
+          else
+            echo '{}' > /tmp/github-stars-compare/current.json
+            echo "No valid deployed github-stars.json found; treating as changed"
+          fi
+
+      - name: Generate public/data/github-stars.json
+        env:
+          OUTPUT_PATH: public/data/github-stars.json
+        run: npm run update-github-stars-json
+
+      - name: Compare github-stars.json ignoring updatedAt
+        id: compare
+        shell: bash
+        run: |
+          current="$(jq -cS 'del(.updatedAt)' /tmp/github-stars-compare/current.json)"
+          next="$(jq -cS 'del(.updatedAt)' public/data/github-stars.json)"
+
+          if [ "$current" = "$next" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "changed=false"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "changed=true"
+          fi
+
+      - name: Decide whether to build/deploy
+        id: decide
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "Push/manual run -> deploy"
+          elif [ "${{ steps.compare.outputs.changed }}" = "true" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "Scheduled run with github stars change -> deploy"
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+            echo "Scheduled run with no github stars change -> skip build/deploy"
+          fi
+
       - name: Setup TeX Live
+        if: steps.decide.outputs.should_deploy == 'true'
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra
 
       - name: Setup Pages
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
       - name: Restore cache
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/cache@v4
         with:
           path: |
@@ -67,17 +120,21 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Build CV
+        if: steps.decide.outputs.should_deploy == 'true'
         run: npm run build:cv
 
       - name: Build with Next.js
+        if: steps.decide.outputs.should_deploy == 'true'
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
   deploy:
+    if: needs.build.outputs.should_deploy == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -87,4 +144,3 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
