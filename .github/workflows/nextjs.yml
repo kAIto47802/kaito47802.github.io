@@ -1,36 +1,35 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
 name: Deploy Next.js site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.decide.outputs.should_deploy }}
+      scholar_changed: ${{ steps.compare.outputs.changed }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -48,44 +47,96 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-      - name: Setup TeX Live
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      - name: Download current deployed scholar.json
+        run: |
+          mkdir -p /tmp/scholar-compare
+          if curl -fsSL "${SITE_URL}/data/scholar.json" -o /tmp/scholar-compare/current.json; then
+            echo "Downloaded current deployed scholar.json"
+          else
+            echo '{}' > /tmp/scholar-compare/current.json
+            echo "No deployed scholar.json found; treating as changed"
+          fi
+
+      - name: Generate public/data/scholar.json
+        env:
+          OUTPUT_PATH: public/data/scholar.json
+        run: npm run update-scholar-json
+
+      - name: Compare scholar.json ignoring updatedAt
+        id: compare
+        shell: bash
+        run: |
+          current="$(jq -cS 'del(.updatedAt)' /tmp/scholar-compare/current.json)"
+          next="$(jq -cS 'del(.updatedAt)' public/data/scholar.json)"
+
+          if [ "$current" = "$next" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "changed=false"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "changed=true"
+          fi
+
+      - name: Decide whether to build/deploy
+        id: decide
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "Push/manual run -> deploy"
+          elif [ "${{ steps.compare.outputs.changed }}" = "true" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "Scheduled run with scholar change -> deploy"
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+            echo "Scheduled run with no scholar change -> skip build/deploy"
+          fi
+
+      - name: Setup TeX Live
+        if: steps.decide.outputs.should_deploy == 'true'
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra
+
       - name: Setup Pages
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/configure-pages@v5
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+
       - name: Restore cache
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/cache@v4
         with:
           path: |
             .next/cache
-          # Generate a new cache whenever packages or source files change.
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build CV
+        if: steps.decide.outputs.should_deploy == 'true'
         run: npm run build:cv
+
       - name: Build with Next.js
+        if: steps.decide.outputs.should_deploy == 'true'
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Upload artifact
+        if: steps.decide.outputs.should_deploy == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
-  # Deployment job
   deploy:
+    if: needs.build.outputs.should_deploy == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
