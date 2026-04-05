@@ -16,9 +16,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -60,11 +57,12 @@ jobs:
       - name: Download current deployed scholar.json
         run: |
           mkdir -p /tmp/scholar-compare
-          if curl -fsSL "${SITE_URL}/data/scholar.json" -o /tmp/scholar-compare/current.json; then
-            echo "Downloaded current deployed scholar.json"
+          curl -sSL "https://kaito47802.github.io/data/scholar.json" -o /tmp/scholar-compare/current.json || true
+          if jq empty /tmp/scholar-compare/current.json >/dev/null 2>&1; then
+            echo "Downloaded valid current scholar.json"
           else
             echo '{}' > /tmp/scholar-compare/current.json
-            echo "No deployed scholar.json found; treating as changed"
+            echo "No valid deployed scholar.json found; treating as changed"
           fi
 
       - name: Generate public/data/scholar.json
