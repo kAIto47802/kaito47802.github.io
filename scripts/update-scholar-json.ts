@@ -63,7 +63,7 @@ const getScholarEntries = async (): Promise<string[]> => {
       .map((publication) => publication.scholar),
   );
 
-  return Array.from(new Set(scholars));
+  return [...new Set(scholars)].sort();
 };
 
 const buildCitationUrl = (profileId: string, articleId: string): string => {
