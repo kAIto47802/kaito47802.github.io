@@ -8,7 +8,7 @@ const ScholarIcon = ({
 }: {
   url: string;
   className?: string;
-  withCitations: boolean;
+  withCitations?: boolean;
 }) => (
   <>
     <a href={url} className={`${styles.link} ${className ?? ''}`}>
