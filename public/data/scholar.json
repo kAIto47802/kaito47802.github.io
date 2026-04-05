@@ -1,0 +1,29 @@
+{
+  "profileId": "oJvSC5wAAAAJ",
+  "updatedAt": "2026-04-05T22:33:31.923Z",
+  "profile": {
+    "citationUrl": "https://scholar.google.com/citations?hl=en&user=oJvSC5wAAAAJ",
+    "citations": 115,
+    "error": null
+  },
+  "items": {
+    "9yKSN-GCB0IC": {
+      "ok": true,
+      "citationUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ%3A9yKSN-GCB0IC",
+      "citations": 21,
+      "error": null
+    },
+    "u-x6o8ySG0sC": {
+      "ok": true,
+      "citationUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ%3Au-x6o8ySG0sC",
+      "citations": 5,
+      "error": null
+    },
+    "u5HHmVD_uO8C": {
+      "ok": true,
+      "citationUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ%3Au5HHmVD_uO8C",
+      "citations": 88,
+      "error": null
+    }
+  }
+}
