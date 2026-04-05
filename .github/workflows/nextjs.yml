@@ -68,7 +68,7 @@ jobs:
       - name: Generate public/data/github-stars.json
         env:
           OUTPUT_PATH: public/data/github-stars.json
-        run: npm run update-github-stars-json
+        run: npm run update-github-stars
 
       - name: Compare github-stars.json ignoring updatedAt
         id: compare

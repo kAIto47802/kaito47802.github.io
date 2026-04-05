@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "rm -fr .next",
     "dev": "next dev",
-    "gen-latex": "node scripts/gen-latex.js",
+    "gen-latex": "tsx scripts/gen-latex.ts",
     "build:pdf": "pdflatex -interaction=nonstopmode cv.tex && mv cv.pdf public/ && rm -f cv.aux cv.log cv.out cv.synctex.gz",
     "build:cv": "npm run gen-latex && npm run build:pdf",
     "update-scholar": "tsx scripts/update-scholar.ts",
