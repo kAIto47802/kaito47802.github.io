@@ -1,5 +1,6 @@
 import ArrowContent from '@/components/pure/ArrowContent';
 import ArXivIcon from '@/components/pure/ArXivIcon';
+import CitationsIcon from '@/components/pure/CitationsIcon';
 import ExternalLinkIcon from '@/components/pure/ExternalLinkIcon';
 import GitHubIcon from '@/components/pure/GitHubIcon';
 import SlideInLeft from '@/components/pure/SlideInLeft';
@@ -22,6 +23,7 @@ const Publication = ({
   featured,
   github,
   arxiv,
+  scholar,
   poster,
   paper,
   slide,
@@ -62,6 +64,7 @@ const Publication = ({
             {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
+            {scholar && <CitationsIcon articleId={scholar} />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}
             {slide && <ExternalLinkIcon {...slide} name='Slide' />}
             {link && <LinkIcon link={link} />}
@@ -74,6 +77,7 @@ const Publication = ({
             {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
             {paper && <ExternalLinkIcon {...paper} name='Paper' />}
+            {scholar && <CitationsIcon articleId={scholar} />}
             {poster && <ExternalLinkIcon {...poster} name='Poster' />}
             {slide && <ExternalLinkIcon {...slide} name='Slide' />}
             {link && <LinkIcon link={link} />}
