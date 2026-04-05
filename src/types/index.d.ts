@@ -15,6 +15,7 @@ export interface Publication {
     withStar?: boolean;
   };
   arxiv?: string;
+  scholar?: string;
   poster?: ExternalLink;
   paper?: ExternalLink;
   slide?: ExternalLink;

@@ -55,6 +55,7 @@
             "withStar": true
           },
           "arxiv": "2409.09305",
+          "scholar": "u5HHmVD_uO8C",
           "poster": {
             "text": "IEEE%20SLT",
             "link": "https://github.com/sarulab-speech/UTMOSv2/blob/main/poster.pdf"
@@ -73,9 +74,11 @@
           "year": "2025",
           "featured": true,
           "github": {
-            "repo": "kAIto47802/Prover-Agent"
+            "repo": "kAIto47802/Prover-Agent",
+            "withStar": true
           },
           "arxiv": "2506.19923",
+          "scholar": "9yKSN-GCB0IC",
           "poster": {
             "text": "ICML%20AI4Math",
             "link": "https://github.com/kAIto47802/Prover-Agent/tree/main/docs/icml2025_workshop_ai4math"
@@ -91,6 +94,7 @@
           "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2411.09933",
+          "scholar": "u-x6o8ySG0sC",
           "poster": {
             "text": "NeurIPS%20AIM--FM",
             "link": "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/103909.png?t=1733873689.231159",

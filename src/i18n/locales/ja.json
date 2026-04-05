@@ -74,7 +74,8 @@
           "year": "2025",
           "featured": true,
           "github": {
-            "repo": "kAIto47802/Prover-Agent"
+            "repo": "kAIto47802/Prover-Agent",
+            "withStar": true
           },
           "arxiv": "2506.19923",
           "poster": {

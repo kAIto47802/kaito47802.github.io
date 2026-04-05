@@ -8,6 +8,7 @@
     "gen-latex": "node scripts/gen-latex.js",
     "build:pdf": "pdflatex -interaction=nonstopmode cv.tex && mv cv.pdf public/ && rm -f cv.aux cv.log cv.out cv.synctex.gz",
     "build:cv": "npm run gen-latex && npm run build:pdf",
+    "update-scholar-json": "tsx scripts/update-scholar-json.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
@@ -26,7 +27,8 @@
     "react-i18next": "^15.0.1",
     "react-intersection-observer": "^9.13.0",
     "react-tsparticles": "^2.12.2",
-    "tsparticles-slim": "^2.12.0"
+    "tsparticles-slim": "^2.12.0",
+    "tsx": "^4.21.0"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.20",
