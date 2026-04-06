@@ -35,9 +35,9 @@
 
   Homepage: \texttt{\url{https://kaito47802.github.io}}
 
-  GitHub: \texttt{\url{https://github.com/kAIto47802}}
-  \hspace{3mm}
-  Google Scholar: \texttt{\href{https://scholar.google.com/citations?user=oJvSC5wAAAAJ}{oJvSC5wAAAAJ}}
+  GitHub: \texttt{\url{https://github.com/kAIto47802}} (Total stars: {{githubTotalStars}})
+  \hspace{1mm}
+  Google Scholar: \texttt{\href{https://scholar.google.com/citations?user=oJvSC5wAAAAJ}{oJvSC5wAAAAJ}} (Citations: {{scholarTotalCitations}})
 \end{center}
 
 
@@ -87,6 +87,23 @@
       [https://arxiv.org/abs/{{{this.arxiv}}}]
     {{/if}}
   {{/if}}
+  {{#if (or githubStars scholarCitations)}}({{/if}}%
+  {{#if githubStars}}%
+    \href{%
+      https://github.com/{{github.repo}}%
+    }{%
+      GitHub stars: {{githubStars}}%
+    }%
+  {{/if}}%
+  {{#if (and githubStars scholarCitations)}}, {{/if}}%
+  {{#if scholarCitations}}%
+    \href{%
+      https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ:{{scholar}}
+    }{%
+      Cited by: {{scholarCitations}}%
+    }%
+  {{/if}}%
+  {{#if (or githubStars scholarCitations)}}){{/if}}%
   {{/each}}
 \end{itemize}
 
@@ -102,6 +119,23 @@
   }{%
     {{{this.year}}}%
   }{{#if this.arxiv}}[https://arxiv.org/abs/{{{this.arxiv}}}]{{/if}}
+  {{#if (or githubStars scholarCitations)}}({{/if}}%
+  {{#if githubStars}}%
+    \href{%
+      https://github.com/{{github.repo}}%
+    }{%
+      GitHub stars: {{githubStars}}%
+    }%
+  {{/if}}%
+  {{#if (and githubStars scholarCitations)}}, {{/if}}%
+  {{#if scholarCitations}}%
+    \href{%
+      https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ:{{scholar}}
+    }{%
+      Cited by: {{scholarCitations}}%
+    }%
+  {{/if}}%
+  {{#if (or githubStars scholarCitations)}}){{/if}}%
   {{/each}}
 \end{itemize}
 
@@ -117,6 +151,23 @@
   }{%
     {{{this.year}}}%
   }{{#if this.arxiv}}[https://arxiv.org/abs/{{{this.arxiv}}}]{{/if}}
+  {{#if (or githubStars scholarCitations)}}({{/if}}%
+  {{#if githubStars}}%
+    \href{%
+      https://github.com/{{github.repo}}%
+    }{%
+      GitHub stars: {{githubStars}}%
+    }%
+  {{/if}}%
+  {{#if (and githubStars scholarCitations)}}, {{/if}}%
+  {{#if scholarCitations}}%
+    \href{%
+      https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ:{{scholar}}
+    }{%
+      Cited by: {{scholarCitations}}%
+    }%
+  {{/if}}%
+  {{#if (or githubStars scholarCitations)}}){{/if}}%
   {{/each}}
 \end{itemize}
 
@@ -149,6 +200,13 @@
   }{%
     {{{this.year}}}%
   }{{#if this.arxiv}}[https://arxiv.org/abs/{{{this.arxiv}}}]{{/if}}
+  {{#if githubStars}}
+    (\href{%
+      https://github.com/{{github.repo}}%
+    }{%
+      GitHub stars: {{githubStars}}%
+    })
+  {{/if}}
   {{/each}}
 \end{itemize}
 
