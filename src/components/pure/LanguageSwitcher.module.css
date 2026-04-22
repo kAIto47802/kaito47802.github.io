@@ -30,3 +30,7 @@
 .langButton span:hover {
   border-bottom: 1.5px solid #26d7f6;
 }
+
+.active span {
+  border-bottom: 1.5px solid #26d7f6;
+}

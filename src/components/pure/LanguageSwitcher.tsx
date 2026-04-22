@@ -1,21 +1,27 @@
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import styles from './LanguageSwitcher.module.css';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  const locale = i18n.language;
 
   return (
     <div className={styles.languageSwitcher}>
-      <button onClick={() => changeLanguage('en')} className={styles.langButton}>
+      <Link
+        href='/'
+        className={`${styles.langButton} ${locale === 'en' ? styles.active : ''}`}
+        aria-current={locale === 'en' ? 'page' : undefined}
+      >
         <span>🇺🇸 English</span>
-      </button>
-      <button onClick={() => changeLanguage('ja')} className={styles.langButton}>
+      </Link>
+      <Link
+        href='/ja'
+        className={`${styles.langButton} ${locale === 'ja' ? styles.active : ''}`}
+        aria-current={locale === 'ja' ? 'page' : undefined}
+      >
         <span>🇯🇵 日本語</span>
-      </button>
+      </Link>
     </div>
   );
 };

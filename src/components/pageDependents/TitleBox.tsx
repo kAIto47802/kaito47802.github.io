@@ -1,5 +1,4 @@
 import { BASE_PATH } from '@/common/constants';
-import i18n from '@/i18n/config';
 import { Athiti, Caveat, Noticia_Text, Raleway } from 'next/font/google';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
@@ -19,7 +18,7 @@ const athiti = Athiti({ weight: '500', subsets: ['latin'] });
 
 const TitleBox = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div
       ref={ref}

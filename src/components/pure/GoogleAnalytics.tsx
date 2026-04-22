@@ -1,21 +1,16 @@
 'use client';
 
 import { GA_TAG_ID, IS_GATAG, pageview } from '@/libs/gtag';
-import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
-import { Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
 
-const GoogleAnalyticsInner = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
+const GoogleAnalytics = () => {
   useEffect(() => {
     if (!IS_GATAG) {
       return;
     }
-    const url = pathname + searchParams.toString();
-    pageview(url);
-  }, [pathname, searchParams]);
+    pageview(`${window.location.pathname}${window.location.search}`);
+  }, []);
 
   return (
     <>
@@ -34,14 +29,6 @@ const GoogleAnalyticsInner = () => {
         `}
       </Script>
     </>
-  );
-};
-
-const GoogleAnalytics = () => {
-  return (
-    <Suspense>
-      <GoogleAnalyticsInner />
-    </Suspense>
   );
 };
 export default GoogleAnalytics;
