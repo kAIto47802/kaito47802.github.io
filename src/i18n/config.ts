@@ -1,29 +1,40 @@
 import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import type { i18n as I18nInstance } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import translationsEn from './locales/en.json';
 import translationsJa from './locales/ja.json';
 
-i18n
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .init({
-    resources: {
-      en: {
-        translation: translationsEn,
+export const resources = {
+  en: {
+    translation: translationsEn,
+  },
+  ja: {
+    translation: translationsJa,
+  },
+} as const;
+
+export const locales = ['en', 'ja'] as const;
+export type Locale = (typeof locales)[number];
+export const defaultLocale: Locale = 'en';
+
+export const initI18n = (instance: I18nInstance, locale: Locale): I18nInstance => {
+  if (!instance.isInitialized) {
+    instance.use(initReactI18next).init({
+      resources,
+      lng: locale,
+      fallbackLng: defaultLocale,
+      interpolation: {
+        escapeValue: false,
       },
-      ja: {
-        translation: translationsJa,
-      },
-    },
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false,
-    },
-    detection: {
-      order: ['cookie'],
-      lookupCookie: 'lang',
-    },
-  });
+      initImmediate: false,
+    });
+  } else if (instance.language !== locale) {
+    instance.changeLanguage(locale);
+  }
+
+  return instance;
+};
+
+initI18n(i18n, defaultLocale);
 
 export default i18n;

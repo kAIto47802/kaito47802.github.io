@@ -1,7 +1,9 @@
 'use client';
+import Providers from '@/app/providers';
+import styles from '@/app/page.module.css';
 import Publication from '@/components/pageDependents/Publication';
+import { Locale } from '@/i18n/config';
 import { useTranslation } from 'react-i18next';
-import styles from './page.module.css';
 
 import AcademicService from '@/components/pageDependents/AcademicService';
 import AwardsAndHonors from '@/components/pageDependents/AwardsAndHonors';
@@ -25,7 +27,7 @@ import {
   WorkExperience as WorkExperienceType,
 } from '@/types';
 
-const Home = () => {
+const HomeContent = () => {
   const { t } = useTranslation();
   return (
     <>
@@ -166,4 +168,11 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+
+const HomePage = ({ locale }: { locale: Locale }) => (
+  <Providers locale={locale}>
+    <HomeContent />
+  </Providers>
+);
+
+export default HomePage;

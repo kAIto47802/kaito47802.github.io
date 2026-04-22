@@ -1,5 +1,6 @@
+import RootDocument from '@/app/RootDocument';
 import type { Metadata } from 'next';
-import './globals.css';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title: {
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
   description: "This is Kaito Baba's profile page.",
   alternates: {
     canonical: '/',
+    languages: {
+      en: '/',
+      ja: '/ja',
+    },
   },
   metadataBase: new URL('https://kaito47802.github.io'),
   openGraph: {
@@ -16,12 +21,12 @@ export const metadata: Metadata = {
     siteName: 'Kaito Baba',
     url: 'https://kaito47802.github.io/',
     type: 'website',
-    images: ['opengraph-image.png'],
+    images: ['https://kaito47802.github.io/opengraph-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kaito Baba | Homepage',
-    images: ['twitter-image.png'],
+    images: ['https://kaito47802.github.io/twitter-image.png'],
   },
   robots: {
     index: true,
@@ -29,11 +34,10 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({
+const EnglishLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) => {
-  return children;
-};
-export default RootLayout;
+}>) => <RootDocument locale='en'>{children}</RootDocument>;
+
+export default EnglishLayout;
