@@ -1,13 +1,13 @@
 {
   "basic": {
     "affiliation": {
-      "textJa": "東京大学大学院情報理工学系研究科修士1年",
+      "textJa": "東京大学大学院情報理工学系研究科修士2年",
       "text": "First-year master's student at the University of Tokyo\nGraduate School of Information Science and Technology"
     }
   },
   "biography": {
     "title": "Biography",
-    "text": "東京大学大学院情報理工学系研究科修士課程1年。大規模言語モデル (LLM)、深層学習、最適化、学習理論、アルゴリズムなどの研究に興味があります。"
+    "text": "東京大学大学院情報理工学系研究科修士課程2年。大規模言語モデル (LLM)、深層学習、最適化、学習理論、アルゴリズムなどの研究に興味があります。"
   },
   "publications": {
     "title": "発表論文",
