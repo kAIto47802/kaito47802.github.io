@@ -61,9 +61,17 @@
             "link": "https://github.com/sarulab-speech/UTMOSv2/blob/main/poster.pdf"
           },
           "paper": {
-            "text": "IEEE%20SLT",
+            "text": "IEEE%20Xplore",
+            "name": "10832315",
             "link": "https://ieeexplore.ieee.org/document/10832315"
-          }
+          },
+          "otherLinks": [
+            {
+              "text": "%F0%9F%A4%97%20Hugging%20Face",
+              "name": "Spaces",
+              "link": "https://huggingface.co/spaces/sarulab-speech/UTMOSv2"
+            }
+          ]
         }
       ],
       "workshop": [
@@ -81,10 +89,7 @@
           "scholar": "9yKSN-GCB0IC",
           "poster": {
             "text": "ICML%20AI4Math",
-            "link": "https://github.com/kAIto47802/Prover-Agent/tree/main/docs/icml2025_workshop_ai4math"
-          },
-          "slide": {
-            "text": "Prover%20Agent",
+            "name": "Poster&Slides%20(Earlier%20version)",
             "link": "https://github.com/kAIto47802/Prover-Agent/tree/main/docs/icml2025_workshop_ai4math"
           }
         },

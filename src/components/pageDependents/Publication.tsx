@@ -28,6 +28,7 @@ const Publication = ({
   paper,
   slide,
   link,
+  otherLinks,
   type,
 }: PublicationProps) => {
   const authorsKey = `publications.content.${type}.${index}.authors`;
@@ -63,11 +64,15 @@ const Publication = ({
           <div className={styles.icons}>
             {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
-            {paper && <ExternalLinkIcon {...paper} name='Paper' />}
+            {paper && <ExternalLinkIcon {...paper} name={paper.name ?? 'Paper'} />}
             {scholar && <CitationsIcon articleId={scholar} />}
-            {poster && <ExternalLinkIcon {...poster} name='Poster' />}
-            {slide && <ExternalLinkIcon {...slide} name='Slide' />}
+            {poster && <ExternalLinkIcon {...poster} name={poster.name ?? 'Poster'} />}
+            {slide && <ExternalLinkIcon {...slide} name={slide.name ?? 'Slide'} />}
             {link && <LinkIcon link={link} />}
+            {otherLinks &&
+              otherLinks.map((otherLink, idx) => (
+                <ExternalLinkIcon key={idx} {...otherLink} />
+              ))}
           </div>
         </SlideInLeft>
       ) : (
@@ -76,11 +81,15 @@ const Publication = ({
           <div className={styles.icons}>
             {github && <GitHubIcon {...github} />}
             {arxiv && <ArXivIcon num={arxiv} />}
-            {paper && <ExternalLinkIcon {...paper} name='Paper' />}
+            {paper && <ExternalLinkIcon {...paper} name={paper.name ?? 'Paper'} />}
             {scholar && <CitationsIcon articleId={scholar} />}
-            {poster && <ExternalLinkIcon {...poster} name='Poster' />}
-            {slide && <ExternalLinkIcon {...slide} name='Slide' />}
+            {poster && <ExternalLinkIcon {...poster} name={poster.name ?? 'Poster'} />}
+            {slide && <ExternalLinkIcon {...slide} name={slide.name ?? 'Slide'} />}
             {link && <LinkIcon link={link} />}
+            {otherLinks &&
+              otherLinks.map((otherLink, idx) => (
+                <ExternalLinkIcon key={idx} {...otherLink} />
+              ))}
           </div>
         </SlideInRight>
       )}

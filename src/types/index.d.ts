@@ -1,7 +1,11 @@
 export interface ExternalLink {
   text: string;
-  name: string;
+  name?: string;
   link: string;
+}
+
+export interface NamedExternalLink extends ExternalLink {
+  name: string;
 }
 
 export interface Publication {
@@ -20,6 +24,7 @@ export interface Publication {
   paper?: ExternalLink;
   slide?: ExternalLink;
   link?: string;
+  otherLinks?: NamedExternalLink[];
 }
 
 export interface AwardsAndHonors {
