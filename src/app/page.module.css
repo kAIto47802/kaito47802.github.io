@@ -12,7 +12,7 @@
   background-image: url(/background.jpg);
   background-blend-mode: screen;
   width: 100%;
-  height: 90vh;
+  height: 83vh;
 }
 @media (max-width: 600px) and (min-height: 650px) {
   .basic {
@@ -60,33 +60,66 @@
 }
 
 .sectionNav {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(8, max-content);
   gap: 0.5rem;
   justify-content: center;
   width: 80%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.25rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid #ffffff8a;
+  border-bottom: 1px solid #ffffff8a;
   white-space: normal;
 }
 
 .sectionNavItem {
-  color: #1d315f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #18345f;
+  text-align: center;
   text-decoration: none;
-  background-color: #ffffffa8;
-  border: 1px solid #ffffffd1;
+  background-color: #edf5ff91;
+  border: 1px solid #ffffffb8;
   border-radius: 8px;
-  padding: 0.45rem 0.75rem;
+  box-shadow: 0 1px 4px #2f579324;
+  padding: 0.48rem 0.78rem;
   font-size: 0.95rem;
   line-height: 1.2;
+  white-space: nowrap;
   transition:
+    border-color 0.2s ease,
     background-color 0.2s ease,
+    box-shadow 0.2s ease,
     transform 0.2s ease;
 }
 
 .sectionNavItem:hover,
 .sectionNavItem:focus-visible {
-  background-color: #ffffffe0;
+  background-color: #ffffffe8;
+  border-color: #ffffff;
+  box-shadow: 0 3px 8px #244a8530;
   transform: translateY(-1px);
+}
+
+.sectionNavBreak {
+  display: none;
+}
+
+@media (min-width: 752px) and (max-width: 1420px) {
+  .sectionNav {
+    display: block;
+    padding: 0.65rem 0;
+    text-align: center;
+  }
+
+  .sectionNavItem {
+    margin: 0.18rem 0.25rem;
+  }
+
+  .sectionNavBreak {
+    display: block;
+  }
 }
 
 .contentBox {
@@ -114,10 +147,17 @@
     width: 90%;
   }
 }
+@media (max-width: 751px) {
+  .sectionNav {
+    row-gap: 0.35rem;
+    padding: 0.65rem 0;
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+
 @media (max-width: 600px) {
   .sectionNav {
     width: 95%;
-    justify-content: flex-start;
   }
 
   .sectionNavItem {
@@ -126,6 +166,18 @@
 
   .contentBox {
     width: 95%;
+  }
+}
+
+@media (max-width: 547px) {
+  .sectionNav {
+    row-gap: 0.5rem;
+    padding: 0.8rem 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sectionNavItem {
+    white-space: normal;
   }
 }
 

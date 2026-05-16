@@ -55,11 +55,14 @@ const HomeContent = () => {
         </div>
         <div className={styles.content}>
           <nav className={styles.sectionNav} aria-label='Section navigation'>
-            {sectionLinks.map(({ id, text }) => (
+            {sectionLinks.map(({ id, text }, index) => [
               <a key={id} className={styles.sectionNavItem} href={`#${id}`}>
                 {text}
-              </a>
-            ))}
+              </a>,
+              index === 4 && (
+                <br key={`${id}-break`} className={styles.sectionNavBreak} />
+              ),
+            ])}
           </nav>
           <div id='biography' className={styles.contentBox}>
             <AnimatedHeader text={t('biography.title')} />
