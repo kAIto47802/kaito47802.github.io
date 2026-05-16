@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 html[data-locale='en'] body {
   font-family: var(--font-noto-sans), sans-serif;
 }

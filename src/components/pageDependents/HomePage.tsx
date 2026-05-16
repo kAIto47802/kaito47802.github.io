@@ -33,6 +33,16 @@ const HomeContent = () => {
     (t('publications.content.preprint', {
       returnObjects: true,
     }) as PublicationType[] | undefined) ?? [];
+  const sectionLinks = [
+    { id: 'biography', text: t('biography.title') },
+    { id: 'publications', text: t('publications.title') },
+    { id: 'awards-and-honors', text: t('awardsAndHonors.title') },
+    { id: 'work-experience', text: t('workExperience.title') },
+    { id: 'education', text: t('education.title') },
+    { id: 'academic-service', text: t('academicService.title') },
+    { id: 'other-experience', text: t('otherExperience.title') },
+    { id: 'technical-skills', text: t('technicalSkills.title') },
+  ];
 
   return (
     <>
@@ -44,11 +54,18 @@ const HomeContent = () => {
           <TitleBox />
         </div>
         <div className={styles.content}>
-          <div className={styles.contentBox}>
+          <nav className={styles.sectionNav} aria-label='Section navigation'>
+            {sectionLinks.map(({ id, text }) => (
+              <a key={id} className={styles.sectionNavItem} href={`#${id}`}>
+                {text}
+              </a>
+            ))}
+          </nav>
+          <div id='biography' className={styles.contentBox}>
             <AnimatedHeader text={t('biography.title')} />
             <div className={styles.bio}>{t('biography.text')}</div>
           </div>
-          <div className={styles.contentBox}>
+          <div id='publications' className={styles.contentBox}>
             <AnimatedHeader text={t('publications.title')} />
             <div className={styles.note}>{t('publications.note')}</div>
             <Heading2
@@ -122,17 +139,7 @@ const HomeContent = () => {
               />
             ))}
           </div>
-          <div className={styles.contentBox}>
-            <AnimatedHeader text={t('academicService.title')} />
-            {(
-              t('academicService.content', {
-                returnObjects: true,
-              }) as AcademicServiceType[]
-            ).map((service, index) => (
-              <AcademicService key={index} index={index} {...service} />
-            ))}
-          </div>
-          <div className={styles.contentBox}>
+          <div id='awards-and-honors' className={styles.contentBox}>
             <AnimatedHeader text={t('awardsAndHonors.title')} />
             {(
               t('awardsAndHonors.content', {
@@ -142,7 +149,7 @@ const HomeContent = () => {
               <AwardsAndHonors key={index} index={index} {...award} />
             ))}
           </div>
-          <div className={styles.contentBox}>
+          <div id='work-experience' className={styles.contentBox}>
             <AnimatedHeader text={t('workExperience.title')} />
             {(
               t('workExperience.content', { returnObjects: true }) as WorkExperienceType[]
@@ -150,7 +157,7 @@ const HomeContent = () => {
               <WorkExperience key={index} index={index} {...workExperience} />
             ))}
           </div>
-          <div className={styles.contentBox}>
+          <div id='education' className={styles.contentBox}>
             <AnimatedHeader text={t('education.title')} />
             {(t('education.content', { returnObjects: true }) as EducationType[]).map(
               (education, index) => (
@@ -158,7 +165,17 @@ const HomeContent = () => {
               ),
             )}
           </div>
-          <div className={styles.contentBox}>
+          <div id='academic-service' className={styles.contentBox}>
+            <AnimatedHeader text={t('academicService.title')} />
+            {(
+              t('academicService.content', {
+                returnObjects: true,
+              }) as AcademicServiceType[]
+            ).map((service, index) => (
+              <AcademicService key={index} index={index} {...service} />
+            ))}
+          </div>
+          <div id='other-experience' className={styles.contentBox}>
             <AnimatedHeader text={t('otherExperience.title')} />
             {(
               t('otherExperience.content', {
@@ -168,7 +185,7 @@ const HomeContent = () => {
               <OtherExperience key={index} index={index} {...otherExperience} />
             ))}
           </div>
-          <div className={styles.contentBox}>
+          <div id='technical-skills' className={styles.contentBox}>
             <AnimatedHeader text={t('technicalSkills.title')} />
             <TechnicalSkills />
           </div>

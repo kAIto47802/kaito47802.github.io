@@ -4,6 +4,8 @@
 }
 
 .basic {
+  position: relative;
+  z-index: 1;
   background-size: cover;
   background-position: center;
   animation: bg-color 20s infinite;
@@ -49,10 +51,42 @@
 }
 
 .content {
+  position: relative;
+  z-index: 1;
   background-color: #7597df;
   padding-top: 2rem;
   height: 100%;
   overflow: hidden;
+}
+
+.sectionNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto 2rem;
+  white-space: normal;
+}
+
+.sectionNavItem {
+  color: #1d315f;
+  text-decoration: none;
+  background-color: #ffffffa8;
+  border: 1px solid #ffffffd1;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sectionNavItem:hover,
+.sectionNavItem:focus-visible {
+  background-color: #ffffffe0;
+  transform: translateY(-1px);
 }
 
 .contentBox {
@@ -60,18 +94,36 @@
   width: 80%;
   background-color: #ffffff56;
   padding: 1rem 1rem 2rem;
+  scroll-margin-top: 1rem;
 }
 @media (max-width: 900px) {
+  .sectionNav {
+    width: 85%;
+  }
+
   .contentBox {
     width: 85%;
   }
 }
 @media (max-width: 820px) {
+  .sectionNav {
+    width: 90%;
+  }
+
   .contentBox {
     width: 90%;
   }
 }
 @media (max-width: 600px) {
+  .sectionNav {
+    width: 95%;
+    justify-content: flex-start;
+  }
+
+  .sectionNavItem {
+    font-size: 0.85rem;
+  }
+
   .contentBox {
     width: 95%;
   }

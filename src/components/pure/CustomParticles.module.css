@@ -3,11 +3,12 @@
   width: 100px;
   height: 100px;
   z-index: 510;
+  pointer-events: none;
   transition: z-index 0.01s linear 0.25s;
 }
 
 .outView .particles {
-  z-index: 510;
+  z-index: 0;
 }
 
 .inView .particles {
@@ -17,4 +18,5 @@
 .particleCanvas {
   position: absolute;
   z-index: 0;
+  pointer-events: none;
 }
