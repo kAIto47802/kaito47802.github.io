@@ -28,11 +28,11 @@ import {
 } from '@/types';
 
 const HomeContent = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const preprints =
-    (i18n.getResource(i18n.language, 'translation', 'publications.content.preprint') as
-      | PublicationType[]
-      | undefined) ?? [];
+    (t('publications.content.preprint', {
+      returnObjects: true,
+    }) as PublicationType[] | undefined) ?? [];
 
   return (
     <>
