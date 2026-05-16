@@ -34,6 +34,18 @@
     "content": {
       "internationalConference": [
         {
+          "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
+          "authors": "<underline>Kaito Baba</underline>, Yoshihiko Ozaki, and Shuhei Watanabe",
+          "conference": "Proceedings of the 32st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+          "year": "2026",
+          "featured": true,
+          "github": {
+            "repo": "kAIto47802/condPED-ANOVA",
+            "withStar": true
+          },
+          "arxiv": "2601.20800"
+        },
+        {
           "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
           "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
           "conference": "The 33rd ACM International Conference on Multimedia",
@@ -122,17 +134,6 @@
           "year": "2026",
           "featured": false,
           "arxiv": "2603.16876"
-        },
-        {
-          "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
-          "authors": "<underline>Kaito Baba</underline>, Yoshihiko Ozaki, and Shuhei Watanabe",
-          "conference": "arXiv preprint arXiv:2601.20800",
-          "year": "2026",
-          "featured": true,
-          "github": {
-            "repo": "kAIto47802/condPED-ANOVA"
-          },
-          "arxiv": "2601.20800"
         }
       ],
       "article": [
