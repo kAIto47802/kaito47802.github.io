@@ -1,6 +1,6 @@
 'use client';
-import Providers from '@/app/providers';
 import styles from '@/app/page.module.css';
+import Providers from '@/app/providers';
 import Publication from '@/components/pageDependents/Publication';
 import { Locale } from '@/i18n/config';
 import { useTranslation } from 'react-i18next';
@@ -28,7 +28,12 @@ import {
 } from '@/types';
 
 const HomeContent = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const preprints =
+    (i18n.getResource(i18n.language, 'translation', 'publications.content.preprint') as
+      | PublicationType[]
+      | undefined) ?? [];
+
   return (
     <>
       <Header />
@@ -73,17 +78,22 @@ const HomeContent = () => {
             ).map((publication, index) => (
               <Publication key={index} index={index} type='workshop' {...publication} />
             ))}
-            <Heading2
-              text={t('publications.preprint.text')}
-              subtext={t('publications.preprint.subtext')}
-            />
-            {(
-              t('publications.content.preprint', {
-                returnObjects: true,
-              }) as PublicationType[]
-            ).map((publication, index) => (
-              <Publication key={index} index={index} type='preprint' {...publication} />
-            ))}
+            {!!preprints.length && (
+              <>
+                <Heading2
+                  text={t('publications.preprint.text')}
+                  subtext={t('publications.preprint.subtext')}
+                />
+                {preprints.map((publication, index) => (
+                  <Publication
+                    key={index}
+                    index={index}
+                    type='preprint'
+                    {...publication}
+                  />
+                ))}
+              </>
+            )}
             <Heading2
               text={t('publications.article.text')}
               subtext={t('publications.article.subtext')}
