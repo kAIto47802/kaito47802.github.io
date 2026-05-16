@@ -109,12 +109,14 @@
 @media (min-width: 752px) and (max-width: 1420px) {
   .sectionNav {
     display: block;
-    padding: 0.65rem 0;
+    padding: 0.62rem 0;
     text-align: center;
   }
 
   .sectionNavItem {
-    margin: 0.18rem 0.25rem;
+    margin: 0.16rem 0.24rem;
+    padding: 0.42rem 0.74rem;
+    line-height: 1.15;
   }
 
   .sectionNavBreak {
@@ -149,9 +151,14 @@
 }
 @media (max-width: 751px) {
   .sectionNav {
-    row-gap: 0.35rem;
-    padding: 0.65rem 0;
+    row-gap: 0.38rem;
+    padding: 0.62rem 0;
     grid-template-columns: repeat(4, max-content);
+  }
+
+  .sectionNavItem {
+    padding: 0.42rem 0.74rem;
+    line-height: 1.15;
   }
 }
 
@@ -177,6 +184,8 @@
   }
 
   .sectionNavItem {
+    padding: 0.48rem 0.78rem;
+    line-height: 1.2;
     white-space: normal;
   }
 }
