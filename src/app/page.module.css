@@ -132,19 +132,21 @@
   font-size: 0.95rem;
   line-height: 1.2;
   white-space: nowrap;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, background-color, box-shadow;
   transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .sectionNavItem:hover,
 .sectionNavItem:focus-visible {
   background-color: #9ee3f848;
   border-color: #d9f4ffb8;
-  box-shadow: 0 3px 8px #244a8530;
-  transform: translateY(-1px);
+  box-shadow: 0 3px 8px #244a852b;
+  transform: translate3d(0, -0.06rem, 0);
 }
 
 .sectionNavBreak {
@@ -174,7 +176,7 @@
   z-index: 2;
   margin: 0rem auto 2.5rem;
   width: 80%;
-  background-color: #ffffff56;
+  background-color: #ffffff40;
   padding: 1rem 1rem 2rem;
   scroll-margin-top: 1rem;
 }
