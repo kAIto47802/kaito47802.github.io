@@ -34,7 +34,7 @@ const CustomParticles = ({ id = 'tsparticles' }: { id?: string }) => {
               },
             },
             color: {
-              value: ['#79d17db1', '#70d4f3d6'],
+              value: ['#70d4f3d6', '#d8a8ff'],
             },
             shape: {
               type: 'circle',
@@ -111,8 +111,9 @@ const CustomParticles = ({ id = 'tsparticles' }: { id?: string }) => {
               },
               bubble: {
                 distance: 250,
-                size: 0,
+                size: 0.5,
                 duration: 2,
+                color: '#d385fd',
                 opacity: 0,
                 speed: 3,
               },
