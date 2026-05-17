@@ -4,13 +4,14 @@ This repository contains the source code for my personal website and CV.
 
 The site is built as a static Next.js application and deployed to GitHub Pages.
 
+Deployment URL: https://kaito47802.github.io
+
 ## Tech Stack
 
 - Next.js
 - React
 - TypeScript
 - i18next
-- tsParticles
 - Handlebars
 - LaTeX
 
