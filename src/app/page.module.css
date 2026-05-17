@@ -180,6 +180,27 @@
   padding: 1rem 1rem 2rem;
   scroll-margin-top: 1rem;
 }
+
+.contentBox::before {
+  content: '';
+  position: absolute;
+  inset: 0.37rem;
+  pointer-events: none;
+  border: 1.9px solid transparent;
+  background: radial-gradient(circle at top left, #baffcca6 0, transparent 10rem),
+    radial-gradient(circle at top right, #baffcca6 0, transparent 10rem),
+    radial-gradient(circle at bottom left, #baffcca6 0, transparent 10rem),
+    radial-gradient(circle at bottom right, #baffcca6 0, transparent 10rem), #bceeff7a;
+  -webkit-mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
 @media (max-width: 900px) {
   .sectionNav {
     width: 85%;
