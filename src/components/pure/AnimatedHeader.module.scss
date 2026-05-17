@@ -27,20 +27,160 @@
   }
 }
 
-.title span {
+.letter {
   display: inline-block;
   transform: translate(0, -105%);
   opacity: 0;
 }
 
-.outView span {
+.outView .letter {
   transform: translate(0, -105%);
   opacity: 0;
 }
 
-.inView span {
+.inView .letter {
   animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) slidein;
   animation-fill-mode: forwards;
+}
+
+.ornaments {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-style: normal;
+}
+
+.ornament {
+  --drop: 1.05rem;
+  --size: 0.32rem;
+  --x: 1rem;
+
+  position: absolute;
+  top: -1px;
+  left: var(--x);
+  width: var(--size);
+  height: var(--drop);
+  opacity: 0.64;
+  transform: translateX(-50%);
+}
+
+.ornament::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: calc(var(--drop) - (var(--size) * 0.45));
+  background-image: radial-gradient(circle, #ffffffb8 1px, transparent 1.35px);
+  background-repeat: repeat-y;
+  background-size: 2px 5px;
+  transform: translateX(-50%);
+}
+
+.ornament::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: var(--size);
+  height: var(--size);
+  background: #fffffff0;
+  box-shadow:
+    0 0 0.3rem #ffffffa0,
+    0 0 0.65rem #bceeff80;
+}
+
+.ornament:nth-child(1) {
+  --drop: 0.72rem;
+  --size: 0.28rem;
+  --x: 0.52rem;
+
+  opacity: 0.54;
+}
+
+.ornament:nth-child(2) {
+  --drop: 1.88rem;
+  --size: 0.36rem;
+  --x: 1.33rem;
+
+  opacity: 0.74;
+}
+
+.ornament:nth-child(3) {
+  --drop: 1.26rem;
+  --size: 0.32rem;
+  --x: 1.84rem;
+
+  opacity: 0.56;
+}
+
+.ornament:nth-child(4) {
+  --drop: 0.66rem;
+  --size: 0.22rem;
+  --x: 1.94rem;
+
+  opacity: 0.46;
+}
+
+.ornament:nth-child(5) {
+  --drop: 0.84rem;
+  --size: 0.23rem;
+  --x: calc(100% - 1.82rem);
+
+  opacity: 0.3;
+}
+
+.ornament:nth-child(6) {
+  --drop: 1.32rem;
+  --size: 0.25rem;
+  --x: calc(100% - 0.38rem);
+
+  opacity: 0.5;
+}
+
+.ornament:nth-child(7) {
+  --drop: 0.78rem;
+  --size: 0.2rem;
+  --x: calc(100% - 0.48rem);
+
+  opacity: 0.54;
+}
+
+.ornament:nth-child(8) {
+  --drop: 2.32rem;
+  --size: 0.5rem;
+  --x: calc(100% - 1.28rem);
+
+  opacity: 0.6;
+}
+
+.ornamentBottom {
+  top: calc(100% - 1px);
+}
+
+.ornamentDiamond::after {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.ornamentStar::after {
+  clip-path: polygon(
+    50% 0,
+    61% 34%,
+    97% 34%,
+    68% 55%,
+    79% 91%,
+    50% 69%,
+    21% 91%,
+    32% 55%,
+    3% 34%,
+    39% 34%
+  );
+  transform: translateX(-50%);
+}
+
+.ornamentDot::after {
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 @keyframes slidein {
@@ -55,7 +195,7 @@
 }
 
 @for $i from 2 through 21 {
-  .title span:nth-child(#{$i}) {
+  .letter:nth-child(#{$i}) {
     animation-delay: (0.06s * ($i - 1));
   }
 }

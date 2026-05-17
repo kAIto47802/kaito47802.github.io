@@ -9,8 +9,24 @@ const AnimatedHeader = ({ text }: { text: string }) => {
       ref={ref}
     >
       {text.split('').map((t, i) => (
-        <span key={i}>{t}</span>
+        <span key={i} className={styles.letter}>
+          {t}
+        </span>
       ))}
+      <i className={styles.ornaments} aria-hidden='true'>
+        <i className={`${styles.ornament} ${styles.ornamentDiamond}`} />
+        <i className={`${styles.ornament} ${styles.ornamentStar}`} />
+        <i className={`${styles.ornament} ${styles.ornamentStar}`} />
+        <i
+          className={`${styles.ornament} ${styles.ornamentDot} ${styles.ornamentBottom}`}
+        />
+        <i className={`${styles.ornament} ${styles.ornamentDot}`} />
+        <i className={`${styles.ornament} ${styles.ornamentDiamond}`} />
+        <i
+          className={`${styles.ornament} ${styles.ornamentDiamond} ${styles.ornamentBottom}`}
+        />
+        <i className={`${styles.ornament} ${styles.ornamentStar}`} />
+      </i>
     </h1>
   );
 };
