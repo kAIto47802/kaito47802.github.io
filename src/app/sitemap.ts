@@ -7,13 +7,13 @@ const sitemap = (): MetadataRoute.Sitemap => {
     {
       url: 'https://kaito47802.github.io/',
       lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: 'https://kaito47802.github.io/ja',
       lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
   ];
