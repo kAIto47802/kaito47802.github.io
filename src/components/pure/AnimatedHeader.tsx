@@ -15,7 +15,7 @@ const AnimatedHeader = ({ text }: { text: string }) => {
       ))}
       <i className={styles.ornaments} aria-hidden='true'>
         <i className={`${styles.ornament} ${styles.ornamentDiamond}`} />
-        <i className={`${styles.ornament} ${styles.ornamentStar}`} />
+        <i className={`${styles.ornament} ${styles.ornamentDot}`} />
         <i className={`${styles.ornament} ${styles.ornamentStar}`} />
         <i
           className={`${styles.ornament} ${styles.ornamentDot} ${styles.ornamentBottom}`}

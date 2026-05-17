@@ -52,7 +52,13 @@
 
 .ornament {
   --drop: 1.05rem;
+  --line-gap: 0.12rem;
+  --line-width: 2px;
+  --rotate: 0deg;
+  --shape-rotate: 0deg;
   --size: 0.32rem;
+  --symbol-offset-x: -0.04em;
+  --symbol-size: calc(var(--size) + 0.2rem);
   --x: 1rem;
 
   position: absolute;
@@ -69,11 +75,11 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: 2px;
-  height: calc(var(--drop) - (var(--size) * 0.45));
-  background-image: radial-gradient(circle, #ffffffb8 1px, transparent 1.35px);
+  width: var(--line-width);
+  height: calc(var(--drop) - var(--line-gap));
+  background-image: radial-gradient(circle, #ffffffb8 45%, transparent 58%);
   background-repeat: repeat-y;
-  background-size: 2px 5px;
+  background-size: var(--line-width) 5px;
   transform: translateX(-50%);
 }
 
@@ -88,10 +94,17 @@
   box-shadow:
     0 0 0.3rem #ffffffa0,
     0 0 0.65rem #bceeff80;
+  transform: translateX(-50%) rotate(calc(var(--shape-rotate) + var(--rotate)));
+}
+
+.ornamentStar {
+  width: var(--symbol-size);
 }
 
 .ornament:nth-child(1) {
   --drop: 0.72rem;
+  --line-width: 1.1px;
+  --rotate: 0deg;
   --size: 0.28rem;
   --x: 0.52rem;
 
@@ -100,7 +113,9 @@
 
 .ornament:nth-child(2) {
   --drop: 1.88rem;
-  --size: 0.36rem;
+  --line-width: 1px;
+  --rotate: 36deg;
+  --size: 0.33rem;
   --x: 1.33rem;
 
   opacity: 0.74;
@@ -108,6 +123,8 @@
 
 .ornament:nth-child(3) {
   --drop: 1.26rem;
+  --line-width: 1.3px;
+  --rotate: -14deg;
   --size: 0.32rem;
   --x: 1.84rem;
 
@@ -115,15 +132,19 @@
 }
 
 .ornament:nth-child(4) {
-  --drop: 0.66rem;
-  --size: 0.22rem;
+  --drop: 0.76rem;
+  --line-width: 1.1px;
+  --rotate: 0deg;
+  --size: 0.26rem;
   --x: 1.94rem;
 
-  opacity: 0.46;
+  opacity: 0.66;
 }
 
 .ornament:nth-child(5) {
   --drop: 0.84rem;
+  --line-width: 1px;
+  --rotate: 0deg;
   --size: 0.23rem;
   --x: calc(100% - 1.82rem);
 
@@ -132,6 +153,8 @@
 
 .ornament:nth-child(6) {
   --drop: 1.32rem;
+  --line-width: 1.5px;
+  --rotate: 10deg;
   --size: 0.25rem;
   --x: calc(100% - 0.38rem);
 
@@ -139,7 +162,9 @@
 }
 
 .ornament:nth-child(7) {
-  --drop: 0.78rem;
+  --drop: 0.88rem;
+  --line-width: 1.5px;
+  --rotate: -12deg;
   --size: 0.2rem;
   --x: calc(100% - 0.48rem);
 
@@ -148,7 +173,9 @@
 
 .ornament:nth-child(8) {
   --drop: 2.32rem;
-  --size: 0.5rem;
+  --line-width: 1.8px;
+  --rotate: 30deg;
+  --size: 0.3rem;
   --x: calc(100% - 1.28rem);
 
   opacity: 0.6;
@@ -159,28 +186,31 @@
 }
 
 .ornamentDiamond::after {
-  transform: translateX(-50%) rotate(45deg);
+  --shape-rotate: 45deg;
 }
 
 .ornamentStar::after {
-  clip-path: polygon(
-    50% 0,
-    61% 34%,
-    97% 34%,
-    68% 55%,
-    79% 91%,
-    50% 69%,
-    21% 91%,
-    32% 55%,
-    3% 34%,
-    39% 34%
-  );
-  transform: translateX(-50%);
+  content: '★';
+  display: grid;
+  place-items: center;
+  margin-left: calc((var(--symbol-size) / -2) + var(--symbol-offset-x));
+  width: var(--symbol-size);
+  height: var(--symbol-size);
+  color: #fffffff0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--symbol-size);
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  text-shadow:
+    0 0 0.25rem #ffffffa0,
+    0 0 0.6rem #bceeff80;
+  transform: rotate(var(--rotate));
+  transform-origin: center;
 }
 
 .ornamentDot::after {
   border-radius: 50%;
-  transform: translateX(-50%);
 }
 
 @keyframes slidein {
