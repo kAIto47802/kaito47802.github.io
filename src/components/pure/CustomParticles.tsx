@@ -34,7 +34,7 @@ const CustomParticles = ({ id = 'tsparticles' }: { id?: string }) => {
               },
             },
             color: {
-              value: '#79d199b1',
+              value: ['#79d17db1', '#70d4f3d6'],
             },
             shape: {
               type: 'circle',
@@ -74,7 +74,7 @@ const CustomParticles = ({ id = 'tsparticles' }: { id?: string }) => {
             line_linked: {
               enable: true,
               distance: 150,
-              color: '#84e0be86',
+              color: 'random',
               opacity: 0.4,
               width: 2,
             },
