@@ -49,7 +49,7 @@ const HomeContent = () => {
       <Header />
       <main className={styles.main}>
         <OpeningAnimation />
-        <CustomParticles />
+        <CustomParticles id='page-particles' />
         <div className={styles.basic}>
           <TitleBox />
         </div>

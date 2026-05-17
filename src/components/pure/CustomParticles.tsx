@@ -5,7 +5,7 @@ import type { Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 import styles from './CustomParticles.module.css';
 
-const CustomParticles = () => {
+const CustomParticles = ({ id = 'tsparticles' }: { id?: string }) => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
@@ -18,10 +18,13 @@ const CustomParticles = () => {
       <Particles
         className={styles.particles}
         canvasClassName={styles.particleCanvas}
-        id='tsparticles'
+        id={id}
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
+          fullScreen: {
+            enable: false,
+          },
           particles: {
             number: {
               value: 120,

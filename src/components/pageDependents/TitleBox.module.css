@@ -1,5 +1,6 @@
 .basicBox {
   position: relative;
+  z-index: 3;
   top: 20%;
   height: 60%;
   width: 75%;
