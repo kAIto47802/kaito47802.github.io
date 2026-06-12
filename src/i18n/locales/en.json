@@ -128,11 +128,17 @@
       ],
       "preprint": [
         {
-          "title": "Multi-Modal Multi-Agent Reinforcement Learning for Radiology Report Generation: Radiologist-Like Workflow with Clinically Verifiable Rewards",
-          "authors": "<underline>Kaito Baba</underline> and Satoshi Kodera",
+          "title": "Learning-Augmented Approximation for Unrelated-Machines Makespan Scheduling",
+          "authors": "<underline>Kaito Baba</underline>, Evripidis Bampis, and Giorgos Mitropoulos",
+          "conference": "arXiv preprint arXiv:2606.13133",
+          "year": "2026",
+          "arxiv": "2606.13133"
+        },
+        {
+          "title": "Multi-Modal Multi-Agent Reinforcement Learning for Radiology Report Generation",
+          "authors": "<underline>Kaito Baba</underline>, Risa Kishikawa, and Satoshi Kodera",
           "conference": "arXiv preprint arXiv:2603.16876",
           "year": "2026",
-          "featured": false,
           "arxiv": "2603.16876"
         }
       ],
