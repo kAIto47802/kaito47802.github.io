@@ -20,6 +20,10 @@
       "text": "国際会議ワークショップ論文 (査読あり)",
       "subtext": "Workshop Papers at International Conferences"
     },
+    "journal": {
+      "text": "ジャーナル論文 (査読あり)",
+      "subtext": "Journals"
+    },
     "preprint": {
       "text": "プレプリント",
       "subtext": "Preprints"

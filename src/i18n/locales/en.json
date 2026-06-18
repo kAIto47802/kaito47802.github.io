@@ -19,6 +19,10 @@
       "text": "Workshop Papers at International Conferences (Refereed)",
       "subtext": ""
     },
+    "journal": {
+      "text": "Journals (Refereed)",
+      "subtext": ""
+    },
     "preprint": {
       "text": "Preprints",
       "subtext": ""
@@ -116,6 +120,9 @@
             "text": "NeurIPS%20AIM--FM",
             "link": "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/103909.png?t=1733873689.231159",
             "color": "9d7bae"
+          },
+          "github": {
+            "repo": "kAIto47802/JRadiEvo"
           }
         },
         {
@@ -124,6 +131,24 @@
           "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
           "arxiv": "2504.09302"
+        }
+      ],
+      "journal": [
+        {
+          "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
+          "authors": "<underline>Kaito Baba</underline>, Satoshi Kodera, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Junichi Ishida, and Norihiko Takeda",
+          "conference": "Artificial Intelligence in Medicine",
+          "year": "2026",
+          "arxiv": "2411.09933",
+          "scholar": "u-x6o8ySG0sC",
+          "poster": {
+            "text": "NeurIPS%20AIM--FM",
+            "link": "https://neurips.cc/media/PosterPDFs/NeurIPS%202024/103909.png?t=1733873689.231159",
+            "color": "9d7bae"
+          },
+          "github": {
+            "repo": "kAIto47802/JRadiEvo"
+          }
         }
       ],
       "preprint": [

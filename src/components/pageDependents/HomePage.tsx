@@ -98,6 +98,17 @@ const HomeContent = () => {
             ).map((publication, index) => (
               <Publication key={index} index={index} type='workshop' {...publication} />
             ))}
+            <Heading2
+              text={t('publications.journal.text')}
+              subtext={t('publications.journal.subtext')}
+            />
+            {(
+              t('publications.content.journal', {
+                returnObjects: true,
+              }) as PublicationType[]
+            ).map((publication, index) => (
+              <Publication key={index} index={index} type='journal' {...publication} />
+            ))}
             {!!preprints.length && (
               <>
                 <Heading2
