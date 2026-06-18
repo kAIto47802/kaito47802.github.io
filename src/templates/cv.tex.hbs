@@ -139,6 +139,45 @@
   {{/each}}
 \end{itemize}
 
+\textbf{ {{~{publications.journal.text}~}} }
+\begin{itemize}
+  {{#each publications.content.journal}}
+  \pubitem{{#if this.featured}}*{{/if}}{%
+    {{{this.authors}}}%
+  }{%
+    {{{this.title}}}%
+  }{%
+    {{{this.conference}}}%
+  }{%
+    {{{this.year}}}%
+  }%
+  {{#if this.paper}}
+    [{{{this.paper.link}}}]
+  {{else}}
+    {{#if this.arxiv}}
+      [https://arxiv.org/abs/{{{this.arxiv}}}]
+    {{/if}}
+  {{/if}}
+  {{#if (or githubStars scholarCitations)}}({{/if}}%
+  {{#if githubStars}}%
+    \href{%
+      https://github.com/{{github.repo}}%
+    }{%
+      GitHub stars: {{githubStars}}%
+    }%
+  {{/if}}%
+  {{#if (and githubStars scholarCitations)}}, {{/if}}%
+  {{#if scholarCitations}}%
+    \href{%
+      https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ:{{scholar}}
+    }{%
+      Cited by: {{scholarCitations}}%
+    }%
+  {{/if}}%
+  {{#if (or githubStars scholarCitations)}}){{/if}}%
+  {{/each}}
+\end{itemize}
+
 \textbf{ {{~{publications.preprint.text}~}} }
 \begin{itemize}
   {{#each publications.content.preprint}}
