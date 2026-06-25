@@ -148,6 +148,11 @@
           },
           "github": {
             "repo": "kAIto47802/JRadiEvo"
+          },
+          "paper": {
+            "text": "ScienceDirect",
+            "link": "https://doi.org/10.1016/j.artmed.2026.103482",
+            "color": "eb6500"
           }
         }
       ],
