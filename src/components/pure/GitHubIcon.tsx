@@ -48,11 +48,7 @@ const GitHubIcon = ({
       href={`https://github.com/${repo}`}
       className={`${styles.github} ${className ?? ''}`}
     >
-      <Image
-        src={createGitHubBadgeSrc(repo, withStar)}
-        alt='GitHub'
-        fill
-      />
+      <Image src={createGitHubBadgeSrc(repo, withStar)} alt='GitHub' fill />
     </a>
   </>
 );
