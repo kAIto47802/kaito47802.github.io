@@ -1,11 +1,10 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
-const githubRepos = [
-  'sarulab-speech/UTMOSv2',
-  'kAIto47802/Prover-Agent',
+const localePaths = ['src/i18n/locales/en.json', 'src/i18n/locales/ja.json'] as const;
+
+const extraGithubRepos = [
   'kAIto47802/notist',
-  'kAIto47802/condPED-ANOVA',
   'kAIto47802/kAIto47802',
   'kAIto47802/kaito47802.github.io',
 ] as const;
@@ -14,6 +13,35 @@ type GithubStarsJson = {
   updatedAt: string;
   totalStars: number;
   items: Record<string, number>;
+};
+
+const collectRepos = (value: unknown, repos: Set<string>) => {
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectRepos(item, repos));
+    return;
+  }
+
+  if (!value || typeof value !== 'object') {
+    return;
+  }
+
+  for (const [key, nestedValue] of Object.entries(value)) {
+    if (key === 'repo' && typeof nestedValue === 'string') {
+      repos.add(nestedValue);
+    }
+    collectRepos(nestedValue, repos);
+  }
+};
+
+const loadGithubRepos = async (): Promise<string[]> => {
+  const repos = new Set<string>(extraGithubRepos);
+
+  for (const localePath of localePaths) {
+    const locale = JSON.parse(await readFile(localePath, 'utf8')) as unknown;
+    collectRepos(locale, repos);
+  }
+
+  return [...repos].sort();
 };
 
 const fetchRepoStars = async (repo: string): Promise<number> => {
@@ -39,6 +67,7 @@ const fetchRepoStars = async (repo: string): Promise<number> => {
 
 const main = async () => {
   const outputPath = process.env.OUTPUT_PATH ?? 'public/data/github-stars.json';
+  const githubRepos = await loadGithubRepos();
 
   const entries = await Promise.all(
     githubRepos.map(async (repo) => [repo, await fetchRepoStars(repo)] as const),
