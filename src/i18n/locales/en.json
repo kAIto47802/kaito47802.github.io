@@ -47,13 +47,22 @@
             "repo": "kAIto47802/condPED-ANOVA",
             "withStar": true
           },
-          "arxiv": "2601.20800"
+          "arxiv": "2601.20800",
+          "poster": {
+            "text": "KDD%202026",
+            "link": "https://github.com/kAIto47802/condPED-ANOVA/blob/main/poster.pdf"
+          },
+          "paper": {
+            "text": "KDD%202026",
+            "link": "https://dl.acm.org/doi/10.1145/3770855.3817758"
+          }
         },
         {
           "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
           "authors": "Daichi Sato, Duc Minh Vo, Khan Md. Anwarus Salam, Hidenori Shoji, Yuma Matsuoka, Takara Taniguchi, <underline>Kaito Baba</underline>, and Hideki Nakayama",
           "conference": "Proceedings of the 33rd ACM International Conference on Multimedia (ACM MM)",
           "year": "2025",
+          "scholar": "2osOgNQ5qMEC",
           "paper": {
             "text": "ACM%20MM",
             "link": "https://dl.acm.org/doi/10.1145/3746027.3761994",
@@ -130,7 +139,8 @@
           "authors": "Junichiro Takahashi, JingChuan Guan, Masataka Sato, <underline>Kaito Baba</underline>, Kazuto Haruguchi, Daichi Nagashima, Satoshi Kodera, and Norihiko Takeda",
           "conference": "NeurIPS Workshop on AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond",
           "year": "2024",
-          "arxiv": "2504.09302"
+          "arxiv": "2504.09302",
+          "scholar": "d1gkVwhDpl0C"
         }
       ],
       "journal": [
