@@ -1,9 +1,9 @@
 {
   "profileId": "oJvSC5wAAAAJ",
-  "updatedAt": "2026-08-15T16:52:16.220Z",
+  "updatedAt": "2026-09-01T08:54:18.703Z",
   "profile": {
     "citationUrl": "https://scholar.google.com/citations?hl=en&user=oJvSC5wAAAAJ",
-    "citations": 180,
+    "citations": 186,
     "error": null
   },
   "items": {
@@ -40,7 +40,7 @@
     "u5HHmVD_uO8C": {
       "ok": true,
       "citationUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oJvSC5wAAAAJ&citation_for_view=oJvSC5wAAAAJ%3Au5HHmVD_uO8C",
-      "citations": 135,
+      "citations": 141,
       "error": null
     }
   }
