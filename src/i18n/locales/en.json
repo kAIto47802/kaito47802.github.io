@@ -38,6 +38,14 @@
     "content": {
       "internationalConference": [
         {
+          "title": "Learning-Augmented Approximation for Unrelated-Machines Makespan Scheduling",
+          "authors": "<underline>Kaito Baba</underline>, Evripidis Bampis, and Giorgos Mitropoulos",
+          "conference": "Proceedings of the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS)",
+          "year": "2026",
+          "arxiv": "2606.13133",
+          "featured": true
+        },
+        {
           "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
           "authors": "<underline>Kaito Baba</underline>, Yoshihiko Ozaki, and Shuhei Watanabe",
           "conference": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
@@ -167,13 +175,6 @@
         }
       ],
       "preprint": [
-        {
-          "title": "Learning-Augmented Approximation for Unrelated-Machines Makespan Scheduling",
-          "authors": "<underline>Kaito Baba</underline>, Evripidis Bampis, and Giorgos Mitropoulos",
-          "conference": "arXiv preprint arXiv:2606.13133",
-          "year": "2026",
-          "arxiv": "2606.13133"
-        },
         {
           "title": "Multi-Modal Multi-Agent Reinforcement Learning for Radiology Report Generation",
           "authors": "<underline>Kaito Baba</underline>, Risa Kishikawa, and Satoshi Kodera",
