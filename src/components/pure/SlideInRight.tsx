@@ -8,7 +8,7 @@ const SlideInRight = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <div
       ref={ref}
