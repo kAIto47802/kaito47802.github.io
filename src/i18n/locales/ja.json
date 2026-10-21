@@ -39,6 +39,21 @@
     "content": {
       "article": [
         {
+          "title": "[Optuna v5 & Rustuna] PED-ANOVA Is Now the Default Hyperparameter Importance Evaluator",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Medium",
+          "year": "2026",
+          "link": "https://medium.com/optuna/optuna-v5-rustuna-ped-anova-is-now-the-default-hyperparameter-importance-evaluator-9016dd7be03f",
+          "includeInCV": true
+        },
+        {
+          "title": "[Optuna v5 & Rustuna] PED-ANOVA をハイパーパラメータ重要度推定手法のデフォルトに採用",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Preferred Networks Tech Blog",
+          "year": "2026",
+          "link": "https://www.preferred.jp/ja/blog/tech/ped-anova-importance-evaluator"
+        },
+        {
           "title": "[Optuna v4.5] Gaussian Process-Based Sampler (GPSampler) Can Now Perform Constrained Multi-Objective Optimization",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
@@ -51,15 +66,15 @@
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Preferred Networks Tech Blog",
           "year": "2025",
-          "link": "https://tech.preferred.jp/ja/blog/optuna-gp-sampler-supports-multi-objective-constrained-optimization/",
-          "includeInCV": false
+          "link": "https://tech.preferred.jp/ja/blog/optuna-gp-sampler-supports-multi-objective-constrained-optimization/"
         },
         {
           "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
           "year": "2025",
-          "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810"
+          "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810",
+          "includeInCV": true
         },
         {
           "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
@@ -275,7 +290,7 @@
     "title": "その他の経験",
     "content": [
       {
-        "place": "ソルボンヌ大学 (Sorbonne University)",
+        "place": "ソルボンヌ大学 (Sorbonne Université)",
         "location": "Paris, France",
         "period": {
           "start": "2026年2月",

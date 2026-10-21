@@ -43,7 +43,10 @@
           "conference": "Proceedings of the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS)",
           "year": "2026",
           "arxiv": "2606.13133",
-          "featured": true
+          "featured": true,
+          "github": {
+            "repo": "kAIto47802/rcmax-with-predictions"
+          }
         },
         {
           "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
@@ -63,7 +66,15 @@
           "paper": {
             "text": "KDD%202026",
             "link": "https://dl.acm.org/doi/10.1145/3770855.3817758"
-          }
+          },
+          "otherLinks": [
+            {
+              "text": "Speaker%20Deck",
+              "name": "Slides%20%28ja%29",
+              "color": "009287",
+              "link": "https://speakerdeck.com/pfn/20261016-conditional-ped-anova"
+            }
+          ]
         },
         {
           "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
@@ -153,6 +164,19 @@
       ],
       "journal": [
         {
+          "title": "Prover Agent: An Agent-Based Framework for Formal Mathematical Proofs",
+          "authors": "<underline>Kaito Baba</underline>, Chaoran Liu, Shuhei Kurita, and Akiyoshi Sannai",
+          "conference": "Transactions on Machine Learning Research",
+          "year": "2026",
+          "featured": true,
+          "github": {
+            "repo": "kAIto47802/Prover-Agent",
+            "withStar": true
+          },
+          "arxiv": "2506.19923",
+          "scholar": "9yKSN-GCB0IC"
+        },
+        {
           "title": "JRadiEvo: A Japanese Radiology Report Generation Model Enhanced by Evolutionary Optimization of Model Merging",
           "authors": "<underline>Kaito Baba</underline>, Satoshi Kodera, Ryota Yagi, Junichiro Takahashi, Risa Kishikawa, Junichi Ishida, and Norihiko Takeda",
           "conference": "Artificial Intelligence in Medicine",
@@ -186,6 +210,14 @@
       ],
       "article": [
         {
+          "title": "[Optuna v5 & Rustuna] PED-ANOVA Is Now the Default Hyperparameter Importance Evaluator",
+          "authors": "<underline>Kaito Baba</underline>",
+          "conference": "Medium",
+          "year": "2026",
+          "link": "https://medium.com/optuna/optuna-v5-rustuna-ped-anova-is-now-the-default-hyperparameter-importance-evaluator-9016dd7be03f",
+          "includeInCV": true
+        },
+        {
           "title": "[Optuna v4.5] Gaussian Process-Based Sampler (GPSampler) Can Now Perform Constrained Multi-Objective Optimization",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
@@ -194,28 +226,12 @@
           "includeInCV": true
         },
         {
-          "title": "[Optuna v4.5] ガウス過程を利用した Sampler の制約付き多目的最適化対応",
-          "authors": "<underline>Kaito Baba</underline>",
-          "conference": "Preferred Networks Tech Blog",
-          "year": "2025",
-          "link": "https://tech.preferred.jp/ja/blog/optuna-gp-sampler-supports-multi-objective-constrained-optimization/",
-          "includeInCV": false
-        },
-        {
           "title": "[Optuna v4.2] Gaussian Process-Based Sampler Can Now Handle Inequality Constraints",
           "authors": "<underline>Kaito Baba</underline>",
           "conference": "Medium",
           "year": "2025",
           "link": "https://medium.com/optuna/optuna-v4-2-gaussian-process-based-sampler-can-now-handle-inequality-constraints-a4f68e8ee810",
           "includeInCV": true
-        },
-        {
-          "title": "[Optuna v4.2] ガウス過程を利用した Sampler の不等式制約対応",
-          "authors": "<underline>Kaito Baba</underline>",
-          "conference": "Preferred Networks Tech Blog",
-          "year": "2025",
-          "link": "https://tech.preferred.jp/ja/blog/gp-sampler-with-inequality-constraints/",
-          "includeInCV": false
         }
       ],
       "domesticConference": [
@@ -447,7 +463,7 @@
     "title": "Other Experience",
     "content": [
       {
-        "place": "Sorbonne University",
+        "place": "Sorbonne Université",
         "location": "Paris, France",
         "period": {
           "start": "Feb. 2026",
