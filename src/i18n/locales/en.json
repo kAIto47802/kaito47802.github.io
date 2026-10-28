@@ -258,6 +258,12 @@
     "title": "Academic Service",
     "content": [
       {
+        "title": "Reviewer",
+        "descriptions": [
+          "The Fifteenth International Conference on Learning Representations (ICLR 2027)"
+        ]
+      },
+      {
         "title": "Organizing Committee Member",
         "descriptions": [
           "ACM MM 2026 Workshop and Grand Challenge on Large Vision Language Model Learning and Applications Grand Challenge"
