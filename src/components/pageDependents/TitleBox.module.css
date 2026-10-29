@@ -62,17 +62,17 @@
   font-size: 1.1rem;
 }
 
-.scholarProfile {
-  margin-left: 0.5rem;
+.profileLinks {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
 }
 
-.outView .githubProfile,
-.outView .scholarProfile {
+.outView .profileLinks {
   opacity: 0;
 }
 
-.inView .githubProfile,
-.inView .scholarProfile {
+.inView .profileLinks {
   opacity: 1;
   transition: opacity 0.5s ease-in-out 0.5s;
 }
@@ -287,10 +287,10 @@
     position: relative;
     left: -4rem;
   }
-  .githubProfile,
-  .scholarProfile {
+  .profileLinks {
     position: relative;
     left: -4rem;
+    width: calc(100% + 4rem);
   }
 }
 @media (max-width: 580px) {
