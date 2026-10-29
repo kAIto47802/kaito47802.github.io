@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import CvIcon from '../pure/CvIcon';
 import DropInText from '../pure/DropInText';
 import GitHubIcon from '../pure/GitHubIcon';
+import LinkedInIcon from '../pure/LinkedInIcon';
 import ScholarIcon from '../pure/ScholarIcon';
 import SlideInText from '../pure/SlideInText';
 import TypeWriter from '../pure/TypeWriter';
@@ -71,12 +72,12 @@ const TitleBox = () => {
             <div className={styles.contact}>k.ai.to47802 [at] gmail.com</div>
             <div className={styles.contact}>baba-kaito662 [at] g.ecc.u-tokyo.ac.jp</div>
           </div>
-          <GitHubIcon className={styles.githubProfile} repo='kAIto47802' />
-          <ScholarIcon
-            className={styles.scholarProfile}
-            url='https://scholar.google.com/citations?user=oJvSC5wAAAAJ'
-          />
-          <CvIcon className={styles.scholarProfile} url='cv.pdf' />
+          <div className={styles.profileLinks}>
+            <GitHubIcon repo='kAIto47802' />
+            <LinkedInIcon url='https://www.linkedin.com/in/kaito47802/' />
+            <ScholarIcon url='https://scholar.google.com/citations?user=oJvSC5wAAAAJ' />
+            <CvIcon url='cv.pdf' />
+          </div>
         </div>
       </div>
     </div>
