@@ -262,6 +262,20 @@
 \end{description}
 
 
+{{#if academicService.content}}
+\section{ {{~{academicService.title}~}} }
+
+\begin{itemize}
+  {{#each academicService.content}}
+  \item \textbf{ {{~{this.title}~}} }
+    {{#each this.descriptions}}
+    {{#if @first}}--- {{else}}\\{{/if}}{{{this}}}
+    {{/each}}
+  {{/each}}
+\end{itemize}
+
+
+{{/if}}
 \section{ {{~{workExperience.title}~}} }
 
 {{#each workExperience.content}}
