@@ -60,6 +60,15 @@
 {{~/each}}
 
 
+{{#if researchInterests.content}}
+\section{ {{~{researchInterests.title}~}} }
+
+{\raggedright
+{{{researchInterests.content}}}\par
+}
+
+
+{{/if}}
 \section{ {{~{publications.title}~}} }
 
 \NewDocumentCommand{\pubitem}{s m m m m o}{
@@ -249,6 +258,20 @@
   {{/each}}
 \end{itemize}
 
+{{#if openSourceContributions.content}}
+\section{ {{~{openSourceContributions.title}~}} }
+
+\begin{itemize}
+  {{#each openSourceContributions.content}}
+  \item \textbf{\href{ {{~{this.url}~}} }{ {{~{this.name}~}} }}{{#if this.role}} ({{{this.role}}}){{/if}}.
+    {{#each this.descriptions}}
+    {{{this}}}
+    {{/each}}
+  {{/each}}
+\end{itemize}
+
+
+{{/if}}
 \section{ {{~{awardsAndHonors.title}~}} }
 \begin{description}[labelwidth=16mm, labelsep=1em, leftmargin=!, font=\normalfont]
   {{#each awardsAndHonors.content}}

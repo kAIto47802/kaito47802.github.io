@@ -8,6 +8,10 @@
     "title": "Biography",
     "text": "I am a second-year master’s student at the Graduate School of Information Science and Technology at The University of Tokyo. My primary research interests lie in large language models (LLMs), deep learning, optimization, learning theory, and algorithm design."
   },
+  "researchInterests": {
+    "title": "Research Interests",
+    "content": "Large Language Models (Reasoning, Agents, and Post-training), Reinforcement Learning, Optimization (including Bayesian Optimization), and Algorithm Design (including Learning-Augmented Algorithms)."
+  },
   "publications": {
     "title": "Publications",
     "note": "Underline: Featured publications",
@@ -75,6 +79,17 @@
               "link": "https://speakerdeck.com/pfn/20261016-conditional-ped-anova"
             }
           ]
+        },
+        {
+          "title": "LAVA Grand Challenge 2026: Grounded Multi-Page Document Question Answering in Japanese and Vietnamese",
+          "authors": "Takara Taniguchi, <underline>Kaito Baba</underline>, Daichi Sato, Duc Minh Vo, Duc-Tuan Luu, Khan Md. Anwarus Salam, and Hideki Nakayama",
+          "conference": "Proceedings of the 34th ACM International Conference on Multimedia (ACM MM)",
+          "year": "2026",
+          "paper": {
+            "text": "ACM%20MM",
+            "link": "https://dl.acm.org/doi/10.1145/3767308.3837710",
+            "color": "cc1962"
+          }
         },
         {
           "title": "LAVA Challenge 2025: Advancing Japanese Document Understanding with a Challenging PDF-VQA Benchmark",
@@ -254,6 +269,30 @@
       ]
     }
   },
+  "openSourceContributions": {
+    "title": "Open-Source Software Contributions",
+    "content": [
+      {
+        "name": "Optuna",
+        "url": "https://github.com/optuna/optuna",
+        "role": "member of the core development team",
+        "descriptions": [
+          "Implemented and benchmarked GPSampler's constraint handling for single- and multi-objective studies.",
+          "Implemented Conditional PED-ANOVA, Optuna v5's default importance evaluator.",
+          "Reviewed a range of pull requests, including GPSampler changes for multi-objective optimization and parallelization."
+        ]
+      },
+      {
+        "name": "Rustuna",
+        "url": "https://github.com/optuna/rustuna",
+        "role": "member of the core development team",
+        "descriptions": [
+          "Implemented the hyperparameter importance module in Rust, including Conditional PED-ANOVA.",
+          "Reviewed the tree-structured Parzen estimator (TPE) implementation and contributed to core design discussions."
+        ]
+      }
+    ]
+  },
   "academicService": {
     "title": "Academic Service",
     "content": [
@@ -389,7 +428,7 @@
       {
         "company": "Recruit Co., Ltd",
         "location": "Tokyo, Japan",
-        "position": "Datascientist (Internship)",
+        "position": "Data Scientist (Internship)",
         "period": {
           "start": "Oct. 2023",
           "end": "Dec. 2023"
@@ -414,7 +453,7 @@
       {
         "company": "LearnWiz Inc.",
         "location": "Tokyo, Japan",
-        "position": "Font-end Engineer (Outsourcing)",
+        "position": "Front-end Engineer (Outsourcing)",
         "period": {
           "start": "Apr. 2023",
           "end": "Sep. 2023"
