@@ -1,6 +1,7 @@
 import type { Publication } from '@/types';
 import * as cheerio from 'cheerio';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
 type ScholarItem = {
@@ -29,41 +30,16 @@ type LocaleData = {
   };
 };
 
-const stripHtml = (html: string): string =>
-  html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-const extractCitationCount = (html: string): number | null => {
-  const text = stripHtml(html);
-
-  const citedByMatch = text.match(/\bCited by\s+(\d+)\b/i);
-  if (citedByMatch) {
-    return Number.parseInt(citedByMatch[1], 10);
-  }
-
-  const citationValueMatch = text.match(/\bCitations\b\s+(\d+)\b/i);
-  if (citationValueMatch) {
-    return Number.parseInt(citationValueMatch[1], 10);
-  }
-
-  return null;
-};
-
 const normalizeText = (text: string): string =>
   text
     .replace(/[\u200e\u200f\u202a-\u202e\u2066-\u2069]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 
-const extractProfileCitationCount = (html: string): number | null => {
-  const $ = cheerio.load(html);
+const parseCitationCount = (text: string): number | null =>
+  /^(?:\d+|\d{1,3}(?:,\d{3})+)$/.test(text) ? Number(text.replaceAll(',', '')) : null;
 
+const extractProfileCitationCount = ($: cheerio.CheerioAPI): number | null => {
   const row = $('#gsc_rsb_st tbody tr')
     .filter((_, tr) => {
       const label = normalizeText($(tr).find('td.gsc_rsb_sc1').first().text());
@@ -71,18 +47,7 @@ const extractProfileCitationCount = (html: string): number | null => {
     })
     .first();
 
-  if (row.length === 0) {
-    return null;
-  }
-
-  const valueText = normalizeText(row.find('td.gsc_rsb_std').first().text());
-
-  if (!valueText) {
-    return null;
-  }
-
-  const value = Number.parseInt(valueText.replaceAll(',', ''), 10);
-  return Number.isNaN(value) ? null : value;
+  return parseCitationCount(normalizeText(row.find('td.gsc_rsb_std').first().text()));
 };
 
 const getScholarEntries = async (): Promise<string[]> => {
@@ -136,61 +101,85 @@ const fetchHtml = async (url: string): Promise<string> => {
   return await response.text();
 };
 
-const fetchScholarItem = async (
-  profileId: string,
-  articleId: string,
-): Promise<ScholarItem> => {
-  const citationUrl = buildCitationUrl(profileId, articleId);
+const fetchScholarProfile = async (profileId: string, articleIds: string[]) => {
+  const citationUrl = buildProfileUrl(profileId);
+  const pageUrl = new URL(citationUrl);
+  pageUrl.searchParams.set('cstart', '0');
+  pageUrl.searchParams.set('pagesize', '100');
 
-  const payload: ScholarItem = {
-    ok: false,
-    citationUrl,
-    citations: null,
-    error: null,
-  };
-
-  try {
-    const html = await fetchHtml(citationUrl);
-    const citations = extractCitationCount(html);
-
-    if (citations == null) {
-      throw new Error('Could not extract article citation count from the page');
-    }
-
-    payload.ok = true;
-    payload.citations = citations;
-  } catch (error) {
-    payload.error =
-      error instanceof Error ? `${error.name}: ${error.message}` : String(error);
+  let $ = cheerio.load(await fetchHtml(pageUrl.toString()));
+  const citations = extractProfileCitationCount($);
+  if (citations === null) {
+    throw new Error('Could not extract profile citation count from Google Scholar');
   }
 
-  return payload;
+  const profile = { citationUrl, citations, error: null };
+  const articleCitations = new Map<string, number>();
+  const pending = new Set(articleIds);
+  const profilePrefix = `${profileId}:`;
+  let offset = 0;
+
+  while (pending.size > 0) {
+    const rows = $('#gsc_a_b tr.gsc_a_tr');
+
+    for (const row of rows) {
+      const article = $(row);
+      const href = article.find('a.gsc_a_at').attr('href');
+      if (!href || !URL.canParse(href, citationUrl)) {
+        continue;
+      }
+
+      const citationId = new URL(href, citationUrl).searchParams.get('citation_for_view');
+      if (!citationId?.startsWith(profilePrefix)) {
+        continue;
+      }
+
+      const articleId = citationId.slice(profilePrefix.length);
+      if (!pending.has(articleId)) {
+        continue;
+      }
+
+      const link = article.find('.gsc_a_c a.gsc_a_ac').first();
+      const text = normalizeText(link.text());
+      // Scholar leaves both the count and link empty for uncited articles.
+      const count =
+        text === '' && link.attr('href') === '' ? 0 : parseCitationCount(text);
+      if (count !== null) {
+        articleCitations.set(articleId, count);
+        pending.delete(articleId);
+      }
+    }
+
+    if (
+      pending.size === 0 ||
+      rows.length === 0 ||
+      !$('#gsc_bpf_more').is('button:not([disabled])')
+    ) {
+      break;
+    }
+
+    offset += rows.length;
+    pageUrl.searchParams.set('cstart', String(offset));
+    $ = cheerio.load(await fetchHtml(pageUrl.toString()));
+    if ($('#gsc_a_b').length === 0) {
+      throw new Error(
+        `Could not read the Google Scholar article list at offset ${offset}`,
+      );
+    }
+  }
+
+  return { profile, articleCitations };
 };
 
-const fetchScholarProfile = async (profileId: string): Promise<ScholarProfile> => {
-  const citationUrl = buildProfileUrl(profileId);
-
-  const payload: ScholarProfile = {
-    citationUrl,
-    citations: null,
-    error: null,
-  };
-
+const readPreviousData = async (outputPath: string): Promise<ScholarJsonFile | null> => {
   try {
-    const html = await fetchHtml(citationUrl);
-    const citations = extractProfileCitationCount(html);
-
-    if (citations == null) {
-      throw new Error('Could not extract profile citation count from the page');
-    }
-
-    payload.citations = citations;
+    return JSON.parse(await readFile(outputPath, 'utf8')) as ScholarJsonFile;
   } catch (error) {
-    payload.error =
-      error instanceof Error ? `${error.name}: ${error.message}` : String(error);
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return null;
+    }
+    throw error;
   }
-
-  return payload;
 };
 
 const main = async () => {
@@ -198,13 +187,40 @@ const main = async () => {
   const scholarProfileId = 'oJvSC5wAAAAJ';
   const outputPath = process.env.OUTPUT_PATH ?? 'public/data/scholar.json';
 
-  const profile = await fetchScholarProfile(scholarProfileId);
-  const entries = await Promise.all(
-    scholarEntries.map(async (articleId) => {
-      const item = await fetchScholarItem(scholarProfileId, articleId);
-      return [articleId, item] as const;
-    }),
+  const { profile, articleCitations } = await fetchScholarProfile(
+    scholarProfileId,
+    scholarEntries,
   );
+  const previous =
+    articleCitations.size < scholarEntries.length
+      ? await readPreviousData(outputPath)
+      : null;
+  const previousItems =
+    previous?.profileId === scholarProfileId ? previous.items : undefined;
+
+  const entries = scholarEntries.map((articleId): [string, ScholarItem] => {
+    const count = articleCitations.get(articleId);
+    const error =
+      count === undefined
+        ? 'Could not extract article citation count from the Google Scholar profile'
+        : null;
+    const citations = count ?? previousItems?.[articleId]?.citations ?? null;
+    if (error) {
+      const fallback =
+        citations === null ? '' : `; retaining previous count (${citations})`;
+      console.warn(`${articleId}: ${error}${fallback}`);
+    }
+
+    return [
+      articleId,
+      {
+        ok: count !== undefined,
+        citationUrl: buildCitationUrl(scholarProfileId, articleId),
+        citations,
+        error,
+      },
+    ];
+  });
 
   const payload: ScholarJsonFile = {
     profileId: scholarProfileId,
@@ -214,7 +230,13 @@ const main = async () => {
   };
 
   await mkdir(dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  const temporaryPath = `${outputPath}.${randomUUID()}.tmp`;
+  try {
+    await writeFile(temporaryPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+    await rename(temporaryPath, outputPath);
+  } finally {
+    await rm(temporaryPath, { force: true });
+  }
 
   console.log(`Wrote ${outputPath}`);
   console.log(JSON.stringify(payload, null, 2));
