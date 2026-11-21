@@ -106,7 +106,7 @@
         {
           "title": "The T05 System for the VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
           "authors": "<underline>Kaito Baba</underline>, Wataru Nakata, Yuki Saito, and Hiroshi Saruwatari",
-          "conference": "IEEE Spoken Language Technology Workshop (SLT)",
+          "conference": "Proceedings of the IEEE Spoken Language Technology Workshop (SLT)",
           "year": "2024",
           "featured": true,
           "github": {
